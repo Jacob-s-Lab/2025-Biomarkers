@@ -49,16 +49,16 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 ![image](https://hackmd.io/_uploads/SyaH6dE3A.png)
 
 3. Click the following options at the top of the screen: Member Center -> Member Profile -> System Account
-![image](https://github.com/r14455009/note/blob/main/images/member-profile.png)\
+![image](https://github.com/r14455009/note/blob/main/images/member-profile.png)
 
-   A. Check if your supercomputer account has the "Enable" label next to it. If not, please check if you have completed the verification step in [Registering for an iService Account](###Registering-for-an-iService-Account).\
+   A. Check if your supercomputer account has the "Enable" label next to it. If not, please check if you have completed the verification step in [Registering for an iService Account](###Registering-for-an-iService-Account).
    ![image](https://github.com/r14455009/note/blob/screenshot/NCHC-id-otp.png)
    (Note: You may periodically change the supercomputer password if necessary.)  
  
    B. Click "Create OTP Token" and check your email for the "Token Registration Notification". 
    ![image](https://hackmd.io/_uploads/ByhrAuNh0.png)
 
-   C. Follow the instructions in the email to install the 'IDExpert' app and complete the mobile binding.\ 
+   C. Follow the instructions in the email to install the 'IDExpert' app and complete the mobile binding. 
    (https://iservice.nchc.org.tw/nchc_service/nchc_service_qa_single.php?qa_code=774)
 
 ### Project
@@ -94,9 +94,9 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 
 3. Enter the supercomputer password (this is not the iService login password). **It is normal if the password does not appear on the screen while typing.**
 
-4. Enter OTP\
+4. Enter OTP
 > ![CAUTION]
-> !! Enter the supercomputer password first, then the OTP. Do not reverse the order.\
+> !! Enter the supercomputer password first, then the OTP. Do not reverse the order.
 
 5. If the login is successful, you will see the following screen:
 ![](https://hackmd.io/_uploads/S1H454mha.png)
@@ -114,7 +114,7 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 > > (1) If you encounter "Permission denied (keyboard-interaction)", please ensure you have filled out the form provided by the instructor. If not, fill it out immediately and notify the TA.
 > > (2) Confirm that OTP authentication is enabled on the iService website.
 > > (3) Ensure the input order during login is correct.
-> > (4) Verify that the supercomputer password is entered correctly\
+> > (4) Verify that the supercomputer password is entered correctly
 > >  (Note: This is different from the iService account password).
 > > (5) Pay attention to case sensitivity, language switching, and full-width/half-width character switching issues (Mac users should be extra cautious).
 > ⚠️ **If all the above issues are resolved and you still cannot log in, please notify the instructor or TA. Do not force a login attempt, as it may lock your account!**    
@@ -124,9 +124,9 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
  
 1. Enter the login node `t3-c4.nchc.org.tw` in the server field.
 2. Enter your "NCHC supercomputer account" in the username field.
-3. Enter "1"or"3" in the password field, then press enter to log in.\
+3. Enter "1"or"3" in the password field, then press enter to log in.
    (**Note: Do not enter the supercomputer password or iService password here!**)
-4. Enter your "NCHC supercomputer password" \
+4. Enter your "NCHC supercomputer password" 
    (**Note: This is the supercomputer password, not the iService password!**)     
 ![image](https://hackmd.io/_uploads/rJTPkYEhA.png)
 
@@ -225,7 +225,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 3. Open WinSCP
 
 4. Fill in or change the options as shown in the following screen:
-![image](https://github.com/r14455009/note/blob/main/images/WinSCP-login.png)\
+![image](https://github.com/r14455009/note/blob/main/images/WinSCP-login.png)
  ```
  File protocol: SFTP
  Host name: t3-c4.nchc.org.tw
@@ -250,7 +250,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 
 3. On the right side (NCHC directories), select the files you want to download, right-click and choose Download. The files will be downloaded to the directory displayed on the left side of the screen.        
 ![image](https://github.com/r14455009/note/blob/main/images/WinSCP-upload.jpg)
- (**Note: If you want to open the file, do not open it directly from the local site panel in WinSCP. Instead, go back to your computer’s desktop, navigate to the path where you saved the file, and open it from there. Opening it directly from the local site panel in WinSCP will upload the file to NCHC.**)\
+ (**Note: If you want to open the file, do not open it directly from the local site panel in WinSCP. Instead, go back to your computer’s desktop, navigate to the path where you saved the file, and open it from there. Opening it directly from the local site panel in WinSCP will upload the file to NCHC.**)
 
 ---------------------------------------------
 ---------------------------------------------
