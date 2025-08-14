@@ -53,7 +53,7 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 
    A. Check if your supercomputer account has the "Enable" label next to it. If not, please check if you have completed the verification step in [Registering for an iService Account](###Registering-for-an-iService-Account).
    ![image](https://github.com/r14455009/note/blob/screenshot/NCHC-id-otp.png)
-   (Note: You may periodically change the supercomputer password if necessary.)  
+    (Note: You may periodically change the supercomputer password if necessary.)  
  
    B. Click "Create OTP Token" and check your email for the "Token Registration Notification". 
    ![image](https://hackmd.io/_uploads/ByhrAuNh0.png)
@@ -78,8 +78,8 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 
 1. In CMD (or Terminal), type`ssh supercomputeraccount@t3-c4.nchc.org.tw`to log into the NCHC biomedical node.
 
-> ![IMPORTANT]
-> ### Commands Lecture
+> [!IMPORTANT]
+> **Commands Lecture**
 > - `ssh`: Log in to a remote server.
 > - Usage: `ssh user@hostname`
 > - `user` is your username on the remote server, and 'hostname'is the IP address or hostname of the remote server.
