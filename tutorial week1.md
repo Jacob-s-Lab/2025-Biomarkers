@@ -118,7 +118,7 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 > > (3) Ensure the input order during login is correct.\
 > > (4) Verify that the supercomputer password is entered correctly\
 > >  (Note: This is different from the iService account password).\
-> > (5) Pay attention to case sensitivity, language switching, and full-width/half-width character switching issues (Mac users should be extra cautious).\
+> > (5) Pay attention to case sensitivity, language switching, and full-width/half-width character switching issues (Mac users should be extra cautious).
 > 
 > ⚠️ **If all the above issues are resolved and you still cannot log in, please notify the instructor or TA. Do not force a login attempt, as it may lock your account!**    
 
@@ -143,7 +143,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 
 7. After logging in, click on the top left "Activities" to see nine dots (Show Applications) appear on the left. Click on it, then select Xfce Terminal.    
 ![image](https://hackmd.io/_uploads/HktElt42C.png)      
-**Reminder: If the system logs you out after a period of inactivity, you will need to repeat the login process**
+   **If the system logs you out after a period of inactivity, you will need to repeat the login process**
 
   
 ### Entering the Remote Host file `/work`
@@ -199,16 +199,16 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 > #### Command Lecture
 > - `rsync`:The command itself, used for synchronizing files and directories.
 > -  `-azrvh`:
->    1. -a: Archive mode. This is a combination of several options that preserve the structure and attributes of the files. It ensures that symbolic links, devices, attributes, permissions, ownerships, and timestamps are preserved. Essentially, it attempts to make an exact copy of the source.
->    2. -z: Compress file data during the transfer. This option compresses the data as it is being transferred to reduce the amount of data that needs to be sent over the network or between locations.
->    3. -r: Recursive. This option tells rsync to copy directories recursively. It is necessary when you want to synchronize directories and their contents.
->    4. -v: Verbose. This option increases the verbosity of the output, providing more information about what rsync is doing during the synchronization process. It shows details about the files being transferred and other related actions.
->    5. -h: Human-readable. This option makes the output more readable by converting file sizes into a human-friendly format (e.g., KB, MB) rather than displaying raw byte sizes.
->    6. ".": This represents the source directory. In this case, it means the current directory. rsync will synchronize the contents of the current directory to the specified destination (which is missing in this command).
+>   1. -a: Archive mode. This is a combination of several options that preserve the structure and attributes of the files. It ensures that symbolic links, devices, attributes, permissions, ownerships, and timestamps are preserved. Essentially, it attempts to make an exact copy of the source.
+>   2. -z: Compress file data during the transfer. This option compresses the data as it is being transferred to reduce the amount of data that needs to be sent over the network or between locations.
+>   3. -r: Recursive. This option tells rsync to copy directories recursively. It is necessary when you want to synchronize directories and their contents.
+>   4. -v: Verbose. This option increases the verbosity of the output, providing more information about what rsync is doing during the synchronization process. It shows details about the files being transferred and other related actions.
+>   5. -h: Human-readable. This option makes the output more readable by converting file sizes into a human-friendly format (e.g., KB, MB) rather than displaying raw byte sizes.
+>   6. ".": This represents the source directory. In this case, it means the current directory. rsync will synchronize the contents of the current directory to the specified destination (which is missing in this command).
 >     
-> ⚠️ If the directory name on NCHC is not "HW1", modify it accordingly.
-> (Note: The "."represents the current directory.)
-> ⚠️ **There must be a space between the file and "."**
+> ⚠️ If the directory name on NCHC is not "HW1", modify it accordingly.\
+> (Note: The "."represents the current directory.)\
+> ⚠️ **There must be a space between the file and "."**\
 > (Note: If the files are large, it may take some time to upload, so be patient.)
 
 5. Enter your two-factor authentication, supercomputer password, and OTP (required only if you selected 1 or 3 as your authentication method) in sequence to start uploading the files.
