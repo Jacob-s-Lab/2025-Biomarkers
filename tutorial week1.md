@@ -1,4 +1,8 @@
-# 20240904 Fantastic Genomic Biomarkers and Where to Find Them Practical Course (part I)
+Date: 20250903
+Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Course-(part-I)) / [中文](生物標記物與它們的產地實作課程(一))
+
+
+# Fantastic Genomic Biomarkers and Where to Find Them Practical Course (part I)
 
 
 ## Main Content of This Course
