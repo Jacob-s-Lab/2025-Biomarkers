@@ -8,8 +8,8 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 
 ## Main Content of This Course
 
->[!CAUTION]Warning
->Please Do Not skip steps, and pay close attention to the instructions
+> [!CAUTION]
+> Please Do Not skip steps, and pay close attention to the instructions
 
 1. NCHC registration and login
 2. Thinlinc download and connect NCHC 
@@ -33,11 +33,15 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 ![image](https://hackmd.io/_uploads/ByH6hOVhR.png)
 
 3. Read and agree to the iService Member Registration and Service Terms.
-4. Enter the desired iService account name. (Note: The iService account here is only for logging into the iService website (not the supercomputer!))
-5. Fill out the Member Information and Supercomputer account information sequentially. (Note: A single mobile number can only be used to apply for one account.) (Note: Make sure to record the email & password used for registering (for logging into the iService website), as well as the supercomputer account & password (for logging into and operating the NCHC).)
+4. Enter the desired iService account name.\
+(Note: The iService account here is **only for logging into the iService website (not the supercomputer!)**)
+5. Fill out the **Member Information** and **Supercomputer account information** sequentially.\
+ (Note: A single mobile number can only be used to apply for one account.)\
+ (Note: Make sure to record the email & password used for registering (for logging into the **iService website**), as well as the supercomputer account & password (for logging into and operating the **NCHC**).)
 ![image](https://hackmd.io/_uploads/rkWmFLr20.png)
 
-6. Complete the verification as instructed. (Note: The member registration confirmation email will be sent to the email used for registration, and the registration authorization code will be sent via SMS.)
+6. Complete the verification as instructed.\
+ (Note: The member registration confirmation email will be sent to the email used for registration, and the registration authorization code will be sent via SMS.)
 
 ### Logging into iService
 1. Go to the iService website: https://iservice.nchc.org.tw/nchc_service/index.php?lang_type=
@@ -45,15 +49,16 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 ![image](https://hackmd.io/_uploads/SyaH6dE3A.png)
 
 3. Click the following options at the top of the screen: Member Center -> Member Profile -> System Account
-![image](https://hackmd.io/_uploads/SJ1opONnR.png)
+![6870733a2f2](https://hackmd.io/_uploads/HkmW81Yugg.png)
 
-A. Check if your supercomputer account has the "Enable" label next to it. If not, please check if you have completed the verification step in Registering for an iService Account.(Note: You may periodically change the supercomputer password if necessary.) 
-![image](https://hackmd.io/_uploads/r1c0puVn0.png)
-
-B. Click "Create OTP Token" and check your email for the "Token Registration Notification". 
+ A. Check if your supercomputer account has the "Enable" label next to it. If not, please check if you have completed the verification step in [Registering for an iService Account](###Registering-for-an-iService-Account).\
+ ![33a2f2f68](https://hackmd.io/_uploads/H1RC8JY_xe.png)
+ (Note: You may periodically change the supercomputer password if necessary.)  
+ 
+ B. Click "Create OTP Token" and check your email for the "Token Registration Notification". 
 ![image](https://hackmd.io/_uploads/ByhrAuNh0.png)
 
-C. Follow the instructions in the email to install the 'IDExpert' app and complete the mobile binding. 
+ C. Follow the instructions in the email to install the 'IDExpert' app and complete the mobile binding.\ 
 (https://iservice.nchc.org.tw/nchc_service/nchc_service_qa_single.php?qa_code=774)
 
 ### Project
