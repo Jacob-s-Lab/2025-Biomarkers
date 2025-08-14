@@ -1,4 +1,8 @@
-# 20240911 Fantastic Genomic Biomarkers and Where to Find Them Practical Course (Part II)
+Date：20250910  
+Language：[EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Course-part-II) / [中文](#生物標記物與它們的產地實作課程二)  
+
+
+# Fantastic Genomic Biomarkers and Where to Find Them Practical Course (Part II)
 
 ## Main Content of This Course
 1. Copy course files to your folder on the National Center for High-Performance Computing (NCHC) system
