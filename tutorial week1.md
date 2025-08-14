@@ -527,7 +527,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 2. 在左半部先移動到檔案要下載到的資料夾下
     (注意：避免到時候檔案下載到你不知道的地方去)
 3. 在右半部(國網主機空間)選取要下載的檔案，**按右鍵**選擇**下載**即可將檔案下載(檔案放的位置就在你左半部顯示的資料夾路徑下)      
-![image](https://github.com/r14455009/note/blob/main/images/WinSCP%E4%B8%8B%E8%BC%89.png)
+![image](https://github.com/r14455009/note/blob/main/images/WinSCP%E4%B8%8B%E8%BC%89.png)\
 (**注意，若想要開啟檔案，請不要直接在WinSCP的本地站台點開，請回到你的電腦桌面點選剛剛儲存的路徑再去打開檔案，若直接從WinSCP的本地站台點選檔名，將會把檔案上傳到國網**）
 
 -----------------------------
