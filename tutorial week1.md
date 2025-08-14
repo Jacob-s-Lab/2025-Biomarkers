@@ -105,20 +105,20 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
  
 ## Step 2: Download Thinlinc
 1. Download software: ThinLinc
-- Download and install the version corresponding to your computer from the [ThinLinc official website](https://www.cendio.com/thinlinc/download/).      
-![image](https://hackmd.io/_uploads/rkY-1KEnC.png)
+  - Download and install the version corresponding to your computer from the [ThinLinc official website](https://www.cendio.com/thinlinc/download/).      
+  ![image](https://hackmd.io/_uploads/rkY-1KEnC.png)
 2. Ensure that [NCHC OTP is enabled](###Logging-into-NCHC).
 
  
 ### Using Thinlinc to Log into NCHC, Access the Remote Host, and Open Terminal
 > [!CAUTION]
 > If you still cannot log in after following the steps below, please check the following:
-> > (1) If you encounter "Permission denied (keyboard-interaction)", please ensure you have filled out the form provided by the instructor. If not, fill it out immediately and notify the TA.
-> > (2) Confirm that OTP authentication is enabled on the iService website.
-> > (3) Ensure the input order during login is correct.
-> > (4) Verify that the supercomputer password is entered correctly
-> >  (Note: This is different from the iService account password).
-> > (5) Pay attention to case sensitivity, language switching, and full-width/half-width character switching issues (Mac users should be extra cautious).
+> > (1) If you encounter "Permission denied (keyboard-interaction)", please ensure you have filled out the form provided by the instructor. If not, fill it out immediately and notify the TA.\
+> > (2) Confirm that OTP authentication is enabled on the iService website.\
+> > (3) Ensure the input order during login is correct.\
+> > (4) Verify that the supercomputer password is entered correctly\
+> >  (Note: This is different from the iService account password).\
+> > (5) Pay attention to case sensitivity, language switching, and full-width/half-width character switching issues (Mac users should be extra cautious).\
 > 
 > ⚠️ **If all the above issues are resolved and you still cannot log in, please notify the instructor or TA. Do not force a login attempt, as it may lock your account!**    
 
@@ -143,7 +143,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 
 7. After logging in, click on the top left "Activities" to see nine dots (Show Applications) appear on the left. Click on it, then select Xfce Terminal.    
 ![image](https://hackmd.io/_uploads/HktElt42C.png)      
-==Reminder: If the system logs you out after a period of inactivity, you will need to repeat the login process==
+**Reminder: If the system logs you out after a period of inactivity, you will need to repeat the login process**
 
   
 ### Entering the Remote Host file `/work`
@@ -153,18 +153,20 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
  ```
 2. Use the `pwd` command to verify if you are in the correct directory.
 
-> [！IMPORTANT]
+> [!IMPORTANT]
 > #### Commands Lecture
-> ``cd`` is a commonly used command in command-line tools. It stands for change directory and is used to switch the current working directory in a terminal or command-line interface.
+> `cd` is a commonly used command in command-line tools. It stands for change directory and is used to switch the current working directory in a terminal or command-line interface.
 > Usage of `cd`:
-> ```cd [directory path]# Switch to the specified directory
+> ```
+> cd [directory path]# Switch to the specified directory
 > cd ..               # Move up to the parent directory
 > cd ~                # Return to the user's home directory
 > cd                  # Used without arguments, it will switch the current directory back to the user's home directory
 > cd -                # Switch back to the previous working directory
 > ```
+> 
 > - ⚠️ **There is a "space" between the command and the path. Do not type it as "cd/work/{your_username}".** The same applies to the following code as well.
->  - Tip: Use your mouse to select and confirm if there is a space.
+>    - Tip: Use your mouse to select and confirm if there is a space.
 > - ⚠️ If you copy the command, make sure to check if anything needs to be modified!
 > - ⚠️ Replace {your_username} entirely with your supercomputer account. **Do not include the {} symbols! Also, do not delete the /**. The same applies to the following code as well.
 
@@ -197,12 +199,12 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 > #### Command Lecture
 > - `rsync`:The command itself, used for synchronizing files and directories.
 > -  `-azrvh`:
->  1. -a: Archive mode. This is a combination of several options that preserve the structure and attributes of the files. It ensures that symbolic links, devices, attributes, permissions, ownerships, and timestamps are preserved. Essentially, it attempts to make an exact copy of the source.
->  2. -z: Compress file data during the transfer. This option compresses the data as it is being transferred to reduce the amount of data that needs to be sent over the network or between locations.
->  3. -r: Recursive. This option tells rsync to copy directories recursively. It is necessary when you want to synchronize directories and their contents.
->  4. -v: Verbose. This option increases the verbosity of the output, providing more information about what rsync is doing during the synchronization process. It shows details about the files being transferred and other related actions.
->  5. -h: Human-readable. This option makes the output more readable by converting file sizes into a human-friendly format (e.g., KB, MB) rather than displaying raw byte sizes.
->  6. ".": This represents the source directory. In this case, it means the current directory. rsync will synchronize the contents of the current directory to the specified destination (which is missing in this command).
+>    1. -a: Archive mode. This is a combination of several options that preserve the structure and attributes of the files. It ensures that symbolic links, devices, attributes, permissions, ownerships, and timestamps are preserved. Essentially, it attempts to make an exact copy of the source.
+>    2. -z: Compress file data during the transfer. This option compresses the data as it is being transferred to reduce the amount of data that needs to be sent over the network or between locations.
+>    3. -r: Recursive. This option tells rsync to copy directories recursively. It is necessary when you want to synchronize directories and their contents.
+>    4. -v: Verbose. This option increases the verbosity of the output, providing more information about what rsync is doing during the synchronization process. It shows details about the files being transferred and other related actions.
+>    5. -h: Human-readable. This option makes the output more readable by converting file sizes into a human-friendly format (e.g., KB, MB) rather than displaying raw byte sizes.
+>    6. ".": This represents the source directory. In this case, it means the current directory. rsync will synchronize the contents of the current directory to the specified destination (which is missing in this command).
 >     
 > ⚠️ If the directory name on NCHC is not "HW1", modify it accordingly.
 > (Note: The "."represents the current directory.)
@@ -227,7 +229,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 
 ### Uploading Files Using WinSCP
 1. If you haven’t installed WinSCP, go to this [link](https://winscp.net/download/WinSCP-6.5.3-Setup.exe/download) and click **Direct Download** to download.
-![image](https://github.com/r14455009/note/blob/main/images/WinSCP-web.png))
+![image](https://github.com/r14455009/note/blob/main/images/WinSCP-web.png)
 
 2. Follow the prompts: click Accept → Next → Next → Install. When the following screen appears, click Finish to complete the installation.
 ![image](https://github.com/r14455009/note/blob/main/images/WinSCP-download-finish.png)
