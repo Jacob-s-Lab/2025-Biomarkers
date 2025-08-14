@@ -49,17 +49,17 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 ![image](https://hackmd.io/_uploads/SyaH6dE3A.png)
 
 3. Click the following options at the top of the screen: Member Center -> Member Profile -> System Account
-![image](https://github.com/r14455009/note/blob/main/images/member-profile.png)
+![image](https://github.com/r14455009/note/blob/main/images/member-profile.png)\
 
- A. Check if your supercomputer account has the "Enable" label next to it. If not, please check if you have completed the verification step in [Registering for an iService Account](###Registering-for-an-iService-Account).\
-![image](https://github.com/r14455009/note/blob/screenshot/NCHC-id-otp.png)
- (Note: You may periodically change the supercomputer password if necessary.)  
+   A. Check if your supercomputer account has the "Enable" label next to it. If not, please check if you have completed the verification step in [Registering for an iService Account](###Registering-for-an-iService-Account).\
+   ![image](https://github.com/r14455009/note/blob/screenshot/NCHC-id-otp.png)
+   (Note: You may periodically change the supercomputer password if necessary.)  
  
- B. Click "Create OTP Token" and check your email for the "Token Registration Notification". 
-![image](https://hackmd.io/_uploads/ByhrAuNh0.png)
+   B. Click "Create OTP Token" and check your email for the "Token Registration Notification". 
+   ![image](https://hackmd.io/_uploads/ByhrAuNh0.png)
 
- C. Follow the instructions in the email to install the 'IDExpert' app and complete the mobile binding.\ 
-(https://iservice.nchc.org.tw/nchc_service/nchc_service_qa_single.php?qa_code=774)
+   C. Follow the instructions in the email to install the 'IDExpert' app and complete the mobile binding.\ 
+   (https://iservice.nchc.org.tw/nchc_service/nchc_service_qa_single.php?qa_code=774)
 
 ### Project
 1. After accessing the iService webpage, click the following options at the top of the screen: Member Center -> Projects -> My Projects
