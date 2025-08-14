@@ -9,7 +9,7 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 ## Main Content of This Course
 
 > [!CAUTION]
-> Please Do Not skip steps, and pay close attention to the instructions
+> ‼️ Please Do Not skip steps, and pay close attention to the instructions
 
 1. NCHC registration and login
 2. Thinlinc download and connect NCHC 
@@ -63,76 +63,75 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 
 ### Project
 1. After accessing the iService webpage, click the following options at the top of the screen: Member Center -> Projects -> My Projects
-![image](https://hackmd.io/_uploads/B12QC_EhA.png)
+![image](https://github.com/r14455009/note/blob/main/images/my-projects.png)
 2. Please fill NCHC Account Registration form.
-[NCHC Account Registration form](https://docs.google.com/forms/d/e/1FAIpQLSdj1NXX9Z7DCfTjYdZQKBB3T6H3DXBOz3eZLf34g4zGW-2Sug/viewform?usp=sf_link
-3. After filling out the form, please wait for the TA to add your account to the "Fantastic Genomic Biomarkers and Where to Find Them" project.
+[NCHC Account Registration form](https://forms.gle/7tT8pnGgwadRAbt28)
+3. After filling out the form, please wait for the TA to add your account to the "2025 Fantastic Genomic Biomarkers and Where to Find Them" project.
 
 ### Logging into NCHC
 
 - For Windows users, open CMD.     
-![image](https://hackmd.io/_uploads/B1gdIdEnC.png)     
+![image](https://github.com/r14455009/note/blob/main/images/cmd.png)     
 
 - For Mac users, open Terminal.     
 ![image](https://hackmd.io/_uploads/rkP16IH3A.png)     
 
 1. In CMD (or Terminal), type`ssh supercomputeraccount@t3-c4.nchc.org.tw`to log into the NCHC biomedical node.
 
-ℹ️
-### Commands Lecture 
-- `ssh`: Log in to a remote server.
-- Usage: `ssh user@hostname`
-- 'user' is your username on the remote server, and 'hostname'is the IP address or hostname of the remote server.
+> ![IMPORTANT]
+> ### Commands Lecture
+> - `ssh`: Log in to a remote server.
+> - Usage: `ssh user@hostname`
+> - `user` is your username on the remote server, and 'hostname'is the IP address or hostname of the remote server.
+> ⚠️ The biomedical node is `t3-c4.nchc.org.tw`. When logging into the node for the first time, you will be prompted with the message: "Are you sure you want to continue connecting (yes/no/[fingerprint])?". Please type `yes` to proceed.
 
-<span style="color: blue;">
-    Note: The biomedical node is t3-c4.nchc.org.tw.  
-    When logging into the node for the first time, you will be prompted with the message: "Are you sure you want to continue connecting (yes/no/[fingerprint])?". Please type "yes" to proceed.</span>
+ - Terminal screen:
+   ![](https://hackmd.io/_uploads/BkvbPN7ha.png)
+ - Windows  screen:
+   ![image](https://hackmd.io/_uploads/H1OqvuV3A.png)
 
-- Terminal screen:
-![](https://hackmd.io/_uploads/BkvbPN7ha.png)
-- Windows  screen:
-![image](https://hackmd.io/_uploads/H1OqvuV3A.png)
+2. Enter the two-factor authentication method (**this is not the supercomputer password**).If you chose two-factor authentication method 1 or 3, you will need to enter the OTP.
 
-2. Enter the two-factor authentication method (<span style="color: red;">this is not the supercomputer password</span>).If you chose two-factor authentication method 1 or 3, you will need to enter the OTP.
+3. Enter the supercomputer password (this is not the iService login password). **It is normal if the password does not appear on the screen while typing.**
 
-3. Enter the supercomputer password (this is not the iService login password). <span style="color: red;">It is normal if the password does not appear on the screen while typing.</span>
-
-4. Enter OTP
-
-<span style="color: red;">!! Note: Enter the supercomputer password first, then the OTP. Do not reverse the order.</span>
+4. Enter OTP\
+> ![CAUTION]
+> !! Enter the supercomputer password first, then the OTP. Do not reverse the order.\
 
 5. If the login is successful, you will see the following screen:
 ![](https://hackmd.io/_uploads/S1H454mha.png)
 
 
 ## Step 2: Download Thinlinc
-1. Download software:
-[thinlinc official website](https://www.cendio.com/thinlinc/download/)      
-![image](https://hackmd.io/_uploads/rkY-1KEnC.png)      
-
-2. Download and install the version corresponding to your computer from the Thinlinc official website.
-3. Ensure that NCHC OTP is enabled.
+1. Download software: ThinLinc
+- Download and install the version corresponding to your computer from the [ThinLinc official website](https://www.cendio.com/thinlinc/download/).      
+![image](https://hackmd.io/_uploads/rkY-1KEnC.png)
+2. Ensure that [NCHC OTP is enabled](###Logging-into-NCHC).
 
 ### Using Thinlinc to Log into NCHC, Access the Remote Host, and Open Terminal
-> Here remind you if you still cannot log in after following the steps below, please check the following:     
-> (1) If you encounter "Permission denied (keyboard-interaction)", please ensure you have filled out the form provided by the instructor. If not, fill it out immediately and notify the TA.     
-> (2) Confirm that OTP authentication is enabled on the iService website.    
-> (3) Ensure the input order during login is correct.    
-> (4) Verify that the supercomputer password is entered correctly (Note: This is different from the iService account password).    
-> (5) Pay attention to case sensitivity, language switching, and full-width/half-width character switching issues (Mac users should be extra cautious). If all the above issues are resolved and you still cannot log in, please notify the instructor or TA. Do not force a login attempt, as it may lock your account!    
+> ![CAUTION]
+> If you still cannot log in after following the steps below, please check the following:
+> > (1) If you encounter "Permission denied (keyboard-interaction)", please ensure you have filled out the form provided by the instructor. If not, fill it out immediately and notify the TA.
+> > (2) Confirm that OTP authentication is enabled on the iService website.
+> > (3) Ensure the input order during login is correct.
+> > (4) Verify that the supercomputer password is entered correctly\
+> >  (Note: This is different from the iService account password).
+> > (5) Pay attention to case sensitivity, language switching, and full-width/half-width character switching issues (Mac users should be extra cautious).
+> ⚠️ **If all the above issues are resolved and you still cannot log in, please notify the instructor or TA. Do not force a login attempt, as it may lock your account!**    
 
 - The Thinlinc login screen is as follows:      
  ![](https://i.imgur.com/XvGJFXA.png)
  
-1. Enter the login node`t3-c4.nchc.org.tw` in the server field.
+1. Enter the login node `t3-c4.nchc.org.tw` in the server field.
 2. Enter your "NCHC supercomputer account" in the username field.
-3. Enter "1"or"3" in the password field, then press enter to log in. (<span style="color: red;">Note: Do not enter the supercomputer password or iService password here!</span>)
-
-4. Enter your "NCHC supercomputer password" (<span style="color: red;">Note: This is the supercomputer password, not the iService password!</span>)     
+3. Enter "1"or"3" in the password field, then press enter to log in.\
+   (**Note: Do not enter the supercomputer password or iService password here!**)
+4. Enter your "NCHC supercomputer password" \
+   (**Note: This is the supercomputer password, not the iService password!**)     
 ![image](https://hackmd.io/_uploads/rJTPkYEhA.png)
 
 5. Use your mobile app to obtain the OTP.
-Enter the OTP just obtained (This is not the supercomputer password or the iService password!), this step should be down twice!      
+Enter the OTP just obtained (**This is not the supercomputer password or the iService password!**), this step should be down twice!      
 ![image](https://hackmd.io/_uploads/rkAY1YVnC.png)
 
 6. After successfully logging in, click "Forward" and "OK."
@@ -141,149 +140,129 @@ Enter the OTP just obtained (This is not the supercomputer password or the iServ
 
 7. After logging in, click on the top left "Activities" to see nine dots (Show Applications) appear on the left. Click on it, then select Xfce Terminal.    
 ![image](https://hackmd.io/_uploads/HktElt42C.png)      
-(==<font color="red">Reminder: If the system logs you out after a period of inactivity, you will need to repeat the login process</font>==)
+==Reminder: If the system logs you out after a period of inactivity, you will need to repeat the login process==
 
-### Entering the Remote Host file`/work`
-1. In the terminal, use the`cd`command to navigate to your directory under the /work path on the host:
-```
-cd /work/{your_username}
-```
-2. Use the`pwd`command to verify if you are in the correct directory.
+### Entering the Remote Host file `/work`
+1. In the terminal, use the `cd` command to navigate to your directory under the `/work` path on the host:
+ ```
+ cd /work/{your_username}
+ ```
+2. Use the `pwd` command to verify if you are in the correct directory.
 
-ℹ️
-### Commands Lecture 
-```cd```
-is a commonly used command in command-line tools. It stands for change directory and is used to switch the current working directory in a terminal or command-line interface.
-Usage of cd:
-```cd [directory path]# Switch to the specified directory
-cd ..               # Move up to the parent directory
-cd ~                # Return to the user's home directory
-cd                  # Used without arguments, it will switch the current directory back to the user's home directory
-cd -                # Switch back to the previous working directory
-```
+> ![IMPORTANT]
+> #### Commands Lecture
+> ``cd`` is a commonly used command in command-line tools. It stands for change directory and is used to switch the current working directory in a terminal or command-line interface.
+> Usage of `cd`:
+> ```cd [directory path]# Switch to the specified directory
+> cd ..               # Move up to the parent directory
+> cd ~                # Return to the user's home directory
+> cd                  # Used without arguments, it will switch the current directory back to the user's home directory
+> cd -                # Switch back to the previous working directory
+> ```
+> - ⚠️ **There is a "space" between the command and the path. Do not type it as "cd/work/{your_username}".** The same applies to the following code as well.
+>  - Tip: Use your mouse to select and confirm if there is a space.
+> - ⚠️ If you copy the command, make sure to check if anything needs to be modified!
+> - ⚠️ Replace {your_username} entirely with your supercomputer account. **Do not include the {} symbols! Also, do not delete the /**. The same applies to the following code as well.
 
-Note: There is a "space" between the command and the path. Do not type it as "cd/work/{your_username}". The same applies to the following code as well.
-Tip: Use your mouse to select and confirm if there is a space.
-
-Note: <font color="red">If you copy the command, make sure to check if anything needs to be modified!</font>
-Note: <font color="red">Replace {your_username} entirely with your supercomputer account. Do not include the {} symbols! Also, do not delete the /. The same applies to the following code as well.</font>
-
-ℹ️
-### Commands Lecture 
-```pwd```
-print working directory, is used to display the full path of the current working directory. It is especially useful when working in multi-level directories, allowing you to check your current location at any time.
+> ![IMPORTANT]
+> #### Commands Lecture
+> ``pwd`` print working directory, is used to display the full path of the current working directory. It is especially useful when working in multi-level directories, allowing you to check your current location at any time.\
 
 
 ## Step 3: File Transfer
 ### Uploading/Downloading Files
-- Mac users can use the terminal and the rsync command to upload or download files.
-- Windows users can use FileZilla to upload or download files.
+- Mac users can use the terminal and the rsync command to [upload](##Uploading-Files-with-rsync) or [download](##Downloading-Files-Using-rsync) files.
+- Windows users can use WinSCP to [upload](###Uploading-Files-Using-WinSCP) or [download](###Downloading-Files-with-WinSCP-files).
 ## Uploading Files with rsync
 1. First, ensure that the three files you want to upload are placed together in a separate folder on your computer (Do not store them in your computer’s desktop or download folder, as the subsequent steps will upload all files in that folder).
 ![image](https://hackmd.io/_uploads/S1wxNLmpp.png)
-2. Open the local terminal on your computer (<span style="color: red;">Note: Open a new terminal, not the one where you are logged into the NCHC host!</span>).
+2. Open the **local terminal** on your computer (**Note: Open a new terminal, not the one where you are logged into the NCHC host!**).
 ![image](https://hackmd.io/_uploads/Bk3Q4L7pp.png)
-3. Use the "cd" command to navigate to the directory containing the files you want to upload (You can quickly input the folder path by dragging the folder into the terminal command line).
+3. Use the `cd` command to navigate to the directory containing the files you want to upload (You can quickly input the folder path by dragging the folder into the terminal command line).
 ![image](https://hackmd.io/_uploads/HyrRNL7aa.png)
-(For reference on how to display the file or folder path in Finder on a Mac, see macOS User Guide(https://support.apple.com/zh-tw/guide/mac-help/mchlp1774/mac)).
+(For reference on how to display the file or folder path in Finder on a Mac, see [macOS User Guide](https://support.apple.com/zh-tw/guide/mac-help/mchlp1774/mac)).
 
-4. Use the following command to upload the files from your local directory to`/home/spercomputer account/HW1`on the NCHC host (Replace your_username with your actual username):
-``` rsync -azrvh .supercomputeraccount@t3-c4.nchc.org.tw:/home/suppercomputeraccount/HW1```
+4. Use the following command to upload the files from your local directory to `/home/spercomputer account/HW1` on the NCHC host (Replace your_username with your actual username): ``rsync -azrvh .supercomputeraccount@t3-c4.nchc.org.tw:/home/suppercomputeraccount/HW1``
 
-ℹ️
-### Command Lecture 
-- `rsync`:The command itself, used for synchronizing files and directories.
-- `-azrvh`:
-1. -a: Archive mode. This is a combination of several options that preserve the structure and attributes of the files. It ensures that symbolic links, devices, attributes, permissions, ownerships, and timestamps are preserved. Essentially, it attempts to make an exact copy of the source.
+> ![IMPORTANT]
+> #### Command Lecture
+> - `rsync`:The command itself, used for synchronizing files and directories.
+> -  `-azrvh`:
+>  1. -a: Archive mode. This is a combination of several options that preserve the structure and attributes of the files. It ensures that symbolic links, devices, attributes, permissions, ownerships, and timestamps are preserved. Essentially, it attempts to make an exact copy of the source.
+>  2. -z: Compress file data during the transfer. This option compresses the data as it is being transferred to reduce the amount of data that needs to be sent over the network or between locations.
+>  3. -r: Recursive. This option tells rsync to copy directories recursively. It is necessary when you want to synchronize directories and their contents.
+>  4. -v: Verbose. This option increases the verbosity of the output, providing more information about what rsync is doing during the synchronization process. It shows details about the files being transferred and other related actions.
+>  5. -h: Human-readable. This option makes the output more readable by converting file sizes into a human-friendly format (e.g., KB, MB) rather than displaying raw byte sizes.
+>  6. ".": This represents the source directory. In this case, it means the current directory. rsync will synchronize the contents of the current directory to the specified destination (which is missing in this command).
+> ⚠️ If the directory name on NCHC is not "HW1", modify it accordingly.
+> (Note: The "."represents the current directory.)
+> ⚠️ **There must be a space between the file and "."**
+> (Note: If the files are large, it may take some time to upload, so be patient.)
 
-2. -z: Compress file data during the transfer. This option compresses the data as it is being transferred to reduce the amount of data that needs to be sent over the network or between locations.
-
-3. -r: Recursive. This option tells rsync to copy directories recursively. It is necessary when you want to synchronize directories and their contents.
-
-4. -v: Verbose. This option increases the verbosity of the output, providing more information about what rsync is doing during the synchronization process. It shows details about the files being transferred and other related actions.
-
-5. -h: Human-readable. This option makes the output more readable by converting file sizes into a human-friendly format (e.g., KB, MB) rather than displaying raw byte sizes.
-
-6. ".": This represents the source directory. In this case, it means the current directory. rsync will synchronize the contents of the current directory to the specified destination (which is missing in this command).
-
-<span style="color: red;">Note: If the directory name on NCHC is not "HW1", modify it accordingly.</span>
-
-(Note: The "."represents the current directory.)
-(Important: There must be a space between the file and ".")
-(Note: If the files are large, it may take some time to upload, so be patient.)
 5. Enter your two-factor authentication, supercomputer password, and OTP (required only if you selected 1 or 3 as your authentication method) in sequence to start uploading the files.
 
 ### Downloading Files Using rsync
-1. Open the local terminal and`cd`to the directory where you want to download the files (You can input the folder path by dragging the folder into the terminal command line). 
-(Note: Open a new terminal, not the one where you are logged into the NCHC host!).
+1. Open the local terminal and `cd` to the **directory where you want to download the files** (You can input the folder path by dragging the folder into the terminal command line). 
+(Note: **Open a new terminal, not the one where you are logged into the NCHC host!**).
 ![](https://hackmd.io/_uploads/HJ2t2Aq2a.png)
 
 2. Use the following command to download files from NCHC to the current local directory:
    ``` 
    rsync -azvh supercomputeraccount@t3-c4.nchc.org.tw:file path .
    ```
+   If you need to download a **folder**, modify the command to `rsync -azrvh`.
+   (Important: **There must be a space between the file and "."**)
 
-If you need to download a folder, modify the command to `rsync -azrvh`.
+3. Enter your **authentication method**, **supercomputer password**, and **OTP** in sequence to start the download. After the download is complete, you can access the files from your local machine.
 
-(Important: There must be a space between the file and ".")
-3. Enter your authentication method, supercomputer password, and OTP in sequence to start the download. After the download is complete, you can access the files from your local machine.
+### Uploading Files Using WinSCP
+1. If you haven’t installed WinSCP, go to this [link](https://winscp.net/download/WinSCP-6.5.3-Setup.exe/download) and click **Direct Download** to download.
+![image](https://github.com/r14455009/note/blob/main/images/WinSCP-web.png))
 
-### Uploading Files Using FileZilla
-1. If you haven’t installed FileZilla yet, download it from this link, select FileZilla Client, and click download.
-[FileZilla download](https://filezilla-project.org)
-![](https://hackmd.io/_uploads/BJxzRs5u2.png)
+2. Follow the prompts: click Accept → Next → Next → Install. When the following screen appears, click Finish to complete the installation.
+![image](https://github.com/r14455009/note/blob/main/images/WinSCP-download-finish.png)
 
-2. Open FileZilla and click on the Site Manager in the top left corner.       
-![1](https://hackmd.io/_uploads/BygcgtEnR.png)      
-If successful, you’ll see the following screen:      
-![2](https://hackmd.io/_uploads/H19axYE2C.png)     
+3. Open WinSCP
 
+4. Fill in or change the options as shown in the following screen:
+![image](https://github.com/r14455009/note/blob/main/images/WinSCP-login.png)\
+ ```
+ File protocol: SFTP
+ Host name: t3-c4.nchc.org.tw
+ User name: your supercomputer account
+ Password: your supercomputer passward
+ ```
+5. After making the changes, click **Save** → **OK** → **Login** → **Accept**. In the pop-up window, enter in sequence: **1** → **supercomputer password** → **OTP**.
 
-3. Click New Site and fill in or change the options as shown in the following screen:
-![螢幕擷取畫面 2024-09-03 195455](https://hackmd.io/_uploads/rJaGZtVnR.png)
+6. Once connected successfully, the left panel shows your local files and paths, while the right panel shows your NCHC files and paths.
+![image](https://github.com/r14455009/note/blob/main/images/WinSCP-page.jpg)
 
-### Downloading Files with FileZilla
-1. Follow the steps in Uploading Files Using FileZilla steps 1-7 to connect.
+7. On the right side under remote site, navigate to the directory where you want to upload the files.
+![image](https://github.com/r14455009/note/blob/main/images/WinSCP-remote-site.jpg)
+![image](https://github.com/r14455009/note/blob/main/images/WinSCP-change-remode.png)
+
+8. In the left panel (local space), select the file you want to upload and drag it to the right panel (NCHC space) to upload it to NCHC.
+
+### Downloading Files with WinSCP
+1. Connect as described earlier in the [Uploading Files](###Uploading-Files-Using-WinSCP) section.
 
 2. On the left side, navigate to the directory where you want to download the files (to avoid losing track of where the files are saved).
 
-3. On the right side (NCHC directories), select the files you want to download, right-click and choose Download, then follow the prompts to enter your two-factor authentication, supercomputer password, and OTP in sequence. The files will be downloaded to the directory displayed on the left side of the screen.        
-![螢幕擷取畫面 2024-09-03 195820](https://hackmd.io/_uploads/HyeaZKV20.png)
+3. On the right side (NCHC directories), select the files you want to download, right-click and choose Download. The files will be downloaded to the directory displayed on the left side of the screen.        
+![image](https://github.com/r14455009/note/blob/main/images/WinSCP-upload.jpg)
+ (**Note: If you want to open the file, do not open it directly from the local site panel in WinSCP. Instead, go back to your computer’s desktop, navigate to the path where you saved the file, and open it from there. Opening it directly from the local site panel in WinSCP will upload the file to NCHC.**)\
 
-
-<span style="color: red;">Note: To open a file, do not click on it in FileZilla's local site; instead, go to your computer's desktop and open the file from the saved location. If you click on the file name directly in FileZilla's local site, the file will be uploaded back to NCHC.</span>
-
-
-```
-Protocol: SFTP-SSH file
-Host: t3-c4.nchc.org.tw
-Logon Type: interactive
-User: your supercomputer account
-```
-4. After making the changes, click Connect and follow the prompts to enter your two-factor authentication, supercomputer  password, and OTP in sequence. 
-(Note: Do not enter the supercomputer password at every prompt; follow the instructions and enter the correct information in the correct order.)
-
-5. After successfully connecting, the left side of the screen will show your local directories, and the right side will show your NCHC directories.
-![螢幕擷取畫面 2024-09-03 200609](https://hackmd.io/_uploads/SypN-KE2C.png)
-
-6. On the right side under "Remote Site," navigate to the directory where you want to upload the files.
-![image](https://hackmd.io/_uploads/ry0xfF4h0.png)
-
-
-7. On the left side (local directories), select the files you want to upload, right-click and choose Upload, then follow the prompts to enter your two-factor authentication, supercomputer password, and OTP in sequence. This will upload the files to NCHC.
-![螢幕擷取畫面 2024-09-03 195750](https://hackmd.io/_uploads/ry2q-F43A.png)
-
+---------------------------------------------
 ---------------------------------------------
 
 # 生物標記物與它們的產地實作課程(一)
 
 
 ## 本次課程主要內容
-> 
-> <font color=#0000FF>不要跳步驟、不要跳步驟、不要跳步驟</font>
-> <font color=#0000FF>請看好文字及注意事項、請看好文字及注意事項、請看好文字及注意事項</font>
-> 
->
+> ![CAUTION]
+> ‼️不要跳步驟、不要跳步驟、不要跳步驟
+> ‼️請看好文字及注意事項、請看好文字及注意事項、請看好文字及注意事項
+
 1. 國網註冊及登入
 2. Thinlinc下載並連結國網
 3. 上傳檔案至國網及至國網下載檔案
