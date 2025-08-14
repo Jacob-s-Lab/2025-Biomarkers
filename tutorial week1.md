@@ -7,9 +7,8 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 
 
 ## Main Content of This Course
-<div style="border:1px solid #f5c6cb; background-color:#f8d7da; color:#721c24; padding:10px; border-radius:5px;">
-Please Do Not skip steps, and pay close attention to the instructions
-</div>
+```dif
+- Please Do Not skip steps, and pay close attention to the instructions
 
 1. NCHC registration and login
 2. Thinlinc download and connect NCHC 
