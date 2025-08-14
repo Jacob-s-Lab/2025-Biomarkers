@@ -79,37 +79,39 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 1. In CMD (or Terminal), type`ssh supercomputeraccount@t3-c4.nchc.org.tw`to log into the NCHC biomedical node.
 
 > [!IMPORTANT]
-> **Commands Lecture**
+> #### Commands Lecture
 > - `ssh`: Log in to a remote server.
 > - Usage: `ssh user@hostname`
-> - `user` is your username on the remote server, and 'hostname'is the IP address or hostname of the remote server.
+> - `user` is your username on the remote server, and 'hostname'is the IP address or hostname of the remote server.\
+>   
 > ⚠️ The biomedical node is `t3-c4.nchc.org.tw`. When logging into the node for the first time, you will be prompted with the message: "Are you sure you want to continue connecting (yes/no/[fingerprint])?". Please type `yes` to proceed.
 
- - Terminal screen:
-   ![](https://hackmd.io/_uploads/BkvbPN7ha.png)
- - Windows  screen:
-   ![image](https://hackmd.io/_uploads/H1OqvuV3A.png)
+  - Terminal screen:
+    ![](https://hackmd.io/_uploads/BkvbPN7ha.png)
+  - Windows  screen:
+    ![image](https://hackmd.io/_uploads/H1OqvuV3A.png)
 
 2. Enter the two-factor authentication method (**this is not the supercomputer password**).If you chose two-factor authentication method 1 or 3, you will need to enter the OTP.
 
 3. Enter the supercomputer password (this is not the iService login password). **It is normal if the password does not appear on the screen while typing.**
 
 4. Enter OTP
-> ![CAUTION]
+> [!CAUTION]
 > !! Enter the supercomputer password first, then the OTP. Do not reverse the order.
 
 5. If the login is successful, you will see the following screen:
 ![](https://hackmd.io/_uploads/S1H454mha.png)
-
-
+ 
+ 
 ## Step 2: Download Thinlinc
 1. Download software: ThinLinc
 - Download and install the version corresponding to your computer from the [ThinLinc official website](https://www.cendio.com/thinlinc/download/).      
 ![image](https://hackmd.io/_uploads/rkY-1KEnC.png)
 2. Ensure that [NCHC OTP is enabled](###Logging-into-NCHC).
 
+ 
 ### Using Thinlinc to Log into NCHC, Access the Remote Host, and Open Terminal
-> ![CAUTION]
+> [!CAUTION]
 > If you still cannot log in after following the steps below, please check the following:
 > > (1) If you encounter "Permission denied (keyboard-interaction)", please ensure you have filled out the form provided by the instructor. If not, fill it out immediately and notify the TA.
 > > (2) Confirm that OTP authentication is enabled on the iService website.
@@ -117,9 +119,10 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 > > (4) Verify that the supercomputer password is entered correctly
 > >  (Note: This is different from the iService account password).
 > > (5) Pay attention to case sensitivity, language switching, and full-width/half-width character switching issues (Mac users should be extra cautious).
+> 
 > ⚠️ **If all the above issues are resolved and you still cannot log in, please notify the instructor or TA. Do not force a login attempt, as it may lock your account!**    
 
-- The Thinlinc login screen is as follows:      
+* The Thinlinc login screen is as follows:      
  ![](https://i.imgur.com/XvGJFXA.png)
  
 1. Enter the login node `t3-c4.nchc.org.tw` in the server field.
@@ -142,6 +145,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 ![image](https://hackmd.io/_uploads/HktElt42C.png)      
 ==Reminder: If the system logs you out after a period of inactivity, you will need to repeat the login process==
 
+  
 ### Entering the Remote Host file `/work`
 1. In the terminal, use the `cd` command to navigate to your directory under the `/work` path on the host:
  ```
@@ -149,7 +153,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
  ```
 2. Use the `pwd` command to verify if you are in the correct directory.
 
-> ![IMPORTANT]
+> [！IMPORTANT]
 > #### Commands Lecture
 > ``cd`` is a commonly used command in command-line tools. It stands for change directory and is used to switch the current working directory in a terminal or command-line interface.
 > Usage of `cd`:
@@ -164,27 +168,32 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 > - ⚠️ If you copy the command, make sure to check if anything needs to be modified!
 > - ⚠️ Replace {your_username} entirely with your supercomputer account. **Do not include the {} symbols! Also, do not delete the /**. The same applies to the following code as well.
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > #### Commands Lecture
-> ``pwd`` print working directory, is used to display the full path of the current working directory. It is especially useful when working in multi-level directories, allowing you to check your current location at any time.\
+> ``pwd`` print working directory, is used to display the full path of the current working directory. It is especially useful when working in multi-level directories, allowing you to check your current location at any time.
+ 
+ 
+## Step 3: File Transfer  
 
-
-## Step 3: File Transfer
+ 
 ### Uploading/Downloading Files
 - Mac users can use the terminal and the rsync command to [upload](##Uploading-Files-with-rsync) or [download](##Downloading-Files-Using-rsync) files.
 - Windows users can use WinSCP to [upload](###Uploading-Files-Using-WinSCP) or [download](###Downloading-Files-with-WinSCP-files).
+
 ## Uploading Files with rsync
 1. First, ensure that the three files you want to upload are placed together in a separate folder on your computer (Do not store them in your computer’s desktop or download folder, as the subsequent steps will upload all files in that folder).
 ![image](https://hackmd.io/_uploads/S1wxNLmpp.png)
+
 2. Open the **local terminal** on your computer (**Note: Open a new terminal, not the one where you are logged into the NCHC host!**).
 ![image](https://hackmd.io/_uploads/Bk3Q4L7pp.png)
+
 3. Use the `cd` command to navigate to the directory containing the files you want to upload (You can quickly input the folder path by dragging the folder into the terminal command line).
 ![image](https://hackmd.io/_uploads/HyrRNL7aa.png)
 (For reference on how to display the file or folder path in Finder on a Mac, see [macOS User Guide](https://support.apple.com/zh-tw/guide/mac-help/mchlp1774/mac)).
 
 4. Use the following command to upload the files from your local directory to `/home/spercomputer account/HW1` on the NCHC host (Replace your_username with your actual username): ``rsync -azrvh .supercomputeraccount@t3-c4.nchc.org.tw:/home/suppercomputeraccount/HW1``
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > #### Command Lecture
 > - `rsync`:The command itself, used for synchronizing files and directories.
 > -  `-azrvh`:
@@ -194,6 +203,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 >  4. -v: Verbose. This option increases the verbosity of the output, providing more information about what rsync is doing during the synchronization process. It shows details about the files being transferred and other related actions.
 >  5. -h: Human-readable. This option makes the output more readable by converting file sizes into a human-friendly format (e.g., KB, MB) rather than displaying raw byte sizes.
 >  6. ".": This represents the source directory. In this case, it means the current directory. rsync will synchronize the contents of the current directory to the specified destination (which is missing in this command).
+>     
 > ⚠️ If the directory name on NCHC is not "HW1", modify it accordingly.
 > (Note: The "."represents the current directory.)
 > ⚠️ **There must be a space between the file and "."**
@@ -259,7 +269,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 
 
 ## 本次課程主要內容
-> ![CAUTION]
+> [!CAUTION]
 > ‼️不要跳步驟、不要跳步驟、不要跳步驟
 > ‼️請看好文字及注意事項、請看好文字及注意事項、請看好文字及注意事項
 
