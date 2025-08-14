@@ -494,8 +494,8 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 -----------------------------
 
 ### 使用WinSCP上傳檔案
-1. 若沒安裝WinSCP的同學，請至[此網址](https://github.com/r14455009/note/blob/main/images/WinSCP-web.png)下載，點選 **Direct Download** 並點選download
-![](https://hackmd.io/_uploads/BJxzRs5u2.png)
+1. 若沒安裝WinSCP的同學，請至[此網址](https://winscp.net/download/WinSCP-6.5.3-Setup.exe/download)下載，點選 **Direct Download** 並點選download
+![](https://github.com/r14455009/note/blob/main/images/WinSCP-web.png)
 2. 依序點選 接受 -> 下一步 -> 下一步 -> 安裝，出現以下畫面後按完成即完成安裝     
 ![image](https://github.com/r14455009/note/blob/main/images/WinSCP-download-finish.png)      
 
