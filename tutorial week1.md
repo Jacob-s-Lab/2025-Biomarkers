@@ -502,13 +502,13 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 3. 開啟WinSCP
 
 4.依照以下畫面填入或更改選項
-![image](http://github.com/r14455009/note/blob/main/images/WinSCP-%E6%9B%B4%E6%94%B9%E9%81%B8%E9%A0%85.png)
-  ```
-  檔案協定:SFTP
-  主機名稱: t3-c4.nchc.org.tw
-  使用者名稱: 你的國網帳號名稱
-  密碼: 你的主機密碼
-  ```
+  ![image](https://github.com/r14455009/note/blob/main/images/WinSCP-%E6%9B%B4%E6%94%B9%E9%81%B8%E9%A0%85.png)  
+   ```
+   檔案協定:SFTP
+   主機名稱: t3-c4.nchc.org.tw
+   使用者名稱: 你的國網帳號名稱
+   密碼: 你的主機密碼
+   ```
 
 5. 更改完成後按下 **儲存** -> **確定** -> **登入** -> **接受**，並在跳出的視窗依序輸入 ：**1** -> **主機密碼** -> **OTP**
   
@@ -523,7 +523,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 
 
 ### 使用WinSCP下載檔案
-1. 請依照前面 [上傳檔案](###使用WinSCP上傳檔案) 的流程進行連線
+1. 請依照前面 [上傳檔案](###使用上傳檔案) 的流程進行連線
 2. 在左半部先移動到檔案要下載到的資料夾下
     (注意：避免到時候檔案下載到你不知道的地方去)
 3. 在右半部(國網主機空間)選取要下載的檔案，**按右鍵**選擇**下載**即可將檔案下載(檔案放的位置就在你左半部顯示的資料夾路徑下)      
