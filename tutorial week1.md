@@ -199,12 +199,12 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 > #### Command Lecture
 > - `rsync` :The command itself, used for synchronizing files and directories.
 > -  `-azrvh` :
->   1. -a : Archive mode. This is a combination of several options that preserve the structure and attributes of the files. It ensures that symbolic links, devices, attributes, permissions, ownerships, and timestamps are preserved. Essentially, it attempts to make an exact copy of the source.
->   2. -z : Compress file data during the transfer. This option compresses the data as it is being transferred to reduce the amount of data that needs to be sent over the network or between locations.
->   3. -r : Recursive. This option tells rsync to copy directories recursively. It is necessary when you want to synchronize directories and their contents.
->   4. -v : Verbose. This option increases the verbosity of the output, providing more information about what rsync is doing during the synchronization process. It shows details about the files being transferred and other related actions.
->   5. -h : Human-readable. This option makes the output more readable by converting file sizes into a human-friendly format (e.g., KB, MB) rather than displaying raw byte sizes.
->   6. "." : This represents the source directory. In this case, it means the current directory. rsync will synchronize the contents of the current directory to the specified destination (which is missing in this command).
+>  1. -a : Archive mode. This is a combination of several options that preserve the structure and attributes of the files. It ensures that symbolic links, devices, attributes, permissions, ownerships, and timestamps are preserved. Essentially, it attempts to make an exact copy of the source.
+>  2. -z : Compress file data during the transfer. This option compresses the data as it is being transferred to reduce the amount of data that needs to be sent over the network or between locations.
+>  3. -r : Recursive. This option tells rsync to copy directories recursively. It is necessary when you want to synchronize directories and their contents.
+>  4. -v : Verbose. This option increases the verbosity of the output, providing more information about what rsync is doing during the synchronization process. It shows details about the files being transferred and other related actions.
+>  5. -h : Human-readable. This option makes the output more readable by converting file sizes into a human-friendly format (e.g., KB, MB) rather than displaying raw byte sizes.
+>  6. "." : This represents the source directory. In this case, it means the current directory. rsync will synchronize the contents of the current directory to the specified destination (which is missing in this command).
 >     
 > ⚠️ If the directory name on NCHC is not "HW1", modify it accordingly.\
 >     (Note: The "."represents the current directory.)\
