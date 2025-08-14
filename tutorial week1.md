@@ -179,8 +179,8 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 
  
 ### Uploading/Downloading Files
-- Mac users can use the terminal and the rsync command to [upload](##Uploading-Files-with-rsync) or [download](##Downloading-Files-Using-rsync) files.
-- Windows users can use WinSCP to [upload](###Uploading-Files-Using-WinSCP) or [download](###Downloading-Files-with-WinSCP-files).
+- Mac users can use the terminal and the rsync command to [upload](#Uploading-Files-with-rsync) or [download](#Downloading-Files-Using-rsync) files.
+- Windows users can use WinSCP to [upload](#Uploading-Files-Using-WinSCP) or [download](#Downloading-Files-with-WinSCP-files).
 
 ## Uploading Files with rsync
 1. First, ensure that the three files you want to upload are placed together in a separate folder on your computer (Do not store them in your computer’s desktop or download folder, as the subsequent steps will upload all files in that folder).
@@ -436,7 +436,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 ### 上傳/下載檔案
 
 - 使用Mac的同學可使用終端機並搭配[rsync指令上傳](#使用rsync上傳檔案)/[下載](#使用rsync下載檔案)
-- 使用Windows的同學可使用[FileZilla上傳](#使用WinSCP上傳檔案)/[下載](#使用WinSCP下載檔案)
+- 使用Windows的同學可使用[WinSCP上傳](#使用WinSCP上傳檔案)/[下載](#使用WinSCP下載檔案)
 
 -----------------------------
 
@@ -523,7 +523,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 
 
 ### 使用WinSCP下載檔案
-1. 請依照前面 [上傳檔案](###使用WinSCP上傳檔案) 的流程進行連線
+1. 請依照前面 [上傳檔案](#使用WinSCP上傳檔案) 的流程進行連線
 2. 在左半部先移動到檔案要下載到的資料夾下
     (注意：避免到時候檔案下載到你不知道的地方去)
 3. 在右半部(國網主機空間)選取要下載的檔案，**按右鍵**選擇**下載**即可將檔案下載(檔案放的位置就在你左半部顯示的資料夾路徑下)      
