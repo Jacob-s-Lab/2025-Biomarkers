@@ -8,7 +8,7 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 
 ## Main Content of This Course
 
->[!CAUTION]Warning
+>[!CAUTION]
 - Please Do Not skip steps, and pay close attention to the instructions
 
 1. NCHC registration and login
