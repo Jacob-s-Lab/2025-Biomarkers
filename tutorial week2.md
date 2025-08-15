@@ -94,6 +94,7 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
 3. Press the <kbd>i</kbd> key to enter insert mode (you will see "–- INSERT –-" at the bottom) and paste the shell script you downloaded into `fastqc.sh`.
 
 ### Step 2: Modify the Analysis Script
+
 1. Change the following code:
 > The example below uses the SEA folder in the fastq directory (format should follow the provided example, excluding the file extension).
 
