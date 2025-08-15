@@ -201,7 +201,7 @@ Details available for [download](https://github.com/Jacob-s-Lab/2024-Biomarkers/
     ```
     #下載密碼:NGS112-2
     ```
-6. 請直接[上傳](https://github.com/Jacob-s-Lab/2024-Biomarkers/blob/main/tutorial%20week1.md)  檔案到fastqc\
+6. 請直接[上傳](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/tutorial%20week1.md)  檔案到fastqc\
     **❗此步驟需要學習的內容為將檔案從本地端上傳至國網❗**
     ```
     上傳檔案:rsync -azrvh . 主機帳號@t3-c4.nchc.org.tw:/work/主機帳號/result/fastqc
