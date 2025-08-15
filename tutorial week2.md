@@ -90,7 +90,7 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
 >     - If the `fastqc.sh` file already exists, `vim fastqc.sh` will open the file, allowing you to view and edit its contents.
 >     - If the `fastqc.sh` file does not exist, `vim fastqc.sh` will create a new empty file and enter Vim editor so you can start writing the script.
   
-⚠️  
+  
 3. Press the <kbd>i</kbd> key to enter insert mode (you will see "–- INSERT –-" at the bottom) and paste the shell script you downloaded into `fastqc.sh`.
 
 ### Step 2: Modify the Analysis Script
