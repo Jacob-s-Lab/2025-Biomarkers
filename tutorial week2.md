@@ -105,18 +105,18 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
 
     👉 Modify this block according to the instructions (see the explanation below): 
 
-    ```
-    #SBATCH -A ACD113120              # Account name/project number
-    #SBATCH -J fastqc                 # Job name
-    #SBATCH -p ngscourse              # Partition Name (equivalent to PBS's -q Queue name)
-    #SBATCH -c 2                      # Number of cores used (refer to Queue resource settings)
-    #SBATCH --mem=13g                 # Amount of memory used (refer to Queue resource settings)
-    #SBATCH -o out.log                # Path to the standard output file
-    #SBATCH -e err.log                # Path to the standard error output file
-    #SBATCH --mail-user=yourmail@gmail.com    # Email
-    #SBATCH --mail-type=END           # Specifies when to send email; can be NONE, BEGIN, END, FAIL, REQUEUE, ALL
-    # For NCHC usage
-    ```
+  ```
+  #SBATCH -A ACD113120              # Account name/project number
+  #SBATCH -J fastqc                 # Job name
+  #SBATCH -p ngscourse              # Partition Name (equivalent to PBS's -q Queue name)
+  #SBATCH -c 2                      # Number of cores used (refer to Queue resource settings)
+  #SBATCH --mem=13g                 # Amount of memory used (refer to Queue resource settings)
+  #SBATCH -o out.log                # Path to the standard output file
+  #SBATCH -e err.log                # Path to the standard error output file
+  #SBATCH --mail-user=yourmail@gmail.com    # Email
+  #SBATCH --mail-type=END           # Specifies when to send email; can be NONE, BEGIN, END, FAIL, REQUEUE, ALL
+  # For NCHC usage
+  ```
 
   (1) Press <kbd>esc</kbd> to exit insert mode.    
   (2) Type `:wq` and press <kbd>Enter</kbd> to save and exit    
