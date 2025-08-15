@@ -102,19 +102,20 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
 > #### What is SLURM?
 > SLURM (Simple Linux Utility for Resource Management) is an open-source resource manager and workload scheduler for large-scale computing clusters. It is primarily used in high-performance computing (HPC) environments to manage and schedule computing resources such as CPUs, memory, and compute nodes. SLURM is widely used in large supercomputing centers, research institutions, and enterprises.
 
-  👉 Modify this block according to the instructions (see the explanation below):\
-        ```
-        #SBATCH -A ACD113120              # Account name/project number
-        #SBATCH -J fastqc                 # Job name
-        #SBATCH -p ngscourse              # Partition Name (equivalent to PBS's -q Queue name)
-        #SBATCH -c 2                      # Number of cores used (refer to Queue resource settings)
-        #SBATCH --mem=13g                 # Amount of memory used (refer to Queue resource settings)
-        #SBATCH -o out.log                # Path to the standard output file
-        #SBATCH -e err.log                # Path to the standard error output file
-        #SBATCH --mail-user=yourmail@gmail.com    # Email
-        #SBATCH --mail-type=END           # Specifies when to send email; can be NONE, BEGIN, END, FAIL, REQUEUE, ALL
-        # For NCHC usage
-        ```
+    👉 Modify this block according to the instructions (see the explanation below): 
+
+    ```
+    #SBATCH -A ACD113120              # Account name/project number
+    #SBATCH -J fastqc                 # Job name
+    #SBATCH -p ngscourse              # Partition Name (equivalent to PBS's -q Queue name)
+    #SBATCH -c 2                      # Number of cores used (refer to Queue resource settings)
+    #SBATCH --mem=13g                 # Amount of memory used (refer to Queue resource settings)
+    #SBATCH -o out.log                # Path to the standard output file
+    #SBATCH -e err.log                # Path to the standard error output file
+    #SBATCH --mail-user=yourmail@gmail.com    # Email
+    #SBATCH --mail-type=END           # Specifies when to send email; can be NONE, BEGIN, END, FAIL, REQUEUE, ALL
+    # For NCHC usage
+    ```
 
   (1) Press <kbd>esc</kbd> to exit insert mode.    
   (2) Type `:wq` and press <kbd>Enter</kbd> to save and exit    
