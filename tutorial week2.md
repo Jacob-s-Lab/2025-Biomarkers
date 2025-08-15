@@ -32,7 +32,7 @@ Language：[EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-C
 > - Make directory, used to create a new directory (folder) at the specified location.
 > - Usage of mkdir: mkdir [options] # Create a new directory (folder)
 
-4. Use the rsync command to copy the required scripts (bash file) and samples to your path: 
+4. Use the rsync command to copy the required scripts (bash file) and samples to your path:\
     **❗In this step, you need to learn how to copy files from someone else's folder on the NCHC to your own folder on the NCHC.❗**
     ```
     rsync -avz /work/u2499286/fastqc.sh ./
@@ -41,7 +41,7 @@ Language：[EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-C
     ```
     password: NGS112-2
     ```
-6. [Upload](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/tutorial%20week1.md) them to your own **fastqc folder**.
+6. [Upload](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/tutorial%20week1.md) them to your own **fastqc folder**.\
     **❗In this step, you need to learn how to upload files from local to NCHC.❗**
     ```
     Upload files:rsync -azrvh . supercomputeracount@t3-c4.nchc.org.tw:/work/supercompputeraccount/result/fastqc
@@ -191,7 +191,7 @@ Details available for [download](https://github.com/Jacob-s-Lab/2024-Biomarkers/
 > - `mkdir` make directory，用來在指定位置創建一個新的目錄（資料夾）
 > - mkdir 的用法: ```mkdir [選項]   #建立一個新目錄(資料夾)```
 
-4. 在terminal利用`rsync`指令，將分析所需的指令(bash檔)，複製到自己的路徑下使用
+4. 在terminal利用`rsync`指令，將分析所需的指令(bash檔)，複製到自己的路徑下使用\
     **❗此步驟你需要學會如何從國網別人的資料夾中複製檔案到自己在國網的資料夾❗**
     ```
     rsync -avz /work/u2499286/fastqc.sh ./
@@ -201,7 +201,7 @@ Details available for [download](https://github.com/Jacob-s-Lab/2024-Biomarkers/
     ```
     #下載密碼:NGS112-2
     ```
-6. 請直接[上傳](https://github.com/Jacob-s-Lab/2024-Biomarkers/blob/main/tutorial%20week1.md)  檔案到fastqc
+6. 請直接[上傳](https://github.com/Jacob-s-Lab/2024-Biomarkers/blob/main/tutorial%20week1.md)  檔案到fastqc\
     **❗此步驟需要學習的內容為將檔案從本地端上傳至國網❗**
     ```
     上傳檔案:rsync -azrvh . 主機帳號@t3-c4.nchc.org.tw:/work/主機帳號/result/fastqc
