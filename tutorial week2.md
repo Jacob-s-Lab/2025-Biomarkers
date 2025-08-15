@@ -103,7 +103,7 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
 > SLURM (Simple Linux Utility for Resource Management) is an open-source resource manager and workload scheduler for large-scale computing clusters. It is primarily used in high-performance computing (HPC) environments to manage and schedule computing resources such as CPUs, memory, and compute nodes. SLURM is widely used in large supercomputing centers, research institutions, and enterprises.
 
 
-    👉 Modify this block according to the instructions (see the explanation below): 
+  👉 Modify this block according to the instructions (see the explanation below): 
 
   ```
   #SBATCH -A ACD113120              # Account name/project number
