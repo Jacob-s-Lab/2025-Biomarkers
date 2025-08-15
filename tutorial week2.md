@@ -96,14 +96,13 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
 ### Step 2: Modify the Analysis Script
 1. Change the following code:
 > The example below uses the SEA folder in the fastq directory (format should follow the provided example, excluding the file extension).    
-    (1) SLURM Scheduling Settings
+  (1) SLURM Scheduling Settings
 
-    > [!IMPORTANT]
-    > #### What is SLURM?
-    > SLURM (Simple Linux Utility for Resource Management) is an open-source resource manager and workload scheduler for large-scale computing clusters. It is primarily used in high-performance computing (HPC) environments to manage and schedule computing resources such as CPUs, memory, and compute nodes. SLURM is widely used in large supercomputing centers, research institutions, and enterprises.
+> [!IMPORTANT]
+> #### What is SLURM?
+> SLURM (Simple Linux Utility for Resource Management) is an open-source resource manager and workload scheduler for large-scale computing clusters. It is primarily used in high-performance computing (HPC) environments to manage and schedule computing resources such as CPUs, memory, and compute nodes. SLURM is widely used in large supercomputing centers, research institutions, and enterprises.
 
-    - Modify this block according to the instructions (see the explanation below):
-
+  👉 Modify this block according to the instructions (see the explanation below):
         ```
         #SBATCH -A ACD113120              # Account name/project number
         #SBATCH -J fastqc                 # Job name
@@ -117,22 +116,21 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
         # For NCHC usage
         ```
 
-
-    (1) Press <span style="color: #E5500F;">esc</span> to exit insert mode.    
-    (2) Type <span style="color: #E5500F;">`:wq`</span> and press Enter to save and exit    
+  (1) Press <kbd>esc</kbd> to exit insert mode.    
+  (2) Type <kbd>`:wq`</kbd> and press Enter to save and exit    
 **❗if you see "E45: 'readonly' option is set (add ! to override)", type :wq! to save.❗**
 
-ℹ️
-### Commands Basics 101
-1. `:wq`: Save and exit. This command in Vim editor saves the current file and exits insert mode. Press Esc to enter command mode, then type`:wq` and press Enter. This saves the current file's modifications and exits Vim. "w" stands for write (save), "q" stands for quit (exit).
-2. `:wq!`: Force save and exit. If the file is read-only or has other restrictions, you can use `:wq!` to force save and exit. "!" signifies force execution.
-3. If you only want to save but not exit, use `:w`. To exit without saving, use `:q` or `:q!` (force exit).
+> [!IMPORTANT]
+> #### Commands Lecture
+> - `:wq`: Save and exit. This command in Vim editor saves the current file and exits insert mode. Press Esc to enter command mode, then type`:wq` and press Enter. This saves the current file's modifications and exits Vim. "w" stands for write (save), "q" stands for quit (exit).
+> - `:wq!`: Force save and exit. If the file is read-only or has other restrictions, you can use `:wq!` to force save and exit. "!" signifies force execution.
+> - If you only want to save but not exit, use `:w`. To exit without saving, use `:q` or `:q!` (force exit).
 
-4. Execute the Script     
-(1) Submit the edited script as a SLURM job with the following command:
-```
-sbatch fastqc.sh
-```
+2. Execute the Script     
+  (1) Submit the edited script as a SLURM job with the following command:
+    ```
+    sbatch fastqc.sh
+    ```
 
 ℹ️
 ### Command Basics 101 
