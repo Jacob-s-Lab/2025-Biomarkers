@@ -64,63 +64,63 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
 
 ### Step 1: Create a Shell Script
 
-ℹ️
-### What is a Shell Script?
-***Shell script*** is a program written using the functionality of the shell. It is a plain text file containing shell syntax and commands (including external commands), combined with regular expressions, pipeline commands, and data redirection, to achieve the desired processing. Writing and using shell scripts can improve work efficiency and reduce repetitive command operations. They can run in Unix, Linux, or other Unix-like systems' shell environments. Common shell scripting languages include Bash (Bourne Again Shell), Sh (Bourne Shell), and Zsh (Z Shell).
-
-Reference: https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts.php#script
+> [!IMPORTANT]
+> #### What is a Shell Script?
+> ***Shell script*** is a program written using the functionality of the shell. It is a plain text file containing shell syntax and commands (including external commands), combined with regular expressions, pipeline commands, and data redirection, to achieve the desired processing. Writing and using shell scripts can improve work efficiency and reduce repetitive command operations. They can run in Unix, Linux, or other Unix-like systems' shell environments. Common shell scripting languages include Bash (Bourne Again Shell), Sh (Bourne Shell), and Zsh (Z Shell).
+>
+> Reference: https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts.php#script
 
 1. Enter the result directory with 
-```
-cd /work/username/result
-```
+   ```
+    cd /work/username/result
+    ```
 
 2. Create a shell script by typing 
-```
-vim fastqc.sh
-```
+    ```
+    vim fastqc.sh
+    ```
 
-ℹ️
-### `vim fastqc.sh`
-- In Unix and Linux systems, the command `vim fastqc.sh` is used to open or create a file named `fastqc.sh` using the Vim editor. This is a simple command to enter the Vim editor to edit the specified Shell Script file.
-Specific Meaning:
-- vim: This is the name of the command-line text editor Vim. Vim is a powerful text editor widely used for editing program code and scripts.
-- fastqc.sh: This is the file name to be edited. In this case, `fastqc.sh` is a Shell Script file, with the .sh extension typically indicating it is a Shell script file.
-- Behavior after executing this command:
-If the `fastqc.sh` file already exists, `vim fastqc.sh` will open the file, allowing you to view and edit its contents.
-If the `fastqc.sh` file does not exist, `vim fastqc.sh` will create a new empty file and enter Vim editor so you can start writing the script.
+> [!IMPORTANT]
+> #### `vim fastqc.sh`
+> - In Unix and Linux systems, the command `vim fastqc.sh` is used to open or create a file named `fastqc.sh` using the Vim editor. This is a simple command to enter the Vim editor to edit the specified Shell Script file.
+> - Specific Meaning:
+>     - vim: This is the name of the command-line text editor Vim. Vim is a powerful text editor widely used for editing program code and scripts.
+>     - fastqc.sh: This is the file name to be edited. In this case, `fastqc.sh` is a Shell Script file, with the .sh extension typically indicating it is a Shell script file.
+> - Behavior after executing this command:
+>     - If the `fastqc.sh` file already exists, `vim fastqc.sh` will open the file, allowing you to view and edit its contents.
+>     - If the `fastqc.sh` file does not exist, `vim fastqc.sh` will create a new empty file and enter Vim editor so you can start writing the script.
   
 ⚠️  
-3. Press the "i" key to enter insert mode (you will see "–- INSERT –-" at the bottom) and paste the shell script you downloaded into `fastqc.sh`.
+3. Press the <kbd>i</kdb> key to enter insert mode (you will see "–- INSERT –-" at the bottom) and paste the shell script you downloaded into `fastqc.sh`.
 
 ### Step 2: Modify the Analysis Script
 1. Change the following code:
-The example below uses the SEA folder in the fastq directory (format should follow the provided example, excluding the file extension).    
-(1) SLURM Scheduling Settings
+> The example below uses the SEA folder in the fastq directory (format should follow the provided example, excluding the file extension).    
+    (1) SLURM Scheduling Settings
 
-ℹ️
-### What is SLURM?
-SLURM (Simple Linux Utility for Resource Management) is an open-source resource manager and workload scheduler for large-scale computing clusters. It is primarily used in high-performance computing (HPC) environments to manage and schedule computing resources such as CPUs, memory, and compute nodes. SLURM is widely used in large supercomputing centers, research institutions, and enterprises.
+    > [!IMPORTANT]
+    > #### What is SLURM?
+    > SLURM (Simple Linux Utility for Resource Management) is an open-source resource manager and workload scheduler for large-scale computing clusters. It is primarily used in high-performance computing (HPC) environments to manage and schedule computing resources such as CPUs, memory, and compute nodes. SLURM is widely used in large supercomputing centers, research institutions, and enterprises.
 
-- Modify this block according to the instructions (see the explanation below):
+    - Modify this block according to the instructions (see the explanation below):
 
-```
-#SBATCH -A ACD113120              # Account name/project number
-#SBATCH -J fastqc                 # Job name
-#SBATCH -p ngscourse              # Partition Name (equivalent to PBS's -q Queue name)
-#SBATCH -c 2                      # Number of cores used (refer to Queue resource settings)
-#SBATCH --mem=13g                 # Amount of memory used (refer to Queue resource settings)
-#SBATCH -o out.log                # Path to the standard output file
-#SBATCH -e err.log                # Path to the standard error output file
-#SBATCH --mail-user=yourmail@gmail.com    # Email
-#SBATCH --mail-type=END           # Specifies when to send email; can be NONE, BEGIN, END, FAIL, REQUEUE, ALL
-# For NCHC usage
-```
+        ```
+        #SBATCH -A ACD113120              # Account name/project number
+        #SBATCH -J fastqc                 # Job name
+        #SBATCH -p ngscourse              # Partition Name (equivalent to PBS's -q Queue name)
+        #SBATCH -c 2                      # Number of cores used (refer to Queue resource settings)
+        #SBATCH --mem=13g                 # Amount of memory used (refer to Queue resource settings)
+        #SBATCH -o out.log                # Path to the standard output file
+        #SBATCH -e err.log                # Path to the standard error output file
+        #SBATCH --mail-user=yourmail@gmail.com    # Email
+        #SBATCH --mail-type=END           # Specifies when to send email; can be NONE, BEGIN, END, FAIL, REQUEUE, ALL
+        # For NCHC usage
+        ```
 
-⚠️  
-(1) Press <span style="color: #E5500F;">esc</span> to exit insert mode.    
-(2) Type <span style="color: #E5500F;">`:wq`</span> and press Enter to save and exit    
-<span style="color: red;">if you see "E45: 'readonly' option is set (add ! to override)", type :wq! to save.</span>
+
+    (1) Press <span style="color: #E5500F;">esc</span> to exit insert mode.    
+    (2) Type <span style="color: #E5500F;">`:wq`</span> and press Enter to save and exit    
+**❗if you see "E45: 'readonly' option is set (add ! to override)", type :wq! to save.❗**
 
 ℹ️
 ### Commands Basics 101
