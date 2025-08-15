@@ -98,7 +98,7 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
 1. Change the following code:
 > The example below uses the SEA folder in the fastq directory (format should follow the provided example, excluding the file extension).
 
-◻️(1) SLURM Scheduling Settings
+(1) SLURM Scheduling Settings
 
 > [!IMPORTANT]
 > #### What is SLURM?
@@ -120,8 +120,8 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
   # For NCHC usage
   ```
 
-◻️(2) Press <kbd>esc</kbd> to exit insert mode.    
-◻️(3) Type `:wq` and press <kbd>Enter</kbd> to save and exit    
+(2) Press <kbd>esc</kbd> to exit insert mode.    
+(3) Type `:wq` and press <kbd>Enter</kbd> to save and exit    
 **❗if you see "E45: 'readonly' option is set (add ! to override)", type :wq! to save.❗**
 
 > [!IMPORTANT]
