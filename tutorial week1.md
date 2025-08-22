@@ -360,7 +360,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 ![](https://hackmd.io/_uploads/S1H454mha.png)
 
 
-## step 2:下載 ThinkLinc
+## step 2:下載 ThinLinc
 ### 下載ThinLinc
 1. 下載需要用到的軟體：ThinLinc
 - 在[ThinLinc官網](https://www.cendio.com/thinlinc/download/)下載您的電腦相對應的版本並安裝即可
