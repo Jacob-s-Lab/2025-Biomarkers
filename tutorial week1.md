@@ -123,7 +123,7 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 > ⚠️ **If all the above issues are resolved and you still cannot log in, please notify the instructor or TA. Do not force a login attempt, as it may lock your account!**    
 
 * The ThinLinc login screen is as follows:      
- ![](https://i.imgur.com/XvGJFXA.png)
+ ![image](https://hackmd.io/_uploads/rJmiJgtuxl.png)
  
 1. Enter the login node `t3-c4.nchc.org.tw` in the server field.
 2. Enter your "NCHC supercomputer account" in the username field.
@@ -364,7 +364,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 ### 下載ThinLinc
 1. 下載需要用到的軟體：ThinLinc
 - 在[ThinLinc官網](https://www.cendio.com/thinlinc/download/)下載您的電腦相對應的版本並安裝即可
-![截圖 2024-06-24 上午10.06.36](https://hackmd.io/_uploads/HJq3EUI80.png)
+![image](https://hackmd.io/_uploads/rJPh0U_dlg.png)
 
 2. 確認[國網OTP是否已啟用](###登入國網)
 
