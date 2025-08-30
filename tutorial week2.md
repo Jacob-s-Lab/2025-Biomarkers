@@ -108,7 +108,7 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
   👉 Modify this block according to the instructions (see the explanation below): 
 
   ```
-  #SBATCH -A ACD113120              # Account name/project number
+  #SBATCH -A ACD114093              # Account name/project number
   #SBATCH -J fastqc                 # Job name
   #SBATCH -p ngscourse              # Partition Name (equivalent to PBS's -q Queue name)
   #SBATCH -c 2                      # Number of cores used (refer to Queue resource settings)
@@ -267,7 +267,7 @@ SLURM（Simple Linux Utility for Resource Management）是一個用於大規模�
 - 接下來依照指示修改這個區塊 (請見下面兩點說明)：
   
     ```
-    #SBATCH -A ACD113120              # Account name/project number
+    #SBATCH -A ACD114093              # Account name/project number
     #SBATCH -J fastqc        # Job name
     #SBATCH -p ngscourse              # Partition Name 等同PBS裡面的 -q Queue name
     #SBATCH -c 2                      # 使用的core數 請參考Queue資源設定
