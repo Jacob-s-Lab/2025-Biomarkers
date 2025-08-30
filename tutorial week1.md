@@ -106,7 +106,7 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 ## Step 2: Download ThinLinc
 1. Download software: ThinLinc
   - Download and install the version corresponding to your computer from the [ThinLinc official website](https://www.cendio.com/thinlinc/download/).      
-  ![image](https://hackmd.io/_uploads/rkY-1KEnC.png)
+  ![image](https://hackmd.io/_uploads/rJPh0U_dlg.png)
 2. Ensure that [NCHC OTP is enabled](###Logging-into-NCHC).
 
  
