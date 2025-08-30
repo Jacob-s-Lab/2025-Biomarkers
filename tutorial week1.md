@@ -63,7 +63,7 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 
 ### Project
 1. After accessing the iService webpage, click the following options at the top of the screen: Member Center -> Projects -> My Projects
-![image](https://github.com/r14455009/note/blob/main/images/my-projects.png)
+![image](https://hackmd.io/_uploads/Hyk4FkFOel.png)
 2. Please fill NCHC Account Registration form.
 [NCHC Account Registration form](https://forms.gle/7tT8pnGgwadRAbt28)
 3. After filling out the form, please wait for the TA to add your account to the "2025 Fantastic Genomic Biomarkers and Where to Find Them" project.
@@ -71,7 +71,7 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 ### Logging into NCHC
 
 - For Windows users, open CMD.     
-![image](https://github.com/r14455009/note/blob/main/images/cmd.png)     
+![image](https://hackmd.io/_uploads/HymEIIO_ll.png)     
 
 - For Mac users, open Terminal.     
 ![image](https://hackmd.io/_uploads/rkP16IH3A.png)     
@@ -229,15 +229,15 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 
 ### Uploading Files Using WinSCP
 1. If you haven’t installed WinSCP, go to this [link](https://winscp.net/download/WinSCP-6.5.3-Setup.exe/download) and click **Direct Download** to download.
-![image](https://github.com/r14455009/note/blob/main/images/WinSCP-web.png)
+![image](https://hackmd.io/_uploads/Hy19LhKOle.png)
 
 2. Follow the prompts: click Accept → Next → Next → Install. When the following screen appears, click Finish to complete the installation.
-![image](https://github.com/r14455009/note/blob/main/images/WinSCP-download-finish.png)
+![image](https://hackmd.io/_uploads/rk6QdnY_gx.png)
 
 3. Open WinSCP
 
 4. Fill in or change the options as shown in the following screen:
-![image](https://github.com/r14455009/note/blob/main/images/WinSCP-login.png)
+![image](https://hackmd.io/_uploads/SJze0T9_ee.png)
  ```
  File protocol: SFTP
  Host name: t3-c4.nchc.org.tw
@@ -247,11 +247,11 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 5. After making the changes, click **Save** → **OK** → **Login** → **Accept**. In the pop-up window, enter in sequence: **1** → **supercomputer password** → **OTP**.
 
 6. Once connected successfully, the left panel shows your local files and paths, while the right panel shows your NCHC files and paths.
-![image](https://github.com/r14455009/note/blob/main/images/WinSCP-page.jpg)
+![image](https://hackmd.io/_uploads/ByheMC5dgg.jpg)
 
 7. On the right side under remote site, navigate to the directory where you want to upload the files.
-![image](https://github.com/r14455009/note/blob/main/images/WinSCP-remote-site.jpg)
-![image](https://github.com/r14455009/note/blob/main/images/WinSCP-change-remode.png)
+![image](https://hackmd.io/_uploads/By9g8Cc_xx.jpg)
+![image](https://hackmd.io/_uploads/ByGRUC5_xe.png)
 
 8. In the left panel (local space), select the file you want to upload and drag it to the right panel (NCHC space) to upload it to NCHC.
 
@@ -261,7 +261,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 2. On the left side, navigate to the directory where you want to download the files (to avoid losing track of where the files are saved).
 
 3. On the right side (NCHC directories), select the files you want to download, right-click and choose Download. The files will be downloaded to the directory displayed on the left side of the screen.        
-![image](https://github.com/r14455009/note/blob/main/images/WinSCP-upload.jpg)
+![image](https://hackmd.io/_uploads/Bywn5Cqdgl.jpg)
  (**Note: If you want to open the file, do not open it directly from the local site panel in WinSCP. Instead, go back to your computer’s desktop, navigate to the path where you saved the file, and open it from there. Opening it directly from the local site panel in WinSCP will upload the file to NCHC.**)
 
 ---------------------------------------------
@@ -312,7 +312,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 2. 點選畫面右上角的"登入"     
 ![image](https://hackmd.io/_uploads/B1VWT7Q36.png)     
 3. 依序點選畫面上方的：會員中心->會員資訊->主機帳號資訊
-![image](https://github.com/r14455009/note/blob/main/images/%E6%9C%83%E5%93%A1%E8%B3%87%E8%A8%8A.png)
+![image](https://hackmd.io/_uploads/rkcKy8Ouge.png)
 
     A. 注意你的主機帳號旁邊是否有註記"啟用"，若沒有請注意[註冊iservice帳號](##註冊iservice帳號)是否有完成驗證步驟      
      ![image](https://hackmd.io/_uploads/SkgBlY4X2a.png)      
@@ -324,13 +324,13 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 
 ### 加入計畫
 1. 進入iservice網頁後，依序點選畫面上方的：會員中心->計畫管理->我的計畫
-![image](https://github.com/r14455009/note/blob/main/images/%E6%88%91%E7%9A%84%E8%A8%88%E5%8A%83.png)
+![image](https://hackmd.io/_uploads/rJDAbL_ueg.png)
 2. 請填寫表單[NCHC Account Registration form](https://docs.google.com/forms/d/1TD3N5mLGEWnA3fh-7tG-09ij02OjRwWVVlnijiDYgOo/edit)
 3. 完成表單後，**敬請等待**助教們將您的帳號加入本課程「2025生物標記物與它們的產地」的計畫中
 
 ### 登入國網
 * 使用Windows的同學開啟命令題字元(CMD)      
-![image](https://github.com/r14455009/note/blob/main/images/cmd.png)      
+![image](https://hackmd.io/_uploads/HymEIIO_ll.png)      
 
 * 使用Mac的同學開啟終端機 (terminal)      
 ![](https://hackmd.io/_uploads/H1K5YKDna.png)      
@@ -388,12 +388,12 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
    (**注意：這裡不是輸入主機密碼、不是iservice密碼！！！**)
 4. 請輸入「國網主機密碼」
    (**注意：是輸入主機密碼、不是iservice密碼！！！**)
-    ![](https://hackmd.io/_uploads/SyNwc58I0.png)
+    ![](https://hackmd.io/_uploads/r1zwCwdOxe.png)
 5. 手機app取得OTP請在此輸入剛剛取得的 OTP (**不是主機密碼！！！不是iservice密碼！！！**)
-    ![image](https://hackmd.io/_uploads/ByOlnc88A.png)
+    ![image](https://hackmd.io/_uploads/H1B9CPdOxl.png)
 6. 成功登入後，請點選 「Forward」、「OK」
-   ![image](https://hackmd.io/_uploads/Bygem38LR.png)
-   ![image](https://hackmd.io/_uploads/HksxQ3L8C.png)
+   ![image](https://hackmd.io/_uploads/H12_8P__gx.png)
+   ![image](https://hackmd.io/_uploads/BJzFIwOuxl.png)
 
 7. 登入之後，點選左上角 Activitives 後會看到左邊出現九個點 (Show Applications)，點進去之後，選擇 Xfce Terminal
    ![image](https://hackmd.io/_uploads/SyT2p5I80.png)
@@ -495,14 +495,14 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 
 ### 使用WinSCP上傳檔案
 1. 若沒安裝WinSCP的同學，請至[此網址](https://winscp.net/download/WinSCP-6.5.3-Setup.exe/download)下載，點選 **Direct Download** 並點選download
-![](https://github.com/r14455009/note/blob/main/images/WinSCP-web.png)
+![](https://hackmd.io/_uploads/Hy19LhKOle.png)
 2. 依序點選 接受 -> 下一步 -> 下一步 -> 安裝，出現以下畫面後按完成即完成安裝     
-![image](https://github.com/r14455009/note/blob/main/images/WinSCP-download-finish.png)      
+![image](https://hackmd.io/_uploads/rk6QdnY_gx.png)      
 
 3. 開啟WinSCP
 
 4.依照以下畫面填入或更改選項
-  ![image](https://github.com/r14455009/note/blob/main/images/WinSCP-%E6%9B%B4%E6%94%B9%E9%81%B8%E9%A0%85.png)  
+  ![image](https://hackmd.io/_uploads/HkYnkTY_gl.png)  
    ```
    檔案協定:SFTP
    主機名稱: t3-c4.nchc.org.tw
@@ -513,11 +513,11 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 5. 更改完成後按下 **儲存** -> **確定** -> **登入** -> **接受**，並在跳出的視窗依序輸入 ：**1** -> **主機密碼** -> **OTP**
   
 6. 連線成功後，如下圖所示，左半部是你的本機空間與路徑，右半部是你的國網空間與路徑
-![image](https://github.com/r14455009/note/blob/main/images/WinSCP%E8%B7%AF%E5%BE%91.png)
+![image](https://hackmd.io/_uploads/ry9rY29_ee.png)
 
 7. 請在右半部"遠端站台"處，改成檔案所在路徑(用意是要將檔案上傳到這個路徑下)      
-![1](https://github.com/r14455009/note/blob/main/images/WinSCP%E6%9B%B4%E6%94%B9%E8%B7%AF%E5%BE%91.png)
-![2](https://github.com/r14455009/note/blob/main/images/WinSCP%E6%9B%B4%E6%94%B9%E8%B7%AF%E5%BE%912.png)
+![1](https://hackmd.io/_uploads/Sk0j5h5_lx.png)
+![2](https://hackmd.io/_uploads/rkUCqnq_gx.png)
 
 8. 在左半部(本機空間)選取要上傳的檔案，拖移到右半部(國網空間)即可將檔案上傳至國網
 
@@ -527,7 +527,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 2. 在左半部先移動到檔案要下載到的資料夾下
     (注意：避免到時候檔案下載到你不知道的地方去)
 3. 在右半部(國網主機空間)選取要下載的檔案，**按右鍵**選擇**下載**即可將檔案下載(檔案放的位置就在你左半部顯示的資料夾路徑下)      
-![image](https://github.com/r14455009/note/blob/main/images/WinSCP%E4%B8%8B%E8%BC%89.png)\
+![image](https://hackmd.io/_uploads/HkGIhn5del.png)\
 (**注意，若想要開啟檔案，請不要直接在WinSCP的本地站台點開，請回到你的電腦桌面點選剛剛儲存的路徑再去打開檔案，若直接從WinSCP的本地站台點選檔名，將會把檔案上傳到國網**）
 
 -----------------------------
