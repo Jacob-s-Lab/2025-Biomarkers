@@ -216,7 +216,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 ### Downloading Files Using rsync
 1. Open the local terminal and `cd` to the **directory where you want to download the files** (You can input the folder path by dragging the folder into the terminal command line). 
 (Note: **Open a new terminal, not the one where you are logged into the NCHC host!**).
-![](https://hackmd.io/_uploads/HJ2t2Aq2a.png)
+![image](https://hackmd.io/_uploads/HJ2t2Aq2a.png)
 
 2. Use the following command to download files from NCHC to the current local directory:
    ``` 
@@ -495,7 +495,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 
 ### 使用WinSCP上傳檔案
 1. 若沒安裝WinSCP的同學，請至[此網址](https://winscp.net/download/WinSCP-6.5.3-Setup.exe/download)下載，點選 **Direct Download** 並點選download
-![](https://hackmd.io/_uploads/Hy19LhKOle.png)
+![image](https://hackmd.io/_uploads/Hy19LhKOle.png)
 2. 依序點選 接受 -> 下一步 -> 下一步 -> 安裝，出現以下畫面後按完成即完成安裝     
 ![image](https://hackmd.io/_uploads/rk6QdnY_gx.png)      
 
