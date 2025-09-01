@@ -98,7 +98,7 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
 1. Change the following code:
 > The example below uses the SEA folder in the fastq directory (format should follow the provided example, excluding the file extension).
 
-    (1) SLURM Scheduling Settings
+(1) SLURM Scheduling Settings
 
 > [!IMPORTANT]
 > #### What is SLURM?
@@ -120,8 +120,8 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
   # For NCHC usage
   ```
 
-    (2) Press <kbd>esc</kbd> to exit insert mode.    
-    (3) Type `:wq` and press <kbd>Enter</kbd> to save and exit    
+(2) Press <kbd>esc</kbd> to exit insert mode.    
+(3) Type `:wq` and press <kbd>Enter</kbd> to save and exit    
 **❗if you see "E45: 'readonly' option is set (add ! to override)", type :wq! to save.❗**
 
 > [!IMPORTANT]
@@ -131,25 +131,25 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
 > - If you only want to save but not exit, use `:w`. To exit without saving, use `:q` or `:q!` (force exit).
 
 2. Execute the Script     
-  (1) Submit the edited script as a SLURM job with the following command:
-    ```
-    sbatch fastqc.sh
-    ```
+(1) Submit the edited script as a SLURM job with the following command:
+```
+sbatch fastqc.sh
+```
 
 > [!IMPORTANT]
 > #### Commands Lecture 
 > `sbatch` is a command-line tool for submitting job scripts to the SLURM job scheduling system. These scripts typically include SLURM directives and commands to be executed.
 
-    (2) If submission is successful, you will see:
-    ```
-    Submitted batch job ＿＿＿
-    ```
+(2) If submission is successful, you will see:
+```
+Submitted batch job ＿＿＿
+```
 
-    (3) Use the following command to check the job status:
-    ```
-    sacct
-    ```
-    ![image](https://hackmd.io/_uploads/Bkevfu630.png)
+(3) Use the following command to check the job status:
+```
+sacct
+```
+![image](https://hackmd.io/_uploads/Bkevfu630.png)
 
 > [!IMPORTANT]
 > #### Commands Lecture
@@ -252,7 +252,7 @@ Details available for [download](https://github.com/Jacob-s-Lab/2024-Biomarkers/
 3. 請按鍵盤 <kbd>i</kbd> 進入編輯模式 (底下會出現"–- INSERT –-")，並把上一步驟下載的shell scipt 貼到`fastqc.sh`
 
 
-## step 2 修改分析執行檔
+## Step 2 修改分析執行檔
 
 1. 請更改以下程式碼：
 > 以下示範會以fastq資料夾中的SEA做為示範 (格式請依照裡面給你的範例，副檔名不用寫進去)
