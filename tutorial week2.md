@@ -323,7 +323,7 @@ sacct
 > ``sacct`` 此指令用於列出帳號的相關任務或任務集之狀態，例如運行中、已終止或是已完成，是最基本的檢視任務指令。它可以顯示例如ID、使用者、狀態、使用的資源等資訊，這個命令對於追蹤和分析作業的運行情況非常有用。
 
 3. 查看結果  
- `out.log`和`err.log`為執行這個script的標準輸出和標準錯誤，如果執行時有出現錯誤，可以查看`err.log`(檔案會在`/work/username/`底下)
+ `out.log`和`err.log`為執行這個script的標準輸出和標準錯誤，如果執行時有出現錯誤，可以查看`err.log`(檔案會在`/work/username/result/`底下)
 * 這份執行檔會產生html檔，下載後即可開啟查看FastQC Report
 * 下載詳情可見連結[下載](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/tutorial%20week1.md)
   
