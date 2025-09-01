@@ -159,7 +159,7 @@ This command is used to list the status of jobs or job arrays associated with an
 3. Entering `ls` allows you to view all the files in a directory, where you can see `out.log`, `err.log`, and HTML files.
 - out.log and err.log are the standard output and standard error for this script. If any errors occurred during execution, you can check err.log.
 - This script will generate an HTML file, which can be downloaded and opened to view the FastQC Report.
-Details available for [download](https://github.com/Jacob-s-Lab/2024-Biomarkers/blob/main/tutorial%20week1.md) at the link
+Details available for [download](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/tutorial%20week1.md) at the link
 
 ---------------
 ---------------
@@ -325,6 +325,6 @@ sacct
 3. 查看結果  
  `out.log`和`err.log`為執行這個script的標準輸出和標準錯誤，如果執行時有出現錯誤，可以查看`err.log`(檔案會在`/work/username/`底下)
 * 這份執行檔會產生html檔，下載後即可開啟查看FastQC Report
-* 下載詳情可見連結[下載](https://github.com/Jacob-s-Lab/2024-Biomarkers/blob/main/tutorial%20week1.md)
+* 下載詳情可見連結[下載](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/tutorial%20week1.md)
   
 
