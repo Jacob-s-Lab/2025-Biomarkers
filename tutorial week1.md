@@ -288,7 +288,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 4. rsync（macOS 工具）或 WinSCP（Windows 軟體）：在本地與伺服器之間傳輸與管理檔案
 
 
-## step 1:國網操作與設定
+## Step 1:國網操作與設定
 
 ### 前言
 > 這是一份國網註冊及登入的教學指南，請按照以下步驟逐一操作
@@ -360,7 +360,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 ![](https://hackmd.io/_uploads/S1H454mha.png)
 
 
-## step 2:下載 ThinLinc
+## Step 2:下載 ThinLinc
 ### 下載ThinLinc
 1. 下載需要用到的軟體：ThinLinc
 - 在[ThinLinc官網](https://www.cendio.com/thinlinc/download/)下載您的電腦相對應的版本並安裝即可
@@ -432,7 +432,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 > ``pwd``print working directory，用來顯示當前所在的工作目錄的完整路徑，特別是在多層目錄中工作時，可以隨時查看當前的位置
 
 
-## step 3:檔案資料傳輸
+## Step 3:檔案資料傳輸
 ### 上傳/下載檔案
 
 - 使用Mac的同學可使用終端機並搭配[rsync指令上傳](#使用rsync上傳檔案)/[下載](#使用rsync下載檔案)
