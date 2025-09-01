@@ -98,7 +98,7 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
 1. Change the following code:
 > The example below uses the SEA folder in the fastq directory (format should follow the provided example, excluding the file extension).
 
-(1) SLURM Scheduling Settings
+    (1) SLURM Scheduling Settings
 
 > [!IMPORTANT]
 > #### What is SLURM?
@@ -120,8 +120,8 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
   # For NCHC usage
   ```
 
-(2) Press <kbd>esc</kbd> to exit insert mode.    
-(3) Type `:wq` and press <kbd>Enter</kbd> to save and exit    
+    (2) Press <kbd>esc</kbd> to exit insert mode.    
+    (3) Type `:wq` and press <kbd>Enter</kbd> to save and exit    
 **❗if you see "E45: 'readonly' option is set (add ! to override)", type :wq! to save.❗**
 
 > [!IMPORTANT]
@@ -136,24 +136,24 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
     sbatch fastqc.sh
     ```
 
-ℹ️
-### Command Basics 101 
-`sbatch` is a command-line tool for submitting job scripts to the SLURM job scheduling system. These scripts typically include SLURM directives and commands to be executed.
+> [!IMPORTANT]
+> #### Commands Lecture 
+> `sbatch` is a command-line tool for submitting job scripts to the SLURM job scheduling system. These scripts typically include SLURM directives and commands to be executed.
 
-(2) If submission is successful, you will see:
-```
-Submitted batch job ＿＿＿
-```
+    (2) If submission is successful, you will see:
+    ```
+    Submitted batch job ＿＿＿
+    ```
 
-(3) Use the following command to check the job status:
-```
-sacct
-```
-![image](https://hackmd.io/_uploads/Bkevfu630.png)
+    (3) Use the following command to check the job status:
+    ```
+    sacct
+    ```
+    ![image](https://hackmd.io/_uploads/Bkevfu630.png)
 
-ℹ️
-### Command basics 101
-`sacct`
+> [!IMPORTANT]
+> #### Commands Lecture
+> `sacct`
 This command is used to list the status of jobs or job arrays associated with an account, such as running, terminated, or completed. It is the most basic command for viewing job statuses. It can display information such as ID, user, status, and resources used, which is useful for tracking and analyzing the status of jobs.
 
 3. Entering `ls` allows you to view all the files in a directory, where you can see `out.log`, `err.log`, and HTML files.
@@ -224,33 +224,32 @@ Details available for [download](https://github.com/Jacob-s-Lab/2024-Biomarkers/
 # Sample QC
 
 
-## step 1 建立shell script
+## Step 1 建立shell script
 
-ℹ️
-### 甚麼是shell script?
-shell  script(程式化草稿)
- - 簡單來說，是利用 shell 的功能所寫的一個『程式 (program)』，這個程式是使用純文字檔，將一些 shell 的語法與指令(含外部指令)寫在裡面， 搭配正規表示法、管線命令與資料流重導向等功能，以達到我們所想要的處理目的，通過編寫和使用 Shell 草稿，可以提高工作效率並減少重複操作命令
- - 可在 Unix、Linux 或其他類 Unix 系統的 shell 環境中運行。最常用的 shell 草稿語言包括 Bash（Bourne Again Shell）、Sh（Bourne Shell）和 Zsh（Z Shell）。
+> [!IMPORTANT]
+> #### 甚麼是shell script?
+> shell  script(程式化草稿)
+> - 簡單來說，是利用 shell 的功能所寫的一個『程式 (program)』，這個程式是使用純文字檔，將一些 shell 的語法與指令(含外部指令)寫在裡面， 搭配正規表示法、管線命令與資料流重導向等功能，以達到我們所想要的處理目的，通過編寫和使用 Shell 草稿，可以提高工作效率並減少重複操作命令
+> - 可在 Unix、Linux 或其他類 Unix 系統的 shell 環境中運行。最常用的 shell 草稿語言包括 Bash（Bourne Again Shell）、Sh（Bourne Shell）和 Zsh（Z Shell）。
 
-reference:
-https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts.php#script
+> reference:https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts.php#script
 
  
 1. 進入result資料夾，輸入`cd /work/username/result`
 2. 進入shell script，輸入`vim fastqc.sh`
 
-ℹ️
-### 命令小學堂
-- 在 Unix 和 Linux 系統中，命令 `vim fastqc.sh` 用於使用 Vim 編輯器打開或創建名為 `fastqc.sh` 的文件。這是一個簡單的命令，用於進入 Vim 編輯器以編輯指定的 Shell Script 文件。
-- 具體含義
-  * vim：這是命令行文本編輯器 Vim 的名稱。Vim 是一個強大的文本編輯器，廣泛用於編輯程序代碼和草稿。
-  * `fastqc.sh`：這是要編輯的文件名。在這種情況下，`fastqc.sh` 是一個 Shell Script 文件，擴展名 .sh 通常表示這是一個 Shell 脚本文件。
-- 執行該命令後的行為：
-  * 如果 `fastqc.sh` 文件已經存在，`vim fastqc.sh` 會打開這個文件，允許你查看和編輯其內容。
-  * 如果 `fastqc.sh` 文件不存在，`vim fastqc.sh` 會創建一個新的空文件，並進入 Vim 編輯器以便你可以開始編寫草稿。
+> [!IMPORTANT]
+> #### 命令小學堂
+> - 在 Unix 和 Linux 系統中，命令 `vim fastqc.sh` 用於使用 Vim 編輯器打開或創建名為 `fastqc.sh` 的文件。這是一個簡單的命令，用於進入 Vim 編輯器以編輯指定的 Shell Script 文件。
+> - 具體含義
+>  * vim：這是命令行文本編輯器 Vim 的名稱。Vim 是一個強大的文本編輯器，廣泛用於編輯程序代碼和草稿。
+>  * `fastqc.sh`：這是要編輯的文件名。在這種情況下，`fastqc.sh` 是一個 Shell Script 文件，擴展名 .sh 通常表示這是一個 Shell 脚本文件。
+> - 執行該命令後的行為：
+>  * 如果 `fastqc.sh` 文件已經存在，`vim fastqc.sh` 會打開這個文件，允許你查看和編輯其內容。
+>  * 如果 `fastqc.sh` 文件不存在，`vim fastqc.sh` 會創建一個新的空文件，並進入 Vim 編輯器以便你可以開始編寫草稿。
 
-⚠️  
-3. 請按鍵盤"i"進入編輯模式 (底下會出現"–- INSERT –-")，並把上一步驟下載的shell scipt 貼到`fastqc.sh`
+  
+3. 請按鍵盤 <kbd>i</kbd> 進入編輯模式 (底下會出現"–- INSERT –-")，並把上一步驟下載的shell scipt 貼到`fastqc.sh`
 
 
 ## step 2 修改分析執行檔
@@ -258,13 +257,13 @@ https://linux.vbird.org/linux_basic/centos7/0340bashshell-scripts.php#script
 1. 請更改以下程式碼：
 > 以下示範會以fastq資料夾中的SEA做為示範 (格式請依照裡面給你的範例，副檔名不用寫進去)
 
-(1) Slurm排程設定
+    (1) Slurm排程設定
 
-ℹ️
-### slurm是甚麼?
-SLURM（Simple Linux Utility for Resource Management）是一個用於大規模計算集群的開源資源管理器和工作負載管理器。它主要用於高性能計算（HPC）環境，幫助管理和調度計算資源，如 CPU、內存和計算節點。SLURM 在大型超算中心、研究機構和企業中廣泛使用。
+> [!IMPORTANT]
+> #### slurm是甚麼?
+> SLURM（Simple Linux Utility for Resource Management）是一個用於大規模計算集群的開源資源管理器和工作負載管理器。它主要用於高性能計算（HPC）環境，幫助管理和調度計算資源，如 CPU、內存和計算節點。SLURM 在大型超算中心、研究機構和企業中廣泛使用。
    
-- 接下來依照指示修改這個區塊 (請見下面兩點說明)：
+    👉 接下來依照指示修改這個區塊 (請見下面兩點說明)：
   
     ```
     #SBATCH -A ACD114093              # Account name/project number
@@ -278,47 +277,47 @@ SLURM（Simple Linux Utility for Resource Management）是一個用於大規模�
     #SBATCH --mail-type=END           # 指定送出email時機 可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
     # 國網使用
 
-⚠️  
-(2)按 <span style="color: #E5500F;">**esc**</span> 離開編輯模式
+  
+    (2)按 <kbd>esc</kbd> 離開編輯模式
 
-(3)輸入<span style="color: #E5500F;">**`:wq`**</span>並按下enter可儲存結果
-（若出現 "E45: 'readonly' option is set (add ! to override)" 的話，請輸入`:wq!`來儲存）
+    (3)輸入 **`:wq`** 並按下 <kbd>enter<kbd> 可儲存結果
+**❗若出現 "E45: 'readonly' option is set (add ! to override)" 的話，請輸入`:wq!`來儲存）❗**
 
-ℹ️
-### 命令小學堂
-- ```:wq```: 保存並退出    
-是在 Vim 編輯器中用來保存文件並退出編輯模式的命令，先按 ```Esc``` 進入命令模式，然後輸入 ```:wq``` 並按下 Enter。這將會保存當前文件的修改並退出 Vim。 ```w``` 代表 write（保存）， ```q``` 代表 quit（退出）
-- ```:wq!```: 強制保存並退出    
-如果文件是只讀的或者有其他限制，可以使用 ```:wq!``` 來強制保存並退出。 ```!``` 是強制執行的意思
-- 如果你只想保存文件但不退出，可以使用 ```:w```，如果只想退出但不保存，可以使用 ```:q``` 或 ```:q!``` (強制退出)。
+> [!IMPORTANT]
+> #### 命令小學堂
+> - ```:wq```: 保存並退出    
+> 是在 Vim 編輯器中用來保存文件並退出編輯模式的命令，先按 ```Esc``` 進入命令模式，然後輸入 ```:wq``` 並按下 Enter。這將會保存當前文件的修改並退出 Vim。 ```w``` 代表 write（保存）， ```q``` 代表 quit（退出）
+> - ```:wq!```: 強制保存並退出    
+> 如果文件是只讀的或者有其他限制，可以使用 ```:wq!``` 來強制保存並退出。 ```!``` 是強制執行的意思
+> - 如果你只想保存文件但不退出，可以使用 ```:w```，如果只想退出但不保存，可以使用 ```:q``` 或 ```:q!``` (強制退出)。
 
 2. 執行script
 
-(1)輸入以下指令，來以sbatch job的方式送出編輯完成的草稿
-```
-sbatch fastqc.sh
-```
+    (1)輸入以下指令，來以sbatch job的方式送出編輯完成的草稿
+    ```
+    sbatch fastqc.sh
+    ```
 
 
-ℹ️
-### 命令小學堂
-```sbatch``` 是 SLURM 的一個命令行工具，用於提交作業草稿到 SLURM 作業調度系統。這些草稿通常包含 SLURM 指令和要執行的命令。
+> [!IMPORTANT]
+> #### 命令小學堂
+> ```sbatch``` 是 SLURM 的一個命令行工具，用於提交作業草稿到 SLURM 作業調度系統。這些草稿通常包含 SLURM 指令和要執行的命令。
 
-(2)若送出成功將會出現以下文字(結果在result資料夾已經指定好路徑)
-```
-Submitted batch job ＿＿＿
-```
+    (2)若送出成功將會出現以下文字(結果在result資料夾已經指定好路徑)
+    ```
+    Submitted batch job ＿＿＿
+    ```
 
-(3)可使用以下指令查看工作執行情況
-```
-sacct
-```
-![image](https://hackmd.io/_uploads/Bkevfu630.png)
+    (3)可使用以下指令查看工作執行情況
+    ```
+    sacct
+    ```
+    ![image](https://hackmd.io/_uploads/Bkevfu630.png)
 
 
-ℹ️
-### 命令小學堂
-```sacct``` 此指令用於列出帳號的相關任務或任務集之狀態，例如運行中、已終止或是已完成，是最基本的檢視任務指令。它可以顯示例如ID、使用者、狀態、使用的資源等資訊，這個命令對於追蹤和分析作業的運行情況非常有用。
+> [!IMPORTANT]
+> #### 命令小學堂
+> ``sacct`` 此指令用於列出帳號的相關任務或任務集之狀態，例如運行中、已終止或是已完成，是最基本的檢視任務指令。它可以顯示例如ID、使用者、狀態、使用的資源等資訊，這個命令對於追蹤和分析作業的運行情況非常有用。
 
 3. 查看結果  
  `out.log`和`err.log`為執行這個script的標準輸出和標準錯誤，如果執行時有出現錯誤，可以查看`err.log`(檔案會在`/work/username/`底下)
