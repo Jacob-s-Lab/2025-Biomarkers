@@ -122,7 +122,7 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
 
 (2) Press <kbd>esc</kbd> to exit insert mode.    
 (3) Type `:wq` and press <kbd>Enter</kbd> to save and exit    
-**❗if you see "E45: 'readonly' option is set (add ! to override)", type :wq! to save.❗**
+**❗if you see "E45: 'readonly' option is set (add ! to override)", type `:wq!` to save.❗**
 
 > [!IMPORTANT]
 > #### Commands Lecture
