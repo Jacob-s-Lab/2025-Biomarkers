@@ -264,6 +264,7 @@ Details available for [download](https://github.com/Jacob-s-Lab/2024-Biomarkers/
 > #### slurm是甚麼?
 > SLURM（Simple Linux Utility for Resource Management）是一個用於大規模計算集群的開源資源管理器和工作負載管理器。它主要用於高性能計算（HPC）環境，幫助管理和調度計算資源，如 CPU、內存和計算節點。SLURM 在大型超算中心、研究機構和企業中廣泛使用。
 
+
     👉 接下來依照指示修改這個區塊 (請見下面兩點說明)：
 
     ```
@@ -282,7 +283,7 @@ Details available for [download](https://github.com/Jacob-s-Lab/2024-Biomarkers/
   
 (2)按 <kbd>esc</kbd> 離開編輯模式
 
-(3)輸入 `:wq` 並按下 <kbd>enter</kbd> 可儲存結果
+(3)輸入 `:wq` 並按下 <kbd>Enter</kbd> 可儲存結果
 **❗若出現 "E45: 'readonly' option is set (add ! to override)" 的話，請輸入`:wq!`來儲存）❗**
 
 > [!IMPORTANT]
