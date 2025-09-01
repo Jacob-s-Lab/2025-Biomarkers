@@ -278,9 +278,9 @@ Details available for [download](https://github.com/Jacob-s-Lab/2024-Biomarkers/
     # 國網使用
 
   
-    (2)按 <kbd>esc</kbd> 離開編輯模式
+(2)按 <kbd>esc</kbd> 離開編輯模式
 
-    (3)輸入 **`:wq`** 並按下 <kbd>enter<kbd> 可儲存結果
+(3)輸入 `:wq` 並按下 <kbd>enter<kbd> 可儲存結果
 **❗若出現 "E45: 'readonly' option is set (add ! to override)" 的話，請輸入`:wq!`來儲存）❗**
 
 > [!IMPORTANT]
@@ -293,26 +293,26 @@ Details available for [download](https://github.com/Jacob-s-Lab/2024-Biomarkers/
 
 2. 執行script
 
-    (1)輸入以下指令，來以sbatch job的方式送出編輯完成的草稿
-    ```
-    sbatch fastqc.sh
-    ```
+(1)輸入以下指令，來以sbatch job的方式送出編輯完成的草稿
+```
+sbatch fastqc.sh
+```
 
 
 > [!IMPORTANT]
 > #### 命令小學堂
 > ```sbatch``` 是 SLURM 的一個命令行工具，用於提交作業草稿到 SLURM 作業調度系統。這些草稿通常包含 SLURM 指令和要執行的命令。
 
-    (2)若送出成功將會出現以下文字(結果在result資料夾已經指定好路徑)
-    ```
-    Submitted batch job ＿＿＿
-    ```
+(2)若送出成功將會出現以下文字(結果在result資料夾已經指定好路徑)
+```
+Submitted batch job ＿＿＿
+```
 
-    (3)可使用以下指令查看工作執行情況
-    ```
-    sacct
-    ```
-    ![image](https://hackmd.io/_uploads/Bkevfu630.png)
+(3)可使用以下指令查看工作執行情況
+```
+sacct
+```
+![image](https://hackmd.io/_uploads/Bkevfu630.png)
 
 
 > [!IMPORTANT]
