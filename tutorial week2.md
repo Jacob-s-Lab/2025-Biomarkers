@@ -120,8 +120,25 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
   # For NCHC usage
   ```
 
-(2) Press <kbd>esc</kbd> to exit insert mode.    
-(3) Type `:wq` and press <kbd>Enter</kbd> to save and exit    
+(2) Modify file path
+  ```
+  # Please enter the R1 & R2 file name and your username
+  sampleR1=/work/username/result/fastqc/SRR13076392_S14_L002_R1_001.fastq.gz    # file path of the compressed reads
+  sampleR2=/work/username/result/fastqc/SRR13076392_S14_L002_R2_001.fastq.gz    # file path of the compressed reads
+  ```
+(3) create a directory named fastqc_S14 to store the FastQC results
+  ```
+  mkdir fastqc_S14
+  # cd fastqc_S14
+  ```
+**❗Make sure to add a `#` before `cd fastqc_S14`, otherwise the result won’t run correctly.❗**
+
+(4) Modify the command for running FastQC
+  ```
+  fastqc ${sampleR1} ${sampleR2} -o fastqc_S14
+  ```
+(5) Press <kbd>esc</kbd> to exit insert mode.    
+(6) Type `:wq` and press <kbd>Enter</kbd> to save and exit    
 **❗if you see "E45: 'readonly' option is set (add ! to override)", type `:wq!` to save.❗**
 
 > [!IMPORTANT]
@@ -258,14 +275,14 @@ Details available for [download](https://github.com/Jacob-s-Lab/2025-Biomarkers/
 1. 請更改以下程式碼：
 > 以下示範會以fastq資料夾中的SEA做為示範 (格式請依照裡面給你的範例，副檔名不用寫進去)
 
-    (1) Slurm排程設定
+(1) Slurm排程設定
 
 > [!IMPORTANT]
 > #### slurm是甚麼?
 > SLURM（Simple Linux Utility for Resource Management）是一個用於大規模計算集群的開源資源管理器和工作負載管理器。它主要用於高性能計算（HPC）環境，幫助管理和調度計算資源，如 CPU、內存和計算節點。SLURM 在大型超算中心、研究機構和企業中廣泛使用。
 
 
-  👉 接下來依照指示修改這個區塊 (請見下面兩點說明)：
+  👉 接下來依照指示修改這個區塊 (請見下面說明)：
 
   ```
   #SBATCH -A ACD114093              # Account name/project number
@@ -280,10 +297,26 @@ Details available for [download](https://github.com/Jacob-s-Lab/2025-Biomarkers/
   # 國網使用
   ```
 
-  
-(2)按 <kbd>esc</kbd> 離開編輯模式
+(2) 修改檔案路徑  
+  ```
+  # Please enter the R1 & R2 file name and your username
+  sampleR1=/work/username/result/fastqc/SRR13076392_S14_L002_R1_001.fastq.gz    # Reads所在的檔案路徑
+  sampleR2=/work/username/result/fastqc/SRR13076392_S14_L002_R2_001.fastq.gz    # Reads所在的檔案路徑
+  ```
 
-(3)輸入 `:wq` 並按下 <kbd>Enter</kbd> 可儲存結果  
+(3)建立資料夾(命名為`fastqc_S14`)來存放FastQC結果
+  ```
+  mkdir fastqc_S14
+  # cd fastqc_S14
+  ```
+**❗記得一定要在 `cd fastqc_S14` 前加 `#`，要不然會跑不出結果❗**
+    
+(4) 修改執行FastQC的命令
+  ```
+  fastqc ${sampleR1} ${sampleR2} -o fastqc_S14
+  ```
+(5)按 ==**Esc**== 離開編輯模式
+(6) 輸入 **`:wq`** 並按下 ==**Enter**== 可儲存結果  
 **❗若出現 "E45: 'readonly' option is set (add ! to override)" 的話，請輸入`:wq!`來儲存）❗**
 
 > [!IMPORTANT]
