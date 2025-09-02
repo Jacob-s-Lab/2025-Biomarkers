@@ -223,10 +223,10 @@ sh /opt/ohpc/Taiwania3/pkg/biology/IGV/IGV_v2.10.3/igv.sh
 ![HYRsUmf](https://hackmd.io/_uploads/HJa0cGxpA.png)
     
 (1) Select "More..." from the dropdown menu in the upper left corner.  
-![upload_5665be535b603da2fd1d955771c76554](https://hackmd.io/_uploads/BJmviGeTC.jpg)
+    ![upload_5665be535b603da2fd1d955771c76554](https://hackmd.io/_uploads/BJmviGeTC.jpg)
     
 (2)Search for hg38 and download Human hg38.
-![upload_137c491955544cb3bfb7e23c7490ade3](https://hackmd.io/_uploads/B1loizeaR.png)
+    ![upload_137c491955544cb3bfb7e23c7490ade3](https://hackmd.io/_uploads/B1loizeaR.png)
     
 (3)Use File → Load from file in the upper left corner to import SAM and BAM files (using BAM files as an example). The files are located at the following path:   
 - bam file:
