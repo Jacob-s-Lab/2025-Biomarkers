@@ -225,15 +225,15 @@ sh /opt/ohpc/Taiwania3/pkg/biology/IGV/IGV_v2.10.3/igv.sh
 (1) Select "More..." from the dropdown menu in the upper left corner.  
     ![upload_5665be535b603da2fd1d955771c76554](https://hackmd.io/_uploads/BJmviGeTC.jpg)
     
-(2)Search for hg38 and download Human hg38.
+(2) Search for hg38 and download Human hg38.
     ![upload_137c491955544cb3bfb7e23c7490ade3](https://hackmd.io/_uploads/B1loizeaR.png)
     
-(3)Use File → Load from file in the upper left corner to import SAM and BAM files (using BAM files as an example). The files are located at the following path:   
+(3) Use File → Load from file in the upper left corner to import SAM and BAM files (using BAM files as an example). The files are located at the following path:   
 - bam file:
     `/work/username/alignment/SRR13076392.sorted.bam/`
     ![image](https://hackmd.io/_uploads/SkeIz-Vcle.png)
     
-(4)In the upper left corner, you can select the chromosome and range to view (blue box), while in the upper right corner (red box), you can select the view size (you may need to zoom in to a sufficient scale to see the results). 
+(4) In the upper left corner, you can select the chromosome and range to view (blue box), while in the upper right corner (red box), you can select the view size (you may need to zoom in to a sufficient scale to see the results). 
      ![](https://hackmd.io/_uploads/rkfvbOYPh.jpg)
     
 >For example, using chr16:
