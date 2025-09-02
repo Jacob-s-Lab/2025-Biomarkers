@@ -315,8 +315,8 @@ Details available for [download](https://github.com/Jacob-s-Lab/2025-Biomarkers/
   ```
   fastqc ${sampleR1} ${sampleR2} -o fastqc_S14
   ```
-(5)按 ==**Esc**== 離開編輯模式
-(6) 輸入 **`:wq`** 並按下 ==**Enter**== 可儲存結果  
+(5)按 <kbd>Esc</kbd> 離開編輯模式  
+(6) 輸入 **`:wq`** 並按下 <kbd>Enter</kbd> 可儲存結果  
 **❗若出現 "E45: 'readonly' option is set (add ! to override)" 的話，請輸入`:wq!`來儲存）❗**
 
 > [!IMPORTANT]
