@@ -255,6 +255,8 @@ https://igv.org/doc/desktop/#
 -----------
 -----------
 
+# 生物標記物與它們的產地實作課程(三)
+
 ## 本次課程主要內容
  1. 利用BWA做alignment
  3. 用thinlinc打開IGV查看alignment的結果
