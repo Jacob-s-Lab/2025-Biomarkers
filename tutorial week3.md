@@ -73,7 +73,7 @@ The following example will use the files in the `bwa.sh` folder as a demonstrati
 
 1. Press <kbd>i</kbd> to edit the following lines: Update the script following the format provided. 
 
-![image]([https://hackmd.io/_uploads/SkUyYwf6R.png](https://hackmd.io/_uploads/B1aeOifclx.png))
+![image](https://hackmd.io/_uploads/B1aeOifclx.png)
 
 ```
 (1) #SBATCH -A ACD114093           #Account name/project number
