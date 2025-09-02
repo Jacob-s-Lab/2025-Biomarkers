@@ -35,7 +35,7 @@ Language：[EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-C
 4. Use the rsync command to copy the required scripts (bash file) and samples to your path:\
     **❗In this step, you need to learn how to copy files from someone else's folder on the NCHC to your own folder on the NCHC.❗**
     ```
-    rsync -avz /work/u2499286/fastqc.sh ./
+    rsync -avz /work/evelyn92/fastqc.sh ./
     ```
 5. Additionally, [download](https://paylong2.tw/nextcloud/index.php/s/NP76ri2MNpoasmq) the data required for analysis (6 reads in total, which include three samples, but you **need to download six files!!**).
     ```
@@ -129,9 +129,7 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
 (3) create a directory named fastqc_S14 to store the FastQC results
   ```
   mkdir fastqc_S14
-  # cd fastqc_S14
   ```
-**❗Make sure to add a `#` before `cd fastqc_S14`, otherwise the result won’t run correctly.❗**
 
 (4) Modify the command for running FastQC
   ```
@@ -214,7 +212,7 @@ Details available for [download](https://github.com/Jacob-s-Lab/2025-Biomarkers/
 4. 在terminal利用`rsync`指令，將分析所需的指令(bash檔)，複製到自己的路徑下使用\
     **❗此步驟你需要學會如何從國網別人的資料夾中複製檔案到自己在國網的資料夾❗**
     ```
-    rsync -avz /work/u2499286/fastqc.sh ./
+    rsync -avz /work/evelyn92/fastqc.sh ./
     ```
 
 5. 另外[下載](https://paylong2.tw/nextcloud/index.php/s/NP76ri2MNpoasmq)分析所需資料(6條reads，共包含三個sample，但你**需下載六個檔案!!**)
@@ -307,16 +305,14 @@ Details available for [download](https://github.com/Jacob-s-Lab/2025-Biomarkers/
 (3)建立資料夾(命名為`fastqc_S14`)來存放FastQC結果
   ```
   mkdir fastqc_S14
-  # cd fastqc_S14
   ```
-**❗記得一定要在 `cd fastqc_S14` 前加 `#`，要不然會跑不出結果❗**
     
 (4) 修改執行FastQC的命令
   ```
   fastqc ${sampleR1} ${sampleR2} -o fastqc_S14
   ```
 (5)按 <kbd>Esc</kbd> 離開編輯模式  
-(6) 輸入 **`:wq`** 並按下 <kbd>Enter</kbd> 可儲存結果  
+(6) 輸入 `:wq` 並按下 <kbd>Enter</kbd> 可儲存結果  
 **❗若出現 "E45: 'readonly' option is set (add ! to override)" 的話，請輸入`:wq!`來儲存）❗**
 
 > [!IMPORTANT]
