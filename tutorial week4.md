@@ -1,21 +1,22 @@
 # 20240925 Fantastic Genomic Biomarkers and Where to Find Them Practical Course (part IV)
 -----------
-:warning: **Warning**
-### TA Reminder
-#### 1. Introduction to NCHC Folder Hierarchy
-![image](https://hackmd.io/_uploads/HJ01rw3TC.png)
-
-![image](https://hackmd.io/_uploads/rJzqBw26R.png)
-
-
-*** **Please execute the course content under work/$user** ***
-
-#### 2. How to Use `mv`
-`mv` is a command-line tool used for moving or renaming files and directories, widely used in Linux and macOS systems. The mv command helps you move files or directories from one location to another, or rename files or directories.
-- Move a file:`mv <source_file> <destination_directory>/`
-- Rename a file:`mv <old_filename> <new_filename>`
-- Move and rename a file:`mv <source_file> /<new_directory>/<new_filename>`
-- Move the directory:`mv <source_directory>/ <destination_directory>/`
+> [!WARNING]
+> :warning: **Warning**
+> ### TA Reminder
+> #### 1. Introduction to NCHC Folder Hierarchy
+> ![image](https://hackmd.io/_uploads/HJ01rw3TC.png)
+> 
+> ![image](https://hackmd.io/_uploads/rJzqBw26R.png)
+> 
+> 
+> *** **Please execute the course content under work/$user** ***
+> 
+> #### 2. How to Use `mv`
+> `mv` is a command-line tool used for moving or renaming files and directories, widely used in Linux and macOS systems. The mv command helps you move files or directories from one location to another, or rename files or directories.
+> - Move a file:`mv <source_file> <destination_directory>/`
+> - Rename a file:`mv <old_filename> <new_filename>`
+> - Move and rename a file:`mv <source_file> /<new_directory>/<new_filename>`
+> - Move the directory:`mv <source_directory>/ <destination_directory>/`
 
 
 
