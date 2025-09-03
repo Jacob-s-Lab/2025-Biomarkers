@@ -67,7 +67,6 @@ Language: [EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Co
 2. Please fill NCHC Account Registration form.
 [NCHC Account Registration form](https://forms.gle/7tT8pnGgwadRAbt28)
 3. After filling out the form, please wait for the TA to add your account to the "2025 Fantastic Genomic Biomarkers and Where to Find Them" project.
-4. Please follow the [link](https://man.twcc.ai/@nchcbio/SJg8LWQEC) to see how to apply for joining a project in order to access the biomedical node`t3-c4.nchc.org.tw`.
 
 ### Logging into NCHC
 
@@ -328,7 +327,6 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 ![image](https://hackmd.io/_uploads/rJDAbL_ueg.png)
 2. 請填寫表單[NCHC Account Registration form](https://docs.google.com/forms/d/1TD3N5mLGEWnA3fh-7tG-09ij02OjRwWVVlnijiDYgOo/edit)
 3. 完成表單後，**敬請等待**助教們將您的帳號加入本課程「2025生物標記物與它們的產地」的計畫中
-4. 請在[連結](https://man.twcc.ai/@nchcbio/SJg8LWQEC)中查看如何申請加入計畫來使用生一節點t3-c4.nchc.org.tw
 
 ### 登入國網
 * 使用Windows的同學開啟命令題字元(CMD)      
