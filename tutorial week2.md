@@ -38,9 +38,9 @@ Language：[EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-C
     rsync -avz /work/evelyn92/fastqc.sh ./
     ```
 5. Additionally, [download](https://paylong2.tw/nextcloud/index.php/s/NP76ri2MNpoasmq) the data required for analysis.
-  ```
-  password: NGS112-2
-  ```
+    ```
+    password: NGS112-2
+    ```
 > **need to download six files!!** (6 reads in total, which include three samples)
 > SRR13076392_S14_L002_R1_001.fastq.gz
 > SRR13076392_S14_L002_R2_001.fastq.gz
