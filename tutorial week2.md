@@ -41,7 +41,7 @@ Language：[EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-C
     ```
     password: NGS112-2
     ```
-> **need to download six files!!** (6 reads in total, which include three samples)
+> ❗**need to download six files!!** (6 reads in total, which include three samples)
 > SRR13076392_S14_L002_R1_001.fastq.gz
 > SRR13076392_S14_L002_R2_001.fastq.gz
 > SRR13076393_S15_L002_R1_001.fastq.gz
@@ -224,7 +224,10 @@ Details available for [download](https://github.com/Jacob-s-Lab/2025-Biomarkers/
     ```
 
 5. 另外[下載](https://paylong2.tw/nextcloud/index.php/s/NP76ri2MNpoasmq)分析所需資料
-   > **請下載以下六個檔案!!** (6條reads，共包含三個sample)
+    ```
+    #下載密碼:NGS112-2
+    ```
+   >❗ **請下載以下六個檔案!!** (6條reads，共包含三個sample)
    > SRR13076392_S14_L002_R1_001.fastq.gz
    > SRR13076392_S14_L002_R2_001.fastq.gz
    > SRR13076393_S15_L002_R1_001.fastq.gz
@@ -232,9 +235,6 @@ Details available for [download](https://github.com/Jacob-s-Lab/2025-Biomarkers/
    > SRR13076396_S16_L002_R1_001.fastq.gz
    > SRR13076396_S16_L002_R2_001.fastq.gz
    
-    ```
-    #下載密碼:NGS112-2
-    ```
 6. 請直接[上傳](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/tutorial%20week1.md)  檔案到fastqc\
     **❗此步驟需要學習的內容為將檔案從本地端上傳至國網❗**
     ```
