@@ -46,9 +46,9 @@ Language：[EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-C
 > SRR13076396_S16_L002_R1_001.fastq.gz
 > SRR13076396_S16_L002_R2_001.fastq.gz
 
-    ```
-    password: NGS112-2
-    ```
+ ```
+ password: NGS112-2
+ ```
 6. [Upload](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/tutorial%20week1.md) them to your own **fastqc folder**.\
     **❗In this step, you need to learn how to upload files from local to NCHC.❗**
     ```
