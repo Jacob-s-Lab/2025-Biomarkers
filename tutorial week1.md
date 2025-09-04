@@ -454,9 +454,9 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 ![image](https://hackmd.io/_uploads/Hk3bBUmaT.png)
 
 
-5. 使用以下指令將本機資料夾中的檔案上傳到 `/home/主機帳號/要取的資料夾名稱` 下 (請自行將主機帳號替換成自己的)
+5. 使用以下指令將本機資料夾中的檔案上傳到 `/home/主機帳號/HW1` 下 (請自行將主機帳號替換成自己的)
     ```
-    rsync -azrvh . 主機帳號@t3-c4.nchc.org.tw:/home/主機帳號/要取的資料夾名稱
+    rsync -azrvh . 主機帳號@t3-c4.nchc.org.tw:/home/主機帳號/HW1
     ```
 
 > [!IMPORTANT]
