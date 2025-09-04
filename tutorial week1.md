@@ -184,16 +184,16 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 
 ## Uploading Files with rsync
 1. First, ensure that the three files you want to upload are placed together in a separate folder on your computer (Do not store them in your computer’s desktop or download folder, as the subsequent steps will upload all files in that folder).
-![image](https://hackmd.io/_uploads/S1wxNLmpp.png)
+(You can just pick any small file to use for practice)
 
-2. Open the **local terminal** on your computer (**Note: Open a new terminal, not the one where you are logged into the NCHC host!**).
+3. Open the **local terminal** on your computer (**Note: Open a new terminal, not the one where you are logged into the NCHC host!**).
 ![image](https://hackmd.io/_uploads/Bk3Q4L7pp.png)
 
-3. Use the `cd` command to navigate to the directory containing the files you want to upload (You can quickly input the folder path by dragging the folder into the terminal command line).
+4. Use the `cd` command to navigate to the directory containing the files you want to upload (You can quickly input the folder path by dragging the folder into the terminal command line).
 ![image](https://hackmd.io/_uploads/HyrRNL7aa.png)
 (For reference on how to display the file or folder path in Finder on a Mac, see [macOS User Guide](https://support.apple.com/zh-tw/guide/mac-help/mchlp1774/mac)).
 
-4. Use the following command to upload the files from your local directory to `/home/spercomputer account/HW1` on the NCHC host (Replace your_username with your actual username): ``rsync -azrvh .supercomputeraccount@t3-c4.nchc.org.tw:/home/suppercomputeraccount/HW1``
+5. Use the following command to upload the files from your local directory to `/home/spercomputer account/HW1` on the NCHC host (Replace your_username with your actual username): ``rsync -azrvh .supercomputeraccount@t3-c4.nchc.org.tw:/home/suppercomputeraccount/HW1``
 
 > [!IMPORTANT]
 > #### Command Lecture
@@ -441,8 +441,8 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 -----------------------------
 
 ### 使用rsync上傳檔案
-1. 首先，先確認你自己的電腦，你要上傳的檔案(以上課講義的檔案作為練習)是否統一放在一個獨立的資料夾(千萬不要放到本機電腦的desktop or download，不然依照後面的步驟會把所有在資料夾的檔案全部上傳喔)
-   (資料夾的名字可以隨便取，只是練習用)
+1. 首先，先確認你自己的電腦，你要上傳的檔案是否統一放在一個獨立的資料夾(千萬不要放到本機電腦的desktop or download，不然依照後面的步驟會把所有在資料夾的檔案全部上傳喔)
+   (可以隨便選一個檔案大小小的檔案作為練習用)
    
 2. 開啟**本機端的**終端機
 (<**注意，要另外開一個終端機，不是你現在有登入國網主機的終端機！**)
