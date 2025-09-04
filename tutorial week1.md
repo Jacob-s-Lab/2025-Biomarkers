@@ -441,8 +441,9 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 -----------------------------
 
 ### 使用rsync上傳檔案
-1. 首先，先確認你自己的電腦，你要上傳的3個檔案是否統一放在一個獨立的資料夾(千萬不要放到本機電腦的desktop or download，不然依照後面的步驟會把所有在資料夾的檔案全部上傳喔)
-![image](https://hackmd.io/_uploads/S1wxNLmpp.png)
+1. 首先，先確認你自己的電腦，你要上傳的檔案(以上課講義的檔案作為練習)是否統一放在一個獨立的資料夾(千萬不要放到本機電腦的desktop or download，不然依照後面的步驟會把所有在資料夾的檔案全部上傳喔)
+   (資料夾的名字可以隨便取，只是練習用)
+   
 2. 開啟**本機端的**終端機
 (<**注意，要另外開一個終端機，不是你現在有登入國網主機的終端機！**)
 ![image](https://hackmd.io/_uploads/Bk3Q4L7pp.png)
@@ -453,9 +454,9 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 ![image](https://hackmd.io/_uploads/Hk3bBUmaT.png)
 
 
-4. 使用以下指令將本機資料夾中的檔案上傳到 `/home/主機帳號/HW1` 下 (請自行將主機帳號替換成自己的)
+5. 使用以下指令將本機資料夾中的檔案上傳到 `/home/主機帳號/要取的資料夾名稱` 下 (請自行將主機帳號替換成自己的)
     ```
-    rsync -azrvh . 主機帳號@t3-c4.nchc.org.tw:/home/主機帳號/HW1
+    rsync -azrvh . 主機帳號@t3-c4.nchc.org.tw:/home/主機帳號/要取的資料夾名稱
     ```
 
 > [!IMPORTANT]
@@ -520,6 +521,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 ![2](https://hackmd.io/_uploads/rkUCqnq_gx.png)
 
 8. 在左半部(本機空間)選取要上傳的檔案，拖移到右半部(國網空間)即可將檔案上傳至國網
+   (可以使用上課講義的檔案作為練習)
 
 
 ### 使用WinSCP下載檔案
