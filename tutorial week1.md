@@ -520,7 +520,7 @@ Enter the OTP just obtained (**This is not the supercomputer password or the iSe
 ![1](https://hackmd.io/_uploads/Sk0j5h5_lx.png)
 ![2](https://hackmd.io/_uploads/rkUCqnq_gx.png)
 
-8. 在左半部(本機空間)選取要上傳的檔案，拖移到右半部(國網空間)即可將檔案上傳至國網
+8. 在左半部(本機空間)選取要上傳的檔案，拖移到右半部(國網空間)即可將檔案上傳至國網\
    (可以使用上課講義的檔案作為練習)
 
 
