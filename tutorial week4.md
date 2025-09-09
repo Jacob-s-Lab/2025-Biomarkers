@@ -1,5 +1,8 @@
-# 20240925 Fantastic Genomic Biomarkers and Where to Find Them Practical Course (part IV)
------------
+Date：20250924  
+Language：[EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Course-part-IV) / [中文](#生物標記物與它們的產地實作課程四)
+
+# Fantastic Genomic Biomarkers and Where to Find Them Practical Course (part IV)
+
 > [!WARNING]
 > ### TA Reminder
 > #### 1. Introduction to NCHC Folder Hierarchy
@@ -22,37 +25,36 @@
 
 ## Main Content of the Course
 1. Use BWA for alignment
-2. <span style="color: red;">Use Picard to mark duplicates</span>
+2.**Use Picard to mark duplicates**
 3. Use ThinLinc to open IGV and view the alignment/MarkDuplicates results
-Therefore, you must download ThinLinc beforehand. For more details, refer to this link.(https://hackmd.io/speUUZSNRZe0n_EAIl2lig)
+Therefore, you must download ThinLinc beforehand. For more details, refer to this [link](https://hackmd.io/speUUZSNRZe0n_EAIl2lig).
 4. If time permits, compare the results from this week with last week's.
 ### Reminder: This session will mainly review the previous content, with the additional step of marking duplicates.
 
 ## Alignment/MarkDuplicates
 
-ℹ️
-
-#### What is Picard?
-- Picard is a genomic data analysis toolkit designed specifically for handling high-throughput sequencing data. It provides a wide range of powerful tools to assist users in performing various operations during the analysis process, such as MarkDuplicates, manipulating read groups, Sorting and indexing files, data-cleanup operations, statistical analysis, and format conversion. Picard is widely used in workflows for variant detection and genome analysis.
-
-
-
-#### What is MarkDuplicates?
-- In genomics and next-generation sequencing (NGS), duplicate reads refer to multiple reads originating from the same original DNA molecule during the sequencing process. These duplicate reads are typically produced due to the PCR amplification process, where DNA polymerase replicates the template DNA during each amplification cycle, doubling the amount of DNA with each cycle. In theory, this should produce a large number of identical DNA fragments. However, certain DNA fragments are amplified more efficiently than others during PCR, which can affect the representativeness and accuracy of the final sequencing data. This can result from factors such as primer design, GC content of the DNA sequence, secondary structures of the DNA (e.g., hairpins), PCR temperature and time, and the efficiency of the DNA polymerase.
-- **Thus, we use MarkDuplicates to identify and mark duplicate reads. This process typically occurs after alignment and is intended to prevent errors in subsequent analyses caused by duplicate reads originating from the same DNA sequence.**
-
+> [!Important]
+> 
+> #### What is Picard?
+> - Picard is a genomic data analysis toolkit designed specifically for handling high-throughput sequencing data. It provides a wide range of powerful tools to assist users in performing various operations during the analysis process, such as MarkDuplicates, manipulating read groups, Sorting and indexing files, data-cleanup operations, statistical analysis, and format conversion. Picard is widely used in workflows for variant detection and genome analysis.
+>
+>
+>
+> #### What is MarkDuplicates?
+> - In genomics and next-generation sequencing (NGS), duplicate reads refer to multiple reads originating from the same original DNA molecule during the sequencing process. These duplicate reads are typically produced due to the PCR amplification process, where DNA polymerase replicates the template DNA during each amplification cycle, doubling the amount of DNA with each cycle. In theory, this should produce a large number of identical DNA fragments. However, certain DNA fragments are amplified more efficiently than others during PCR, which can affect the representativeness and accuracy of the final sequencing data. This can result from factors such as primer design, GC content of the DNA sequence, secondary structures of the DNA (e.g., hairpins), PCR temperature and time, and the efficiency of the DNA polymerase.
+> - **Thus, we use MarkDuplicates to identify and mark duplicate reads. This process typically occurs after alignment and is intended to prevent errors in subsequent analyses caused by duplicate reads originating from the same DNA sequence.**
 
 
 
 ### Step 1: Create a Path on the NCHC  
-1. Log in to the NCHC (For those who forgot how to log in, please refer to this link(https://hackmd.io/jcvG9iIiRW6DTUysi8AKug)).
+1. Log in to the NCHC (For those who forgot how to log in, please refer to this [link](https://hackmd.io/jcvG9iIiRW6DTUysi8AKug)).
 2. Enter the "alignment" folder.
 ```marksown=
 cd /work/username/alignment
 ```
 3. Copy the executable files needed for the class.
 ```marksown=
-rsync -avz /work/u2499286/alignment/bwa_markdup.sh /work/username/alignment
+rsync -avz /work/evelyn92/bwa_markdup.sh /work/username/alignment
 ```
 
 ### Step 2: Modify the Analysis Executable
@@ -61,12 +63,12 @@ rsync -avz /work/u2499286/alignment/bwa_markdup.sh /work/username/alignment
 vim bwa_markdup.sh
 ```
 
-2. Please press "i" to modify the following code:
+2. Please press <kbd>i</kbd> to modify the following code:
 >The following serves as an example based on the files in the bwa_markdup.sh folder (format should follow the examples provided within, do not include the file extension).
-![image](https://hackmd.io/_uploads/Hk-Q7It6A.png)
+![image](https://hackmd.io/_uploads/B1ePKRo5gl.png)
 
 ```
-(1) #SBATCH -A ACD113120           #Account name/project number
+(1) #SBATCH -A ACD114093           #Account name/project number
 (2) #SBATCH -J alignment           ###Job name:可修改
 (3) #SBATCH -p ngscourse           ###Partition Name:等同PBS裡面的 -q Queue name
 (4) #SBATCH -c 2                   #使用的core數:請參考Queue資源設定
@@ -77,13 +79,19 @@ vim bwa_markdup.sh
 (9) #SBATCH --mail-type=END        ###指定送出email時機:可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
 ```
 
-3. Enter your account in any location marked as <span style="color: red;">username</span>.
+3. Make sure to replace `username` with your account and change the file path.
+![image](https://hackmd.io/_uploads/rym19N65eg.png)
+```
+# Please enter the R1 & R2 file name and your username
+sampleR1=/work/username/result/fastqc/SRR13076392_S14_L002_R1_001.fastq.gz    # file path of the compressed reads
+sampleR2=/work/username/result/fastqc/SRR13076392_S14_L002_R2_001.fastq.gz    # file path of the compressed reads
+sample=SRR13076392
+path=/work/username/alignment/alignmentRM
 
-![image](https://hackmd.io/_uploads/H1Yo8qbTA.png)
-
-
-The step we add today
-![image](https://hackmd.io/_uploads/SktMvx-R0.png)
+mkdir -p ${path}
+```
+> The step we add today
+> ![image](https://hackmd.io/_uploads/Hy0mENa5xl.png)
 
 4. Enter `:wq` to save and exit.
 ```
@@ -104,8 +112,8 @@ sacct
 ```
 ![image](https://hackmd.io/_uploads/SkeIcLYTR.png)
 
-6. Check the results: The "alignmentRM" folder will contain `sam` and `bam` files. Confirm the integrity of the files with the detailed steps listed below.
-(1) Open the "alignmentRM" folder: You can use either a relative or absolute path.
+6. Check the results: The `alignmentRM` folder will contain `sam` and `bam` files. Confirm the integrity of the files with the detailed steps listed below.
+(1) Open the `alignmentRM` folder: You can use either a relative or absolute path.
 ```markdown=
 cd alignmentRM                            # Use relative path
 cd /work/username/alignment/alignmentRM   # Or use absolute path
@@ -116,9 +124,9 @@ ls
 ```
 (3) Check the integrity of the files:
 ```
-less SRR13076392_S14_L002_.sam
+less SRR13076392.sam
 ```
-(4) Use `Shift` + `g` to view the bottom of the file. 
+(4) Use <kbd>Shift</kbd> + <kbd>g</kbd> to view the bottom of the file. 
 ![image](https://hackmd.io/_uploads/HJUrZ7B60.png)
 
 (5) Exit:
@@ -127,13 +135,14 @@ q
 ```
 
 ## View Results with IGV
-:warning: **Warning**
-### :warning:<Previous information> :warning:
-Since the alignment/MarkDuplicates step in bwa takes a long time, the results used in the following steps are those already generated by the TA. Please first copy the results from the TA into the alignment folder (both files are required).
-```
-rsync -avz /work/u2499286/alignment/alignmentRM/SRR13076392_S14_L002_.sorted.markdup.bam ./
-rsync -avz /work/u2499286/alignment/alignmentRM/SRR13076392_S14_L002_.sorted.markdup.bai ./
-```
+> [!Caution]
+> ### Previous information
+> Since the alignment/MarkDuplicates step in bwa takes a long time, the results used in the following steps are those already generated by the TA. Please first copy the results from the TA into the alignment folder (both files are required).
+>    
+> ```
+> rsync -avz /work/evelyn92/alignment/alignmentRM/SRR13076392.sorted.markdup.bam ./
+> rsync -avz /work/evelyn92/alignment/alignmentRM/SRR13076392.sorted.markdup.bai ./
+> ```
 
 
 
@@ -154,18 +163,18 @@ sh /opt/ohpc/Taiwania3/pkg/biology/IGV/IGV_v2.10.3/igv.sh
 ![upload_137c491955544cb3bfb7e23c7490ade3](https://hackmd.io/_uploads/B1loizeaR.png)
 
 (3)Use **File → Load from file** in the upper left corner to import SAM and BAM files (using BAM files as an example). The files are located at the following path:
-* bam file:`/work/username/alignment/SRR13076392_S14_L002_sorted.markdup.bam`
+* bam file:`/work/username/alignment/SRR13076392.sorted.markdup.bam`
 
 
-    ![image](https://hackmd.io/_uploads/S1dHkQFTR.png)
+    ![image](https://hackmd.io/_uploads/SyVzTSacel.png)
 
 (4)In the upper left corner, you can select the chromosome and range to view (blue box), while in the upper right corner (red box), you can select the view size (you may need to zoom in to a sufficient scale to see the results). 
-     ![image](https://hackmd.io/_uploads/H1Ys1XK60.png)
+     ![image](https://hackmd.io/_uploads/rkfvbOYPh.jpg)
     
 >For example, using chr16:
 
 >- Enter 16:175,000-178,500 in the box above (you can >adjust the range as needed). If successful, the result will be displayed as shown in the image below.
->![image](https://hackmd.io/_uploads/r1myUreTA.png)   
+>![image](https://hackmd.io/_uploads/H1Ys1XK60.png)   
  >   
 >- Right-click in the gray area on the left side.
 >    1. Check "View as pairs."
@@ -178,7 +187,7 @@ https://igv.org/doc/desktop/#
 [User Guide > Tracks and Data Types > Alignments > Paired-end alignments > Detecting structral variants]
 
 ### Step 2: Observe the Impact of MarkDuplicates (Compare This Week's and Last Week's Results)
-![image](https://github.com/user-attachments/assets/e3fcb523-584f-4ba7-80af-b03eda58d386)
+![image](https://hackmd.io/_uploads/rJSV4Lp5ll.png)
 If you want to know th details about bwa :https://bio-bwa.sourceforge.net/bwa.shtml
 
 ## FastQC Report
@@ -208,30 +217,33 @@ If you want to know th details about bwa :https://bio-bwa.sourceforge.net/bwa.sh
 ![image](https://hackmd.io/_uploads/rkp_eggRR.png)
 
 9. Overrepresented sequences
+![image](https://hackmd.io/_uploads/r1__GI65le.png)
+
 10. Adapter Content
 ![image](https://hackmd.io/_uploads/S1Y2egeCA.png)
 
 -------------------------
 
-:warning: **Warning**
+# 生物標記物與它們的產地實作課程(四)
 
-### 課前助教小提醒~
-#### 1. NCHC資料夾層級介紹
-![image](https://hackmd.io/_uploads/BymXkrFT0.png)
-![image](https://hackmd.io/_uploads/rkYAvrYTA.png)
-
-*** **上課內容請在`work/$user`之下執行** ***
-#### 2. 如何使用`mv`
-- `mv` 是一個用於移動或重新命名文件和資料夾的命令行工具，在 Linux 和 macOS 系統中廣泛使用。`mv` 命令可以幫助你將文件或目錄從一個位置移動到另一個位置，或者將文件或目錄重新命名。
-- 移動文件:`mv <source_file> <destination_directory>/`
-- 重新命名:`mv <old_filename> <new_filename>`
-- 移動並重新命名:`mv <source_file> /<new_directory>/<new_filename>`
-- 移動目錄:`mv <source_directory>/ <destination_directory>/`
+> [!Warning]
+> ### 課前助教小提醒~
+> #### 1. NCHC資料夾層級介紹
+> ![image](https://hackmd.io/_uploads/BymXkrFT0.png)
+> ![image](https://hackmd.io/_uploads/rkYAvrYTA.png)
+> 
+> *** **上課內容請在`work/$user`之下執行** ***
+> #### 2. 如何使用`mv`
+> - `mv` 是一個用於移動或重新命名文件和資料夾的命令行工具，在 > Linux 和 macOS 系統中廣泛使用。`mv` 命令可以幫助你將文件或目錄從一個位置移動到另一個位置，或者將文件或目錄重新命名。
+> - 移動文件:`mv <source_file> <destination_directory>/`
+> - 重新命名:`mv <old_filename> <new_filename>`
+> - 移動並重新命名:`mv <source_file> /<new_directory>/<new_filename>`
+> - 移動目錄:`mv <source_directory>/ <destination_directory>/`
 
 
 ## 本次課程主要內容
  1. 利用BWA做alignment
- 2. <span style="color: red;">**利用picard做mark duplicates**</span>
+ 2. **利用picard做mark duplicates**
  3. 用thinlinc打開IGV查看alignment/ MarkDuplicates後的結果
 所以在這之前必須要先下載好thinlinc，詳細[連結](https://hackmd.io/speUUZSNRZe0n_EAIl2lig)可見此
 4. 若有時間可以比較本週與上週的結果
@@ -239,15 +251,15 @@ If you want to know th details about bwa :https://bio-bwa.sourceforge.net/bwa.sh
 ### 提醒:本次課程主要複習上次內容，並多加入Mark duplicates的步驟
  ## Alignment/MarkDuplicates
 
-ℹ️ 
-#### 甚麼是Picard?
-Picard 是一套genomic data analysis，專為處理高通量測序數據設計，提供了一系列功能強大的工具，幫助用戶在分析過程中進行各種操作，提供如 MarkDuplicates、調整讀數群組、重新排序、數據清理、統計分析和格式轉換等功能，廣泛應用於變異檢測和基因體分析的工作流程中。
-
-
-#### 甚麼是MarkDuplicats?
-
-- 在Genomics和次世代定序（NGS）中，重複讀數（duplicate reads）是指在定序的過程中由同一原始DNA分子產生的多個讀數。這些讀數的出現通常是由於PCR amplification的過程造成的，在每個擴增循環中，DNA polymerase會複製template DNA，使得每個循環後的DNA量都會成倍增加。理論上，這應該會產生大量相同的DNA片段，但因PCR的過程中，某些DNA片段的擴增效率比其他片段高，會影響最終測序數據的代表性和準確性。這種影響可能源於幾個因素：Primer的設計、DNA sequence的GC含量、DNA的二級結構(hairpin)、PCR的溫度時間及DNA polymerase的效率等。
-- **因此我們利用MarkDuplicates來辨識並標記 duplicate reads。這個過程通常在比對alignment之後進行，主要目的是防止來自同一個DNA序列因為重複讀數在後續分析中引起錯誤結果。**
+> [!Important]
+> #### 甚麼是Picard?
+> Picard 是一套genomic data analysis，專為處理高通量測序數據設計，提供了一系列功能強大的工具，幫助用戶在分析過程中進行各種操作，提供如 MarkDuplicates、調整讀數群組、重新排序、數據清理、統計分析和格式轉換等功能，廣泛應用於變異檢測和基因體分析的工作流程中。
+>
+>
+> #### 甚麼是MarkDuplicats?
+>
+> - 在Genomics和次世代定序（NGS）中，重複讀數（duplicate reads）是指在定序的過程中由同一原始DNA分子產生的多個讀數。這些讀數的出現通常是由於PCR amplification的過程造成的，在每個擴增循環中，DNA polymerase會複製template DNA，使得每個循環後的DNA量都會成倍增加。理論上，這應該會產生大量相同的DNA片段，但因PCR的過程中，某些DNA片段的擴增效率比其他片段高，會影響最終測序數據的代表性和準確性。這種影響可能源於幾個因素：Primer的設計、DNA sequence的GC含量、DNA的二級結構(hairpin)、PCR的溫度時間及DNA polymerase的效率等。
+> - **因此我們利用MarkDuplicates來辨識並標記 duplicate reads。這個過程通常在比對alignment之後進行，主要目的是防止來自同一個DNA序列因為重複讀數在後續分析中引起錯誤結果。**
 
 
 ### step 1在國網上建立路徑
@@ -258,7 +270,7 @@ cd /work/username/alignment
 ```
 3. 複製上課所需執行檔
 ```marksown=
-rsync -avz /work/u2499286/bwa.sh /work/username/alignment
+rsync -avz /work/evelyn92/bwa_markdup.sh /work/username/alignment
 ```
 ### step 2 修改分析執行檔
 
@@ -268,15 +280,15 @@ rsync -avz /work/u2499286/bwa.sh /work/username/alignment
 vim bwa_markdup.sh
 ```
 
-2. 請輸入`i`更改以下程式碼：
+2. 請輸入 <kbd>i</kbd> 更改以下程式碼：
 > 以下以bwa_markdup.sh資料夾中的做為示範 (格式請依照裡面給你的範例，副檔名不用寫進去)
 
 
-![image](https://hackmd.io/_uploads/Hk-Q7It6A.png)
+![image](https://hackmd.io/_uploads/HyqdK0o9gg.png)
 
 
 ```
-(1) #SBATCH -A ACD113120           #Account name/project number
+(1) #SBATCH -A ACD114093           #Account name/project number
 (2) #SBATCH -J alignment           ###Job name:可修改
 (3) #SBATCH -p ngscourse           ###Partition Name:等同PBS裡面的 -q Queue name
 (4) #SBATCH -c 2                   #使用的core數:請參考Queue資源設定
@@ -286,13 +298,21 @@ vim bwa_markdup.sh
 (8) #SBATCH --mail-user=           ###e-mail:可修改
 (9) #SBATCH --mail-type=END        ###指定送出email時機:可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
 ```
-3. 在任何<span style="color: red;">username</span>的位子輸入自己的主機帳號    
+3. 將 `username` 的位子改成自己的主機帳號並修改成正確的檔案路徑    
 
-![image](https://hackmd.io/_uploads/H1Yo8qbTA.png)
+![image](https://hackmd.io/_uploads/BknTqETcxx.png)
+```
+# Please enter the R1 & R2 file name and your username
+sampleR1=/work/username/result/fastqc/SRR13076392_S14_L002_R1_001.fastq.gz    # Reads所在的檔案路徑
+sampleR2=/work/username/result/fastqc/SRR13076392_S14_L002_R2_001.fastq.gz    # Reads所在的檔案路徑
+sample=SRR13076392
+path=/work/username/alignment/alignmentRM
 
+mkdir -p ${path}
+```
 
-本次加入步驟      
-![image](https://hackmd.io/_uploads/SktMvx-R0.png)
+> 本次加入步驟      
+> ![image](https://hackmd.io/_uploads/Hy0mENa5xl.png)
 
 4. 輸入`:wq`儲存離開
 ```
@@ -332,9 +352,9 @@ ls
 ```
 (3) 確認檔案完整性:
 ```
-less SRR13076392_S14_L002_.sam
+less SRR13076392.sam
 ```
-(4) 利用 shift+g 查看檔案最底部
+(4) 利用 <kbd>shift</kbd>+<kbd>g</kbd> 查看檔案最底部
 
 ![image](https://hackmd.io/_uploads/HJUrZ7B60.png)
 
@@ -346,18 +366,17 @@ q
 
  ## 用IGV察看結果
  
-:warning: **Warning**
+> [!Caution]
+> ### 前情提要
+> 由於bwa在執行alignment/ MarkDuplicates的時間較長，所以執行以下步驟時使用的都是助教已經跑出的結果，請先複製助教的結果到alignment資料夾底下(兩個檔案都要)
+> 
+> ```
+> rsync -avz /work/evelyn92/alignment/alignmentRM/SRR13076392.sorted.markdup.bam ./
+> rsync -avz /work/evelyn92/alignment/alignmentRM/SRR13076392.sorted.bam.bai ./
+> ```
 
-### :warning: <前情提要> :warning:
-由於bwa在執行alignment/ MarkDuplicates的時間較長，所以執行以下步驟時使用的都是助教已經跑出的結果，請先複製助教的結果到alignment資料夾底下(兩個檔案都要)
-
-```
-rsync -avz /work/u2499286/S14_HC_result/SRR13076392_S14_L002.sorted.bam ./
-rsync -avz /work/u2499286/S14_HC_result/SRR13076392_S14_L002.sorted.bam.bai ./
-```
-
-### step 1使用thinlinc、開啟IGV
-1. 使用thinlinc、開啟 'Xfce terminal'
+### step 1使用Thinlinc、開啟IGV
+1. 使用Thinlinc、開啟 'Xfce terminal'
 2. 在terminal利用`sh`指令開啟IGV軟體
 ```
 sh /opt/ohpc/Taiwania3/pkg/biology/IGV/IGV_v2.10.3/igv.sh
@@ -382,7 +401,7 @@ sh /opt/ohpc/Taiwania3/pkg/biology/IGV/IGV_v2.10.3/igv.sh
     
 (3) 透過左上角的**File → Load from file**可匯入sam檔及bam檔(在這以bam檔為範例)，檔案位於以下路徑：
 
-* bam file:`/work/username/alignment/SRR13076392_S14_L002_sorted.markdup.bam`
+* bam file:`/work/username/alignment/SRR13076392.sorted.markdup.bam`
 
 
 ![image](https://hackmd.io/_uploads/S1dHkQFTR.png)
@@ -407,7 +426,7 @@ sh /opt/ohpc/Taiwania3/pkg/biology/IGV/IGV_v2.10.3/igv.sh
 [User Guide > Tracks and Data Types > Alignments > Paired-end alignments > Detecting structral variants]
 
 ### step 2 觀察MarkDuplicates這步驟的影響(比較本週及上週結果)
-![image](https://github.com/user-attachments/assets/060d1b33-3d47-440c-98bf-e46ef70834ec)
+![image](https://hackmd.io/_uploads/HybQE8aqee.png)
 如果想知道bwa的詳細內容:https://bio-bwa.sourceforge.net/bwa.shtml
 
 
@@ -438,5 +457,7 @@ sh /opt/ohpc/Taiwania3/pkg/biology/IGV/IGV_v2.10.3/igv.sh
 ![image](https://hackmd.io/_uploads/rkp_eggRR.png)
 
 9. Overrepresented sequences
+![image](https://hackmd.io/_uploads/HkLUfU69lx.png)
+
 10. Adapter Content
 ![image](https://hackmd.io/_uploads/S1Y2egeCA.png)
