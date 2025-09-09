@@ -99,7 +99,7 @@ Therefore, you must download ThinLinc beforehand. For more details, refer to thi
   :wq
   ```
 5. Execute the script \
-(1) Enter the following command to submit the edited draft as an sbatch job:
+(1). Enter the following command to submit the edited draft as an sbatch job:
   ```
   sbatch bwa_markdup.sh
   ```
