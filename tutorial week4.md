@@ -217,7 +217,7 @@ If you want to know th details about bwa :https://bio-bwa.sourceforge.net/bwa.sh
 8. Sequence Duplication Levels
 ![image](https://hackmd.io/_uploads/rkp_eggRR.png)
 
-9. Overrepresented sequences
+9. Overrepresented sequences \
 ![image2](https://hackmd.io/_uploads/r1__GI65le.png)
 
 10. Adapter Content
