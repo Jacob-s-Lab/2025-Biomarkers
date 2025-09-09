@@ -160,20 +160,19 @@ Therefore, you must download ThinLinc beforehand. For more details, refer to thi
 (1) Select "More..." from the dropdown menu in the upper left corner.  
   ![upload_5665be535b603da2fd1d955771c76554](https://hackmd.io/_uploads/BJmviGeTC.jpg)
     
-(2)Search for hg38 and download Human hg38.
+(2) Search for hg38 and download Human hg38.
   ![image](https://hackmd.io/_uploads/HyVI28a9eg.png)
 
-(3)Use **File → Load from file** in the upper left corner to import SAM and BAM files (using BAM files as an example). The files are located at the following path:
+(3) Use **File → Load from file** in the upper left corner to import SAM and BAM files (using BAM files as an example). The files are located at the following path:
 * bam file:`/work/username/alignment/SRR13076392.sorted.markdup.bam`
 
 
     ![image](https://hackmd.io/_uploads/SyVzTSacel.png)
 
-(4)In the upper left corner, you can select the chromosome and range to view (blue box), while in the upper right corner (red box), you can select the view size (you may need to zoom in to a sufficient scale to see the results). 
+(4) In the upper left corner, you can select the chromosome and range to view (blue box), while in the upper right corner (red box), you can select the view size (you may need to zoom in to a sufficient scale to see the results). 
      ![image](https://hackmd.io/_uploads/rkfvbOYPh.jpg)
     
 >For example, using chr16:
-
 >- Enter 16:175,000-178,500 in the box above (you can >adjust the range as needed). If successful, the result will be displayed as shown in the image below.
 > ![image](https://hackmd.io/_uploads/H1Ys1XK60.png)
 > 
@@ -416,8 +415,7 @@ sh /opt/ohpc/Taiwania3/pkg/biology/IGV/IGV_v2.10.3/igv.sh
 > 以*chr16*為例：
 > * 請在上方輸入**16:175,000-178,500**（可自行調整級距），若成功開啟會呈現如下圖的結果
 ![image](https://hackmd.io/_uploads/H1Ys1XK60.png)
-
-
+> 
 > * 在左側灰色區域點右鍵
 >   1. 勾選 "View as pairs"
 >   2. Color alignments by → insert size and pair orientation
