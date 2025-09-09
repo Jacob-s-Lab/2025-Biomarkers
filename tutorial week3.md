@@ -99,7 +99,7 @@ sample=SRR13076392
 > - method 1: Replace any occurrence of `username` with your own host account.   
 > ![image](https://hackmd.io/_uploads/HJ5lmNa5eg.png)
 > - method 2 : Define `username` as a variable.    
-> ![螢幕擷取畫面 2025-09-09 130229](https://hackmd.io/_uploads/r1l8BNacgl.png)    
+> ![螢幕擷取畫面 2025-09-09 130229](https://hackmd.io/_uploads/S1U7U4aqle.png)    
 
 3. Create a folder (named `alignmentR`) to store the results.
 ```
@@ -358,7 +358,7 @@ sample=SRR13076392
 > - method 1 : 在任何`username`的位子輸入自己的主機帳號   
 > ![image](https://hackmd.io/_uploads/HJ5lmNa5eg.png)
 > - method 2 : 將username寫為變數    
-> ![螢幕擷取畫面 2025-09-09 130229](https://hackmd.io/_uploads/r1l8BNacgl.png)    
+> ![螢幕擷取畫面 2025-09-09 130229](https://hackmd.io/_uploads/S1U7U4aqle.png)    
 
 3. 建立資料夾(命名為`alignmentR`)來存放結果
 ```
