@@ -49,90 +49,91 @@ Therefore, you must download ThinLinc beforehand. For more details, refer to thi
 ### Step 1: Create a Path on the NCHC  
 1. Log in to the NCHC (For those who forgot how to log in, please refer to this [link](https://hackmd.io/jcvG9iIiRW6DTUysi8AKug)).
 2. Enter the "alignment" folder.
-```marksown=
-cd /work/username/alignment
-```
+  ```marksown=
+  cd /work/username/alignment
+  ```
 3. Copy the executable files needed for the class.
-```marksown=
-rsync -avz /work/evelyn92/bwa_markdup.sh /work/username/alignment
-```
+  ```marksown=
+  rsync -avz /work/evelyn92/bwa_markdup.sh /work/username/alignment
+  ```
 
 ### Step 2: Modify the Analysis Executable
 1. Enter bwa_markdup.sh
-```
-vim bwa_markdup.sh
-```
+  ```
+  vim bwa_markdup.sh
+  ```
 
 2. Please press <kbd>i</kbd> to modify the following code:
 >The following serves as an example based on the files in the bwa_markdup.sh folder (format should follow the examples provided within, do not include the file extension).
-![image](https://hackmd.io/_uploads/B1ePKRo5gl.png)
 
-```
-(1) #SBATCH -A ACD114093           #Account name/project number
-(2) #SBATCH -J alignment           ###Job name:可修改
-(3) #SBATCH -p ngscourse           ###Partition Name:等同PBS裡面的 -q Queue name
-(4) #SBATCH -c 2                   #使用的core數:請參考Queue資源設定
-(5) #SBATCH --mem=13g              #使用的記憶體量 請參考Queue資源設定
-(6) #SBATCH -o out_almark.log          ###Path to the standard output file:可修改
-(7) #SBATCH -e err_almark.log          ###Path to the standard error ouput file:可修改
-(8) #SBATCH --mail-user=           ###e-mail:可修改
-(9) #SBATCH --mail-type=END        ###指定送出email時機:可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
-```
+  ![image](https://hackmd.io/_uploads/B1ePKRo5gl.png)
+
+  ```
+  (1) #SBATCH -A ACD114093           #Account name/project number
+  (2) #SBATCH -J alignment           ###Job name:可修改
+  (3) #SBATCH -p ngscourse           ###Partition Name:等同PBS裡面的 -q Queue name
+  (4) #SBATCH -c 2                   #使用的core數:請參考Queue資源設定
+  (5) #SBATCH --mem=13g              #使用的記憶體量 請參考Queue資源設定
+  (6) #SBATCH -o out_almark.log          ###Path to the standard output file:可修改
+  (7) #SBATCH -e err_almark.log          ###Path to the standard error ouput file:可修改
+  (8) #SBATCH --mail-user=           ###e-mail:可修改
+  (9) #SBATCH --mail-type=END        ###指定送出email時機:可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
+  ```
 
 3. Make sure to replace `username` with your account and change the file path.
-![image](https://hackmd.io/_uploads/rym19N65eg.png)
-```
-# Please enter the R1 & R2 file name and your username
-sampleR1=/work/username/result/fastqc/SRR13076392_S14_L002_R1_001.fastq.gz    # file path of the compressed reads
-sampleR2=/work/username/result/fastqc/SRR13076392_S14_L002_R2_001.fastq.gz    # file path of the compressed reads
-sample=SRR13076392
-path=/work/username/alignment/alignmentRM
-
-mkdir -p ${path}
-```
+  ![image](https://hackmd.io/_uploads/rym19N65eg.png)
+  ```
+  # Please enter the R1 & R2 file name and your username
+  sampleR1=/work/username/result/fastqc/SRR13076392_S14_L002_R1_001.fastq.gz    # file path of the compressed reads
+  sampleR2=/work/username/result/fastqc/SRR13076392_S14_L002_R2_001.fastq.gz    # file path of the compressed reads
+  sample=SRR13076392
+  path=/work/username/alignment/alignmentRM
+  
+  mkdir -p ${path}
+  ```
 > The step we add today
 > ![image](https://hackmd.io/_uploads/Hy0mENa5xl.png)
 
 4. Enter `:wq` to save and exit.
-```
-:wq
-```
+  ```
+  :wq
+  ```
 5. Execute the script
 (1) Enter the following command to submit the edited draft as an sbatch job:
-```
-sbatch bwa_markdup.sh
-```
+  ```
+  sbatch bwa_markdup.sh
+  ```
 (2) If submitted successfully, the following message will appear (after the bwa_markdup.sh file completes running, an alignmentRM folder will be automatically created under the alignment directory to store the results):
-![image](https://hackmd.io/_uploads/Sk5mqIYT0.png)
+  ![image](https://hackmd.io/_uploads/Sk5mqIYT0.png)
 
 
 (3) You can use the following command to check the status of the job execution:
-```
-sacct
-```
-![image](https://hackmd.io/_uploads/SkeIcLYTR.png)
+  ```
+  sacct
+  ```
+  ![image](https://hackmd.io/_uploads/SkeIcLYTR.png)
 
 6. Check the results: The `alignmentRM` folder will contain `sam` and `bam` files. Confirm the integrity of the files with the detailed steps listed below.
 (1) Open the `alignmentRM` folder: You can use either a relative or absolute path.
-```markdown=
-cd alignmentRM                            # Use relative path
-cd /work/username/alignment/alignmentRM   # Or use absolute path
-```
+  ```markdown=
+  cd alignmentRM                            # Use relative path
+  cd /work/username/alignment/alignmentRM   # Or use absolute path
+  ```
 (2) Confirm that the files exist:
-```
-ls
-```
+  ```
+  ls
+  ```
 (3) Check the integrity of the files:
-```
-less SRR13076392.sam
-```
+  ```
+  less SRR13076392.sam
+  ```
 (4) Use <kbd>Shift</kbd> + <kbd>g</kbd> to view the bottom of the file. 
-![image](https://hackmd.io/_uploads/HJUrZ7B60.png)
+  ![image](https://hackmd.io/_uploads/HJUrZ7B60.png)
 
 (5) Exit:
-```
-q
-```
+  ```
+  q
+  ```
 
 ## View Results with IGV
 > [!Caution]
@@ -150,17 +151,17 @@ q
 ### Step 1: Use ThinLinc to Open IGV
 1. Use ThinLinc to open a terminal.
 2. In the terminal, use the `sh` command to open the IGV software:
-```
-sh /opt/ohpc/Taiwania3/pkg/biology/IGV/IGV_v2.10.3/igv.sh
-```
+  ```
+  sh /opt/ohpc/Taiwania3/pkg/biology/IGV/IGV_v2.10.3/igv.sh
+  ```
 3. Use the area in the upper left corner of the screen to select the corresponding reference genome.
-![HYRsUmf](https://hackmd.io/_uploads/HJa0cGxpA.png)
+  ![HYRsUmf](https://hackmd.io/_uploads/HJa0cGxpA.png)
 
 (1) Select "More..." from the dropdown menu in the upper left corner.  
-![upload_5665be535b603da2fd1d955771c76554](https://hackmd.io/_uploads/BJmviGeTC.jpg)
+  ![upload_5665be535b603da2fd1d955771c76554](https://hackmd.io/_uploads/BJmviGeTC.jpg)
     
 (2)Search for hg38 and download Human hg38.
-![upload_137c491955544cb3bfb7e23c7490ade3](https://hackmd.io/_uploads/B1loizeaR.png)
+  ![upload_137c491955544cb3bfb7e23c7490ade3](https://hackmd.io/_uploads/B1loizeaR.png)
 
 (3)Use **File → Load from file** in the upper left corner to import SAM and BAM files (using BAM files as an example). The files are located at the following path:
 * bam file:`/work/username/alignment/SRR13076392.sorted.markdup.bam`
@@ -174,13 +175,13 @@ sh /opt/ohpc/Taiwania3/pkg/biology/IGV/IGV_v2.10.3/igv.sh
 >For example, using chr16:
 
 >- Enter 16:175,000-178,500 in the box above (you can >adjust the range as needed). If successful, the result will be displayed as shown in the image below.
->![image](https://hackmd.io/_uploads/H1Ys1XK60.png)   
- >   
+> ![image](https://hackmd.io/_uploads/H1Ys1XK60.png)
+> 
 >- Right-click in the gray area on the left side.
 >    1. Check "View as pairs."
 >    2. Select "Color alignments by → insert size and pair >orientation."
 >    3. Choose "Sort alignments by → insert size."
- ![image](https://hackmd.io/_uploads/Hkr0ckj80.png)
+>     ![image](https://hackmd.io/_uploads/Hkr0ckj80.png)
 
 If you want to understand what each read's color represents in IGV, you can refer to the following link:
 https://igv.org/doc/desktop/#
