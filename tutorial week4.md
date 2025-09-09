@@ -98,16 +98,16 @@ Therefore, you must download ThinLinc beforehand. For more details, refer to thi
   ```
   :wq
   ```
-5. Execute the script
-  (1) Enter the following command to submit the edited draft as an sbatch job:
+5. Execute the script \
+(1) Enter the following command to submit the edited draft as an sbatch job:
   ```
   sbatch bwa_markdup.sh
   ```
-  (2) If submitted successfully, the following message will appear (after the bwa_markdup.sh file completes running, an alignmentRM folder will be automatically created under the alignment directory to store the results):  
+(2) If submitted successfully, the following message will appear (after the bwa_markdup.sh file completes running, an alignmentRM folder will be automatically created under the alignment directory to store the results):  
   ![image](https://hackmd.io/_uploads/Sk5mqIYT0.png)
 
 
-  (3) You can use the following command to check the status of the job execution:
+(3) You can use the following command to check the status of the job execution:
   ```
   sacct
   ```
@@ -161,7 +161,7 @@ Therefore, you must download ThinLinc beforehand. For more details, refer to thi
   ![upload_5665be535b603da2fd1d955771c76554](https://hackmd.io/_uploads/BJmviGeTC.jpg)
     
 (2)Search for hg38 and download Human hg38.
-  ![upload_137c491955544cb3bfb7e23c7490ade3](https://hackmd.io/_uploads/B1loizeaR.png)
+  ![image](https://hackmd.io/_uploads/HyVI28a9eg.png)
 
 (3)Use **File → Load from file** in the upper left corner to import SAM and BAM files (using BAM files as an example). The files are located at the following path:
 * bam file:`/work/username/alignment/SRR13076392.sorted.markdup.bam`
