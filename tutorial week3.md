@@ -87,7 +87,7 @@ The following example will use the files in the `bwa.sh` folder as a demonstrati
 (9) #SBATCH --mail-type=END        ###Specify the email sending time: it can be NONE, BEGIN, END, FAIL, REQUEUE, or ALL
 ```
 
-2. Make sure to replace `username` with your account.
+2. Make sure to replace `username` with your account and change the file path.
 ```
 # Please enter the R1 & R2 file name and your username
 sampleR1=/work/username/result/fastqc/SRR13076392_S14_L002_R1_001.fastq.gz    # file path of the compressed reads
