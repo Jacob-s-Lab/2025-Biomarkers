@@ -99,15 +99,15 @@ Therefore, you must download ThinLinc beforehand. For more details, refer to thi
   :wq
   ```
 5. Execute the script
-(1) Enter the following command to submit the edited draft as an sbatch job:
+  (1) Enter the following command to submit the edited draft as an sbatch job:
   ```
   sbatch bwa_markdup.sh
   ```
-(2) If submitted successfully, the following message will appear (after the bwa_markdup.sh file completes running, an alignmentRM folder will be automatically created under the alignment directory to store the results):  
+  (2) If submitted successfully, the following message will appear (after the bwa_markdup.sh file completes running, an alignmentRM folder will be automatically created under the alignment directory to store the results):  
   ![image](https://hackmd.io/_uploads/Sk5mqIYT0.png)
 
 
-(3) You can use the following command to check the status of the job execution:
+  (3) You can use the following command to check the status of the job execution:
   ```
   sacct
   ```
