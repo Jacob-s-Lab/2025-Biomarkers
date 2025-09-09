@@ -396,7 +396,7 @@ sh /opt/ohpc/Taiwania3/pkg/biology/IGV/IGV_v2.10.3/igv.sh
 
 
 (2) 搜尋**hg38**，下載**Human hg38**
-    ![upload_137c491955544cb3bfb7e23c7490ade3](https://hackmd.io/_uploads/B1loizeaR.png)
+    ![image](https://hackmd.io/_uploads/HyVI28a9eg.png)
 
 
 
@@ -458,7 +458,7 @@ sh /opt/ohpc/Taiwania3/pkg/biology/IGV/IGV_v2.10.3/igv.sh
 8. Sequence Duplication Levels
 ![image](https://hackmd.io/_uploads/rkp_eggRR.png)
 
-9. Overrepresented sequences
+9. Overrepresented sequences \
 ![image](https://hackmd.io/_uploads/HkLUfU69lx.png)
 
 10. Adapter Content
