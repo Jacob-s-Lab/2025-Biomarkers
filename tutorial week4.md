@@ -218,7 +218,7 @@ If you want to know th details about bwa :https://bio-bwa.sourceforge.net/bwa.sh
 ![image](https://hackmd.io/_uploads/rkp_eggRR.png)
 
 9. Overrepresented sequences
-![image](https://hackmd.io/_uploads/r1__GI65le.png)
+![image2](https://hackmd.io/_uploads/r1__GI65le.png)
 
 10. Adapter Content
 ![image](https://hackmd.io/_uploads/S1Y2egeCA.png)
