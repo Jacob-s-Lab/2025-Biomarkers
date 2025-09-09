@@ -97,7 +97,7 @@ sample=SRR13076392
 > [!Tip]
 > #### How to modify `username`
 > - method 1: Replace any occurrence of `username` with your own host account.   
-> ![螢幕擷取畫面 2025-09-02 014924_2](https://hackmd.io/_uploads/BytmhlVcgx.png)
+> ![image](https://hackmd.io/_uploads/HJ5lmNa5eg.png)
 > - method 2 : Define `username` as a variable.    
 > ![image](https://github.com/user-attachments/assets/4142dda9-c1b6-4525-8a83-cecab970a41f)    
 
@@ -356,7 +356,7 @@ sample=SRR13076392
 > [!Tip]
 > #### 修改`username`的方法
 > - method 1 : 在任何`username`的位子輸入自己的主機帳號   
-> ![螢幕擷取畫面 2025-09-02 014924_2](https://hackmd.io/_uploads/BytmhlVcgx.png)
+> ![image](https://hackmd.io/_uploads/HJ5lmNa5eg.png)
 > - method 2 : 將username寫為變數    
 > ![image](https://github.com/user-attachments/assets/4142dda9-c1b6-4525-8a83-cecab970a41f)    
 
