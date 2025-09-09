@@ -103,7 +103,7 @@ Therefore, you must download ThinLinc beforehand. For more details, refer to thi
   ```
   sbatch bwa_markdup.sh
   ```
-(2) If submitted successfully, the following message will appear (after the bwa_markdup.sh file completes running, an alignmentRM folder will be automatically created under the alignment directory to store the results):
+(2) If submitted successfully, the following message will appear (after the bwa_markdup.sh file completes running, an alignmentRM folder will be automatically created under the alignment directory to store the results):  
   ![image](https://hackmd.io/_uploads/Sk5mqIYT0.png)
 
 
@@ -222,6 +222,7 @@ If you want to know th details about bwa :https://bio-bwa.sourceforge.net/bwa.sh
 
 10. Adapter Content
 ![image](https://hackmd.io/_uploads/S1Y2egeCA.png)
+
 
 -------------------------
 
