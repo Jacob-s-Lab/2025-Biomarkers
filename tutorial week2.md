@@ -41,12 +41,12 @@ Language：[EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-C
     ```
     password: NGS112-2
     ```
-> ❗**need to download six files!!** (6 reads in total, which include three samples)
-> SRR13076392_S14_L002_R1_001.fastq.gz
-> SRR13076392_S14_L002_R2_001.fastq.gz
-> SRR13076393_S15_L002_R1_001.fastq.gz
-> SRR13076393_S15_L002_R2_001.fastq.gz
-> SRR13076396_S16_L002_R1_001.fastq.gz
+> ❗**need to download six files!!** (6 reads in total, which include three samples) \
+> SRR13076392_S14_L002_R1_001.fastq.gz \
+> SRR13076392_S14_L002_R2_001.fastq.gz \
+> SRR13076393_S15_L002_R1_001.fastq.gz \
+> SRR13076393_S15_L002_R2_001.fastq.gz \
+> SRR13076396_S16_L002_R1_001.fastq.gz \
 > SRR13076396_S16_L002_R2_001.fastq.gz
 
 6. [Upload](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/tutorial%20week1.md) them to your own **fastqc folder**.\
