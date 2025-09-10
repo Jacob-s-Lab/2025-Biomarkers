@@ -153,7 +153,8 @@ The file used (total of 1) can be downloaded from [here](https://github.com/Jaco
 > - `:wq!`: Force save and exit. If the file is read-only or has other restrictions, you can use `:wq!` to force save and exit. "!" signifies force execution.
 > - If you only want to save but not exit, use `:w`. To exit without saving, use `:q` or `:q!` (force exit).
 
-2. Execute the Script     
+2. Execute the Script
+
 (1) Submit the edited script as a SLURM job with the following command:
 ```
 sbatch fastqc.sh
@@ -227,12 +228,12 @@ Details available for [download](https://github.com/Jacob-s-Lab/2025-Biomarkers/
     ```
     #下載密碼:NGS112-2
     ```
-   >❗ **請下載以下六個檔案!!** (6條reads，共包含三個sample)
-   > SRR13076392_S14_L002_R1_001.fastq.gz
-   > SRR13076392_S14_L002_R2_001.fastq.gz
-   > SRR13076393_S15_L002_R1_001.fastq.gz
-   > SRR13076393_S15_L002_R2_001.fastq.gz
-   > SRR13076396_S16_L002_R1_001.fastq.gz
+   >❗ **請下載以下六個檔案!!** (6條reads，共包含三個sample) \
+   > SRR13076392_S14_L002_R1_001.fastq.gz \
+   > SRR13076392_S14_L002_R2_001.fastq.gz \
+   > SRR13076393_S15_L002_R1_001.fastq.gz \
+   > SRR13076393_S15_L002_R2_001.fastq.gz \
+   > SRR13076396_S16_L002_R1_001.fastq.gz \
    > SRR13076396_S16_L002_R2_001.fastq.gz
    
 6. 請直接[上傳](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/tutorial%20week1.md)  檔案到fastqc\
