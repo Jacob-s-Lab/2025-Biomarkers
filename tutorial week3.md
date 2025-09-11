@@ -63,6 +63,12 @@ vim bwa.sh
 > 1. As the file owner, you lack read permission, preventing vim from displaying the file's content.   
 > 2. Both group members and other users have full operational permissions.   
 > 3. The `+` symbol suggests that the file may have additional ACL settings, which might restrict your operations further.
+>
+> (3) Change the permission of this file
+> ```
+> chmod u+r bwa.sh
+> ```
+> (4) `-rw-rwxrwx+` means read permission has been granted.
 
 
 > [!Important]
