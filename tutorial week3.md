@@ -100,9 +100,9 @@ The following example will use the files in the `bwa.sh` folder as a demonstrati
 sampleR1=/work/username/result/fastqc/SRR13076392_S14_L002_R1_001.fastq.gz    # file path of the compressed reads
 sampleR2=/work/username/result/fastqc/SRR13076392_S14_L002_R2_001.fastq.gz    # file path of the compressed reads
 sample=SRR13076392
-path=/work/username/alignment/alignmentR
+path1=/work/username/alignment/alignmentR
 
-mkdir -p ${path}
+mkdir -p ${path1}
 ```
 > [!Tip]
 > #### How to modify `username`
@@ -362,9 +362,9 @@ vim bwa.sh
 sampleR1=/work/username/result/fastqc/SRR13076392_S14_L002_R1_001.fastq.gz    # Reads所在的檔案路徑
 sampleR2=/work/username/result/fastqc/SRR13076392_S14_L002_R2_001.fastq.gz    # Reads所在的檔案路徑
 sample=SRR13076392
-path=/work/username/alignment/alignmentR
+path1=/work/username/alignment/alignmentR
 
-mkdir -p ${path}
+mkdir -p ${path1}
 ```
 > [!Tip]
 > #### 修改`username`的方法
