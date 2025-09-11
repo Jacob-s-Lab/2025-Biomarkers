@@ -107,7 +107,7 @@ mkdir -p ${path1}
 > [!Tip]
 > #### How to modify `username`
 > - method 1: Replace any occurrence of `username` with your own host account.   
-> ![image](https://hackmd.io/_uploads/HJ5lmNa5eg.png)
+> ![image](https://hackmd.io/_uploads/By2o1Zxoeg.png)
 > - method 2 : Define `username` as a variable.    
 > ![螢幕擷取畫面 2025-09-09 130229](https://hackmd.io/_uploads/S1U7U4aqle.png)    
 
@@ -369,7 +369,7 @@ mkdir -p ${path1}
 > [!Tip]
 > #### 修改`username`的方法
 > - method 1 : 在任何`username`的位子輸入自己的主機帳號   
-> ![image](https://hackmd.io/_uploads/HJ5lmNa5eg.png)
+> ![image](https://hackmd.io/_uploads/By2o1Zxoeg.png)
 > - method 2 : 將username寫為變數    
 > ![螢幕擷取畫面 2025-09-09 130229](https://hackmd.io/_uploads/S1U7U4aqle.png)    
 
