@@ -94,7 +94,7 @@ Therefore, you must download ThinLinc beforehand. For more details, refer to thi
   mkdir -p ${path2}
   ```
 > The step we add today
-> ![image](https://hackmd.io/_uploads/Hy0mENa5xl.png)
+> ![image](https://hackmd.io/_uploads/rk9gQWgsgg.png)
 
 4. Enter `:wq` to save and exit.
   ```
@@ -314,7 +314,7 @@ mkdir -p ${path}
 ```
 
 > 本次加入步驟      
-> ![image](https://hackmd.io/_uploads/Hy0mENa5xl.png)
+> ![image](https://hackmd.io/_uploads/rk9gQWgsgg.png)
 
 4. 輸入`:wq`儲存離開
 ```
