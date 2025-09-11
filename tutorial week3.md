@@ -69,6 +69,7 @@ vim bwa.sh
 > chmod u+r bwa.sh
 > ```
 > (4) `-rw-rwxrwx+` means read permission has been granted.
+> (5) Repeat the command from Step 2-1.
 
 
 > [!Important]
