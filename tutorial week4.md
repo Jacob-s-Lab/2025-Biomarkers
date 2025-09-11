@@ -87,9 +87,11 @@ Therefore, you must download ThinLinc beforehand. For more details, refer to thi
   sampleR1=/work/username/result/fastqc/SRR13076392_S14_L002_R1_001.fastq.gz    # file path of the compressed reads
   sampleR2=/work/username/result/fastqc/SRR13076392_S14_L002_R2_001.fastq.gz    # file path of the compressed reads
   sample=SRR13076392
-  path=/work/username/alignment/alignmentRM
-  
-  mkdir -p ${path}
+  path1=/work/username/alignment/alignmentR
+  path2=/work/username/alignment/alignmentRM
+
+  mkdir -p ${path1}
+  mkdir -p ${path2}
   ```
 > The step we add today
 > ![image](https://hackmd.io/_uploads/Hy0mENa5xl.png)
