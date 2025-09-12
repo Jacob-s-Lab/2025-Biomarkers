@@ -81,7 +81,7 @@ Therefore, you must download ThinLinc beforehand. For more details, refer to thi
   ```
 
 3. Make sure to replace `username` with your account and change the file path.
-  ![image](https://hackmd.io/_uploads/rym19N65eg.png)
+  ![image](https://hackmd.io/_uploads/r15AvQWjxl.png)
   ```
   # Please enter the R1 & R2 file name and your username
   sampleR1=/work/username/result/fastqc/SRR13076392_S14_L002_R1_001.fastq.gz    # file path of the compressed reads
@@ -90,6 +90,8 @@ Therefore, you must download ThinLinc beforehand. For more details, refer to thi
   path1=/work/username/alignment/alignmentR
   path2=/work/username/alignment/alignmentRM
 
+  user=username
+  
   mkdir -p ${path1}
   mkdir -p ${path2}
   ```
@@ -302,13 +304,15 @@ vim bwa_markdup.sh
 ```
 3. 將 `username` 的位子改成自己的主機帳號並修改成正確的檔案路徑    
 
-![image](https://hackmd.io/_uploads/BknTqETcxx.png)
+![image](https://hackmd.io/_uploads/r15AvQWjxl.png)
 ```
 # Please enter the R1 & R2 file name and your username
 sampleR1=/work/username/result/fastqc/SRR13076392_S14_L002_R1_001.fastq.gz    # Reads所在的檔案路徑
 sampleR2=/work/username/result/fastqc/SRR13076392_S14_L002_R2_001.fastq.gz    # Reads所在的檔案路徑
 sample=SRR13076392
 path=/work/username/alignment/alignmentRM
+
+user=username
 
 mkdir -p ${path}
 ```
