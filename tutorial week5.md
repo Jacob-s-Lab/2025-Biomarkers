@@ -38,7 +38,7 @@ cd /work/username/variantcalling
 ```
 4.  Copy the executable files needed for the class.
 ```marksown=
-rsync -avz /work/evelyn/variantcalling.sh /work/username/variantcalling
+rsync -avz /work/evelyn92/variantcalling.sh /work/username/variantcalling
 ```
 
 
