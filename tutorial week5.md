@@ -67,7 +67,7 @@ vim variantcalling.sh
 
 3. Make sure to replace `username` with your account and change the file path.
 
-![image](https://hackmd.io/_uploads/SJkFvbbsel.png)
+![image](https://hackmd.io/_uploads/BJTXESBilx.png)
 
 > [!Warning]
 > #### The step we add today: Variant calling
@@ -202,7 +202,7 @@ vim variantcalling.sh
 (9) #SBATCH --mail-type=FAIL,END        ###指定送出email時機:可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
 ```
 3. 將`username`的位子改成自己的主機帳號並修改成正確的檔案路徑
-![image](https://hackmd.io/_uploads/SyEqDWbsxg.png)
+![image](https://hackmd.io/_uploads/BJTXESBilx.png)
 
 > [!Warning]
 > #### 本次加入的步驟:Variant calling
