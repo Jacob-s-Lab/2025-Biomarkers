@@ -310,9 +310,11 @@ user=username
 sampleR1=/work/username/result/fastqc/SRR13076392_S14_L002_R1_001.fastq.gz    # Reads所在的檔案路徑
 sampleR2=/work/username/result/fastqc/SRR13076392_S14_L002_R2_001.fastq.gz    # Reads所在的檔案路徑
 sample=SRR13076392
-path=/work/username/alignment/alignmentRM
+path1=/work/username/alignment/alignmentR
+path2=/work/username/alignment/alignmentRM
 
-mkdir -p ${path}
+mkdir -p ${path1}
+mkdir -p ${path2}
 ```
 
 > 本次加入步驟      
