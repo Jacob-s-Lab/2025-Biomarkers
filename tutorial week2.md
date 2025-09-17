@@ -68,7 +68,7 @@ Language：[EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-C
 ---------------
 
 ## Sample QC
-The file used (total of 1) can be downloaded from [here](https://github.com/Jacob-s-Lab/20240904-Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Course) as `fastqc.sh`.
+The file used (total of 1) can be downloaded from [here](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/fastqc.sh) as `fastqc.sh`.
 
 ### Step 1: Create a Shell Script
 
@@ -289,6 +289,7 @@ Details available for [download](https://github.com/Jacob-s-Lab/2025-Biomarkers/
 
 1. 請更改以下程式碼：
 > 以下示範會以fastq資料夾中的SEA做為示範 (格式請依照裡面給你的範例，副檔名不用寫進去)
+> 
 
 (1) Slurm排程設定
 
