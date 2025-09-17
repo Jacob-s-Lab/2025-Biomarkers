@@ -255,7 +255,7 @@ Details available for [download](https://github.com/Jacob-s-Lab/2025-Biomarkers/
 ---------------
 
 # Sample QC
-
+The file used (total of 1) can be downloaded from [here](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/fastqc.sh) as fastqc.sh.
 
 ## Step 1 建立shell script
 
