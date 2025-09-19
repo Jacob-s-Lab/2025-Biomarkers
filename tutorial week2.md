@@ -46,8 +46,8 @@ Language：[EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-C
 > SRR13076392_S14_L002_R2_001.fastq.gz \
 > SRR13076393_S15_L002_R1_001.fastq.gz \
 > SRR13076393_S15_L002_R2_001.fastq.gz \
-> SRR13076396_S16_L002_R1_001.fastq.gz \
-> SRR13076396_S16_L002_R2_001.fastq.gz
+> SRR13076396_S18_L002_R1_001.fastq.gz \
+> SRR13076396_S18_L002_R2_001.fastq.gz
 
 6. [Upload](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/tutorial%20week1.md) them to your own **fastqc folder**.\
     **❗In this step, you need to learn how to upload files from local to NCHC.❗**
@@ -233,8 +233,8 @@ Details available for [download](https://github.com/Jacob-s-Lab/2025-Biomarkers/
    > SRR13076392_S14_L002_R2_001.fastq.gz \
    > SRR13076393_S15_L002_R1_001.fastq.gz \
    > SRR13076393_S15_L002_R2_001.fastq.gz \
-   > SRR13076396_S16_L002_R1_001.fastq.gz \
-   > SRR13076396_S16_L002_R2_001.fastq.gz
+   > SRR13076396_S18_L002_R1_001.fastq.gz \
+   > SRR13076396_S18_L002_R2_001.fastq.gz
    
 6. 請直接[上傳](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/tutorial%20week1.md)  檔案到fastqc\
     **❗此步驟需要學習的內容為將檔案從本地端上傳至國網❗**
