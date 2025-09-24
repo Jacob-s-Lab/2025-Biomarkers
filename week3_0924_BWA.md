@@ -58,7 +58,7 @@ mkdir alignment
 ```
 3. Enter the alignment folder and copy the execution files needed for the class:
 ```markdown=
-cd /alignment
+cd alignment
 pwd
 rsync -avz /work/evelyn92/bwa.sh /work/username/alignment
 ```
@@ -357,7 +357,7 @@ mkdir alignment
 ```
 3. 進入work資料夾輸入`cd /alignmnet`資料夾，接著複製上課所需執行檔
 ```marksown=
-cd /alignmnet
+cd alignmnet
 pwd
 rsync -avz /work/evelyn92/bwa.sh /work/username/alignment
 ```
