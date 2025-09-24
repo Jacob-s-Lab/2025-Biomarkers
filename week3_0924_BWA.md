@@ -3,6 +3,41 @@ Language：[EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-C
 
 # Fantastic Genomic Biomarkers and Where to Find Them Practical Course (part III)
 
+-------------------------
+## FastQC Report
+#### Introduction to the FastQC Report from Course II
+1. Fastqc report
+![image](https://hackmd.io/_uploads/SJgWblgCR.png)
+
+2. Per base sequence quality
+![image](https://hackmd.io/_uploads/BySxllgCA.png)
+
+3. Per sequence quality scores
+ ![image](https://hackmd.io/_uploads/r1LbexeCR.png)
+
+4. Per base sequence content
+![image](https://hackmd.io/_uploads/H1KfeggAA.png)
+
+5. Per sequence GC content
+![image](https://hackmd.io/_uploads/ryaNelgRC.png)
+
+6. Per base N content
+![image](https://hackmd.io/_uploads/HJbLgxeCC.png)
+
+7. Sequence Length Distribution
+![image](https://hackmd.io/_uploads/S1fPlxeAR.png)
+
+8. Sequence Duplication Levels
+![image](https://hackmd.io/_uploads/rkp_eggRR.png)
+
+9. Overrepresented sequences \
+![image2](https://hackmd.io/_uploads/r1__GI65le.png)
+
+10. Adapter Content
+![image](https://hackmd.io/_uploads/S1Y2egeCA.png)
+
+-------------------------
+
 ## Main Content of the Course
 1. Use BWA for alignment
 2. Use ThinLinc to open IGV to view the alignment results.
@@ -265,6 +300,42 @@ https://igv.org/doc/desktop/#
 -----------
 
 # 生物標記物與它們的產地實作課程(三)
+
+-----------
+### Fastqc Report介紹
+#### 介紹第二週做出來的fastqc report
+1. Fastqc report
+![image](https://hackmd.io/_uploads/SJgWblgCR.png)
+
+2. Per base sequence quality
+![image](https://hackmd.io/_uploads/BySxllgCA.png)
+
+3. Per sequence quality scores
+ ![image](https://hackmd.io/_uploads/r1LbexeCR.png)
+
+4. Per base sequence content
+![image](https://hackmd.io/_uploads/H1KfeggAA.png)
+
+5. Per sequence GC content
+![image](https://hackmd.io/_uploads/ryaNelgRC.png)
+
+6. Per base N content
+![image](https://hackmd.io/_uploads/HJbLgxeCC.png)
+
+7. Sequence Length Distribution
+![image](https://hackmd.io/_uploads/S1fPlxeAR.png)
+
+8. Sequence Duplication Levels
+![image](https://hackmd.io/_uploads/rkp_eggRR.png)
+
+9. Overrepresented sequences \
+![image](https://hackmd.io/_uploads/HkLUfU69lx.png)
+
+10. Adapter Content
+![image](https://hackmd.io/_uploads/S1Y2egeCA.png)
+
+-----------
+
 
 ## 本次課程主要內容
  1. 利用BWA做alignment
