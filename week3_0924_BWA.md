@@ -118,15 +118,15 @@ The following example will use the files in the `bwa.sh` folder as a demonstrati
 ![image](https://hackmd.io/_uploads/B1aeOifclx.png)
 
 ```
-(1) #SBATCH -A ACD114093           #Account name/project number
-(2) #SBATCH -J alignment           ###Job name: can be modified 
-(3) #SBATCH -p ngscourse           ###Partition Name: equivalent to the -q Queue name in PBS.
-(4) #SBATCH -c 2                   #使用的core數:Please refer to the Queue resource settings
-(5) #SBATCH --mem=13g              #使用的記憶體量:Please refer to the Queue resource settings
-(6) #SBATCH -o out_al.log          ###Path to the standard output file:can be modified 
-(7) #SBATCH -e err_al.log          ###Path to the standard error ouput file:can be modified 
-(8) #SBATCH --mail-user=           ###e-mail:can be modified 
-(9) #SBATCH --mail-type=END        ###Specify the email sending time: it can be NONE, BEGIN, END, FAIL, REQUEUE, or ALL
+#SBATCH -A ACD114093           #Account name/project number
+#SBATCH -J alignment           ###Job name: can be modified 
+#SBATCH -p ngscourse           ###Partition Name: equivalent to the -q Queue name in PBS.
+#SBATCH -c 2                   #使用的core數:Please refer to the Queue resource settings
+#SBATCH --mem=13g              #使用的記憶體量:Please refer to the Queue resource settings
+#SBATCH -o out_al.log          ###Path to the standard output file:can be modified 
+#SBATCH -e err_al.log          ###Path to the standard error ouput file:can be modified 
+#SBATCH --mail-user=           ###e-mail:can be modified 
+#SBATCH --mail-type=END        ###Specify the email sending time: it can be NONE, BEGIN, END, FAIL, REQUEUE, or ALL
 ```
 
 2. Make sure to replace `username` with your account and change the file path.
@@ -416,15 +416,15 @@ vim bwa.sh
 ![image](https://hackmd.io/_uploads/B1aeOifclx.png)
 
 ```
-(1) #SBATCH -A ACD114093           #Account name/project number
-(2) #SBATCH -J alignment           ###Job name:可修改
-(3) #SBATCH -p ngscourse           ###Partition Name:等同PBS裡面的 -q Queue name
-(4) #SBATCH -c 2                   #使用的core數:請參考Queue資源設定
-(5) #SBATCH --mem=13g              #使用的記憶體量 請參考Queue資源設定
-(6) #SBATCH -o out_al.log          ###Path to the standard output file:可修改
-(7) #SBATCH -e err_al.log          ###Path to the standard error ouput file:可修改
-(8) #SBATCH --mail-user=           ###e-mail:可修改
-(9) #SBATCH --mail-type=END        ###指定送出email時機:可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
+#SBATCH -A ACD114093           #Account name/project number
+#SBATCH -J alignment           ###Job name:可修改
+#SBATCH -p ngscourse           ###Partition Name:等同PBS裡面的 -q Queue name
+#SBATCH -c 2                   #使用的core數:請參考Queue資源設定
+#SBATCH --mem=13g              #使用的記憶體量 請參考Queue資源設定
+#SBATCH -o out_al.log          ###Path to the standard output file:可修改
+#SBATCH -e err_al.log          ###Path to the standard error ouput file:可修改
+#SBATCH --mail-user=           ###e-mail:可修改
+#SBATCH --mail-type=END        ###指定送出email時機:可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
 ```
 
 2. 修改`username`及檔案路徑    
