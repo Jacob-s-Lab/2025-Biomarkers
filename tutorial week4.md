@@ -345,7 +345,7 @@ q
 > 
 > ```
 > rsync -avz /work/evelyn92/alignment/alignmentRM/SRR13076392.sorted.markdup.bam ./
-> rsync -avz /work/evelyn92/alignment/alignmentRM/SRR13076392.sorted.markdup.bam.bai ./
+> rsync -avz /work/evelyn92/alignment/alignmentRM/SRR13076392.sorted.markdup.bai ./
 > ```
 
 ### step 1使用Thinlinc、開啟IGV
