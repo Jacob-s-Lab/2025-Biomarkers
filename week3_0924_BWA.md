@@ -41,7 +41,7 @@ Language：[EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-C
 ## Main Content of the Course
 1. Use BWA for alignment
 2. Use ThinLinc to open IGV to view the alignment results.
-Before proceeding, make sure to download ThinLinc. Detailed instructions can be found at the [link](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/tutorial%20week1.md) 
+Before proceeding, make sure to download ThinLinc. Detailed instructions can be found at the [link](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/week1_0903.md) 
 
 ## Alignment
 > [!Important]
@@ -340,7 +340,7 @@ https://igv.org/doc/desktop/#
 ## 本次課程主要內容
  1. 利用BWA做alignment
  3. 用thinlinc打開IGV查看alignment的結果
-所以在這之前必須要先下載好thinlinc，詳細[連結](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/tutorial%20week1.md)可見此
+所以在這之前必須要先下載好thinlinc，詳細[連結](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/week1_0903.md)可見此
 
 ## Alignment
 
