@@ -69,15 +69,15 @@ Therefore, you must download ThinLinc beforehand. For more details, refer to thi
   ![image](https://hackmd.io/_uploads/B1ePKRo5gl.png)
 
   ```
-  (1) #SBATCH -A ACD114093           #Account name/project number
-  (2) #SBATCH -J alignment           ###Job name:可修改
-  (3) #SBATCH -p ngscourse           ###Partition Name:等同PBS裡面的 -q Queue name
-  (4) #SBATCH -c 2                   #使用的core數:請參考Queue資源設定
-  (5) #SBATCH --mem=13g              #使用的記憶體量 請參考Queue資源設定
-  (6) #SBATCH -o out_almark.log          ###Path to the standard output file:可修改
-  (7) #SBATCH -e err_almark.log          ###Path to the standard error ouput file:可修改
-  (8) #SBATCH --mail-user=           ###e-mail:可修改
-  (9) #SBATCH --mail-type=END        ###指定送出email時機:可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
+  #SBATCH -A ACD114093           #Account name/project number
+  #SBATCH -J alignment           ###Job name:可修改
+  #SBATCH -p ngscourse           ###Partition Name:等同PBS裡面的 -q Queue name
+  #SBATCH -c 2                   #使用的core數:請參考Queue資源設定
+  #SBATCH --mem=13g              #使用的記憶體量 請參考Queue資源設定
+  #SBATCH -o out_almark.log          ###Path to the standard output file:可修改
+  #SBATCH -e err_almark.log          ###Path to the standard error ouput file:可修改
+  #SBATCH --mail-user=           ###e-mail:可修改
+  #SBATCH --mail-type=END        ###指定送出email時機:可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
   ```
 
 3. Make sure to replace `username` with your account and change the file path.
@@ -258,15 +258,15 @@ vim bwa_markdup.sh
 
 
 ```
-(1) #SBATCH -A ACD114093           #Account name/project number
-(2) #SBATCH -J alignment           ###Job name:可修改
-(3) #SBATCH -p ngscourse           ###Partition Name:等同PBS裡面的 -q Queue name
-(4) #SBATCH -c 2                   #使用的core數:請參考Queue資源設定
-(5) #SBATCH --mem=13g              #使用的記憶體量 請參考Queue資源設定
-(6) #SBATCH -o out_almark.log          ###Path to the standard output file:可修改
-(7) #SBATCH -e err_almark.log          ###Path to the standard error ouput file:可修改
-(8) #SBATCH --mail-user=           ###e-mail:可修改
-(9) #SBATCH --mail-type=END        ###指定送出email時機:可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
+#SBATCH -A ACD114093           #Account name/project number
+#SBATCH -J alignment           ###Job name:可修改
+#SBATCH -p ngscourse           ###Partition Name:等同PBS裡面的 -q Queue name
+#SBATCH -c 2                   #使用的core數:請參考Queue資源設定
+#SBATCH --mem=13g              #使用的記憶體量 請參考Queue資源設定
+#SBATCH -o out_almark.log          ###Path to the standard output file:可修改
+#SBATCH -e err_almark.log          ###Path to the standard error ouput file:可修改
+#SBATCH --mail-user=           ###e-mail:可修改
+#SBATCH --mail-type=END        ###指定送出email時機:可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
 ```
 3. 將 `username` 的位子改成自己的主機帳號並修改成正確的檔案路徑    
 
