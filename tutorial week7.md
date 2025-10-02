@@ -46,7 +46,7 @@ vim vep.sh
 * VEP PATH
 ![image](https://hackmd.io/_uploads/rJMI4jDixl.png)
 
-* Split multiallelic and normalized
+* Split multiallelic and normalized  /
 ![image](https://hackmd.io/_uploads/rJgNiYo2gg.png)
 
 ![Screenshot 2024-10-15 at 15.53.38](https://hackmd.io/_uploads/SJockiiyJe.png)
@@ -147,7 +147,7 @@ rsync -avz /work/evelyn92/vep.sh /work/username/variantcalling/variantcallingR
 vim vep.sh
 ```
 
-2. 請輸入 <kbd>i</kbd> 更改以下程式碼：
+2. 請輸入 <kbd>i</kbd> 更改以下程式碼：  /
 ![image](https://hackmd.io/_uploads/Bkk8zqingl.png)
 ```
 #!/usr/bin/sh
