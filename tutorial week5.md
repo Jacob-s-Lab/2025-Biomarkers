@@ -53,15 +53,16 @@ vim variantcalling.sh
 ![image](https://hackmd.io/_uploads/Hy7pGF0qee.png)
 
 ```
-(1) #SBATCH -A ACD114093           #Account name/project number
-(2) #SBATCH -J variantcalling      ###Job name
-(3) #SBATCH -p ngscourse           #### Partition Name (equivalent to PBS's -q Queue name)
-(4) #SBATCH -c 2                   #Number of cores used (refer to Queue resource settings)
-(5) #SBATCH --mem=13g              #Amount of memory used (refer to Queue resource settings)
-(6) #SBATCH -o out_vc.log          ###Path to the standard output file
-(7) #SBATCH -e err_vc.log          ###Path to the standard error ouput file
-(8) #SBATCH --mail-user=           ###e-mail
-(9) #SBATCH --mail-type=FAIL,END   ###pecifies when to send email; can be NONE, BEGIN, END, FAIL, REQUEUE, ALL
+#!/usr/bin/sh
+#SBATCH -A ACD114093           #Account name/project number
+#SBATCH -J variantcalling      ###Job name
+#SBATCH -p ngscourse           #### Partition Name (equivalent to PBS's -q Queue name)
+#SBATCH -c 2                   #Number of cores used (refer to Queue resource settings)
+#SBATCH --mem=13g              #Amount of memory used (refer to Queue resource settings)
+#SBATCH -o out_vc.log          ###Path to the standard output file
+#SBATCH -e err_vc.log          ###Path to the standard error ouput file
+#SBATCH --mail-user=           ###e-mail
+#SBATCH --mail-type=FAIL,END   ###pecifies when to send email; can be NONE, BEGIN, END, FAIL, REQUEUE, ALL
 # For NCHC usage
 ```
 
@@ -191,15 +192,16 @@ vim variantcalling.sh
 
 
 ```
-(1) #SBATCH -A ACD114093           #Account name/project number
-(2) #SBATCH -J variantcalling           ###Job name:可修改
-(3) #SBATCH -p ngscourse           ###Partition Name:等同PBS裡面的 -q Queue name
-(4) #SBATCH -c 2                   #使用的core數:請參考Queue資源設定
-(5) #SBATCH --mem=13g              #使用的記憶體量 請參考Queue資源設定
-(6) #SBATCH -o out_vc.log          ###Path to the standard output file:可修改
-(7) #SBATCH -e err_vc.log          ###Path to the standard error ouput file:可修改
-(8) #SBATCH --mail-user=           ###e-mail:可修改
-(9) #SBATCH --mail-type=FAIL,END        ###指定送出email時機:可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
+#!/usr/bin/sh
+#SBATCH -A ACD114093           #Account name/project number
+#SBATCH -J variantcalling           ###Job name:可修改
+#SBATCH -p ngscourse           ###Partition Name:等同PBS裡面的 -q Queue name
+#SBATCH -c 2                   #使用的core數:請參考Queue資源設定
+#SBATCH --mem=13g              #使用的記憶體量 請參考Queue資源設定
+#SBATCH -o out_vc.log          ###Path to the standard output file:可修改
+#SBATCH -e err_vc.log          ###Path to the standard error ouput file:可修改
+#SBATCH --mail-user=           ###e-mail:可修改
+#SBATCH --mail-type=FAIL,END        ###指定送出email時機:可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
 ```
 3. 將`username`的位子改成自己的主機帳號並修改成正確的檔案路徑
 ![image](https://hackmd.io/_uploads/BJTXESBilx.png)
