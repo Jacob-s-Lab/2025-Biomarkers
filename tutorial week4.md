@@ -69,6 +69,7 @@ Therefore, you must download ThinLinc beforehand. For more details, refer to thi
   ![image](https://hackmd.io/_uploads/B1ePKRo5gl.png)
 
   ```
+  #!/usr/bin/sh
   #SBATCH -A ACD114093           #Account name/project number
   #SBATCH -J alignment           ###Job name:可修改
   #SBATCH -p ngscourse           ###Partition Name:等同PBS裡面的 -q Queue name
@@ -258,6 +259,7 @@ vim bwa_markdup.sh
 
 
 ```
+#!/usr/bin/sh
 #SBATCH -A ACD114093           #Account name/project number
 #SBATCH -J alignment           ###Job name:可修改
 #SBATCH -p ngscourse           ###Partition Name:等同PBS裡面的 -q Queue name
