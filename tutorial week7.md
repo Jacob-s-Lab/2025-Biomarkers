@@ -1,18 +1,19 @@
-## 20241016 Fantastic Genomic Biomarkers and Where to Find Them Practical Course (part VI)
+Date：20251008  
+Language：[EN](#Fantastic-Genomic-Biomarkers-and-Where-to-Find-Them-Practical-Course-part-VI) / [中文](#生物標記物與它們的產地實作課程六) 
+
+# Fantastic Genomic Biomarkers and Where to Find Them Practical Course (part VI)
 ## Main Content of the Course
 1.Use VEP for annotation.
 
-
-#### What is Annotation?
-**Annotation** refers to the functional annotation of biological sequences (such as DNA, RNA, and proteins) to help interpret their biological significance. It primarily includes structural information, used to mark the location of genes, such as exons and introns, and functional information, used to predict the biological function of genes or the role of proteins. This helps us understand the relationship between structure and function.
-
-
-#### Introduction to VEP
-**VEP (Variant Effect Predictor)** is a tool developed by Ensembl, used to analyze genetic information, especially to assess the impact of different variants in genes (such as SNVs, insertions, deletions, and structural variants) on biological function. It is particularly suitable for annotation purposes.
-
+> [!Important]
+> #### What is Annotation?
+> **Annotation** refers to the functional annotation of biological sequences (such as DNA, RNA, and proteins) to help interpret their biological significance. It primarily includes structural information, used to mark the location of genes, such as exons and introns, and functional information, used to predict the biological function of genes or the role of proteins. This helps us understand the relationship between structure and function.
+> 
+> #### Introduction to VEP
+> **VEP (Variant Effect Predictor)** is a tool developed by Ensembl, used to analyze genetic information, especially to assess the impact of different variants in genes (such as SNVs, insertions, deletions, and structural variants) on biological function. It is particularly suitable for annotation purposes.
 
 ### Step 1: Create a Path on the NCHC 
-1. Log in to the NCHC (For those who forgot how to log in, please refer to this link(https://hackmd.io/jcvG9iIiRW6DTUysi8AKug)). 
+1. Log in to the NCHC (For those who forgot how to log in, please refer to this [link](https://hackmd.io/jcvG9iIiRW6DTUysi8AKug)). 
 
 2.  Enter the "variantcalling" folder.
  ```marksown=
@@ -20,22 +21,33 @@ cd /work/username/variantcalling
 ```
 3.Copy the executable files needed for the class.
 ```marksown=
-rsync -avz /work/u2499286/variantcalling/variantcallingR/vep.sh /work/username/variantcalling/variantcallingR
+rsync -avz /work/evelyn92/vep.sh /work/username/variantcalling/variantcallingR
 ```
 ### Step 2: Modify the Analysis Executable
 1. Enter vep.sh
 ```
 vim vep.sh
 ```
+2. Please press <kbd>i</kbd> to modify the following code:
+![image](https://hackmd.io/_uploads/r1EDb9ihex.png)
+```
+#!/usr/bin/sh
+#SBATCH -A ACD114093            # Account name/project number
+#SBATCH -J vep                  # Job name
+#SBATCH -p ngscourse            # Partition Name (equivalent to PBS's -q Queue name)
+#SBATCH -c 2                    # Number of cores used (refer to Queue resource settings)
+#SBATCH --mem=13g               # Amount of memory used (refer to Queue resource settings)
+#SBATCH -o out_vep.log          # Path to the standard output file
+#SBATCH -e err_vep.log          # Path to the standard error ouput file
+#SBATCH --mail-user=            # e-mail
+#SBATCH --mail-type=FAIL,END    # pecifies when to send email; can be NONE, BEGIN, END, FAIL, REQUEUE, ALL
+```
 
 * VEP PATH
-![Screenshot 2024-10-15 at 15.43.26](https://hackmd.io/_uploads/SkjVpqj1ke.png)
-
-* Customized Taiwan Biobank database
-![Screenshot 2024-10-15 at 15.44.11](https://hackmd.io/_uploads/BJMwpciJ1x.png)
-![Screenshot 2024-10-15 at 15.46.09](https://hackmd.io/_uploads/H1nCT9iy1e.png)
+![image](https://hackmd.io/_uploads/rJMI4jDixl.png)
 
 * Split multiallelic and normalized
+![image](https://hackmd.io/_uploads/rJgNiYo2gg.png)
 
 ![Screenshot 2024-10-15 at 15.53.38](https://hackmd.io/_uploads/SJockiiyJe.png)
 
@@ -49,7 +61,7 @@ vim vep.sh
 
 * VEP annotation
 
-![Screenshot 2024-10-15 at 15.59.23](https://hackmd.io/_uploads/HyrZboi1Jg.png)
+![image](https://hackmd.io/_uploads/HyGb3Ki3xl.png)
 
 * Original VEP output
 
@@ -63,18 +75,18 @@ vim vep.sh
 ![Screenshot 2024-10-15 at 16.08.42](https://hackmd.io/_uploads/B1RI7js11g.png)
 
 
-2. Enter `:wq` to save and exit.
+3. Enter `:wq` to save and exit.
 ```
 :wq
 ```
-3. Execute the script: Enter the following command to submit the edited draft as an sbatch job:
+4. Execute the script: Enter the following command to submit the edited draft as an sbatch job:
 ```
 sbatch vep.sh
 ```
 
-3. After execution, the following files will be generated:
+5. After execution, the following files will be generated:
 
-- **sample.HC_normed.vcf.gz**: The VCF after splitting multiallelic variants.
+- **sample.HC.normed.vcf.gz**: The VCF after splitting multiallelic variants.
 - **sample.HC.VEP.vcf**:  After VEP annotation, the file sample.HC.VEP.vcf_summary.html is generated first, followed by the output in VCF format.
 - **sample.HC.VEP.vcf_warnings.txt**: Files containing statistical summaries and warnings after VEP annotation.
 - **sample.HC.VEP.tsv, sample.HC.VEP_filtered.tsv**: The VCF format converted to TSV format, with some fields removed in the filtered version. Each line represents a variant, and different transcripts are separated by a comma (",").
@@ -82,12 +94,12 @@ sbatch vep.sh
 
 ## Explanation of TSV Files
 
-
-### :warning: Background Information :warning:
-Since VEP takes a longer time to run the annotation, the steps below will use results that have already been processed by the teaching assistant. Please copy the TA's results first.
-  ```
-rsync -avz /work/u2499286/variantcalling/variantcallingR/SRR13076392_S14_L002_.HC.VEP_filtered.tsv ./
-```  
+> [!Caution]
+> #### Background Information
+> Since VEP takes a longer time to run the annotation, the steps below will use results that have already been processed by the teaching assistant. Please copy the TA's results first.
+> ```
+> rsync -avz /work/evelyn92/variantcalling/variantcallingR/SRR13076392.HC.VEP_filtered.tsv ./
+> ```  
     
 (1) **CHROM**: The chromosome.
 (2) **POS**: The position of the variant.
@@ -109,16 +121,12 @@ rsync -avz /work/u2499286/variantcalling/variantcallingR/SRR13076392_S14_L002_.H
 ## 本次課程主要內容
  1. 利用VEP做annotation
 
-
-
-#### 甚麼是annotation?
-Annotation是指對生物序列（如DNA、RNA、蛋白質）進行功能標注，幫助解釋其生物意義，主要有結構資訊，用於標記基因的位置，列如exon、intron等；和功能資訊，用於預測基因的生物功能、蛋白質的作用等，這樣可以幫助我們理解結構與功能的關聯。
-
-#### VEP介紹
-VEP（Variant Effect Predictor）是由Ensembl開發的一款工具，用於分析遺傳資訊，特别是評估基因中的不同變異（如SNVs、insertion、deletion和Structural variants）對生物功能的影響，非常適合用於annotation。
-
-
-
+> [!Important]
+> #### 甚麼是annotation?
+> Annotation是指對生物序列（如DNA、RNA、蛋白質）進行功能標注，幫助解釋其生物意義，主要有結構資訊，用於標記基因的位置，列如exon、intron等；和功能資訊，用於預測基因的生物功能、蛋白質的作用等，這樣可以幫助我們理解結構與功能的關聯。
+>
+> #### VEP介紹
+> VEP（Variant Effect Predictor）是由Ensembl開發的一款工具，用於分析遺傳資訊，特别是評估基因中的不同變異（如SNVs、insertion、deletion和Structural variants）對生物功能的影響，非常適合用於annotation。
 
 
 ### step1:在國網上建立路徑
@@ -129,7 +137,7 @@ cd /work/username/variantcalling/variantcallingR
 ```
 3. 複製上課所需執行檔
 ```marksown=
-rsync -avz /work/u2499286/variantcalling/variantcallingR/vep.sh /work/username/variantcalling/variantcallingR
+rsync -avz /work/evelyn92/vep.sh /work/username/variantcalling/variantcallingR
 ```
 ### step 2 修改分析執行檔
 
@@ -138,14 +146,27 @@ rsync -avz /work/u2499286/variantcalling/variantcallingR/vep.sh /work/username/v
 ```
 vim vep.sh
 ```
+
+2. 請輸入 <kbd>i</kbd> 更改以下程式碼：
+![image](https://hackmd.io/_uploads/Bkk8zqingl.png)
+```
+#!/usr/bin/sh
+#SBATCH -A ACD114093           # Account name/project number
+#SBATCH -J vep                 # Job name
+#SBATCH -p ngscourse           # Partition Name 等同PBS裡面的 -q Queue name
+#SBATCH -c 2                   # 使用的core數 請參考Queue資源設定 
+#SBATCH --mem=13g              # 使用的記憶體量 請參考Queue資源設定
+#SBATCH -o out_vep.log               # Path to the standard output file:可修改
+#SBATCH -e err_vep.log               # Path to the standard error ouput file:可修改
+#SBATCH --mail-user=
+#SBATCH --mail-type=FAIL,END
+```
+
 * VEP 路徑
 ![Screenshot 2024-10-15 at 15.43.26](https://hackmd.io/_uploads/SkjVpqj1ke.png)
 
-* 自行定義的資料庫
-![Screenshot 2024-10-15 at 15.44.11](https://hackmd.io/_uploads/BJMwpciJ1x.png)
-![Screenshot 2024-10-15 at 15.46.09](https://hackmd.io/_uploads/H1nCT9iy1e.png)
-
 * Split multiallelic and normalized 拆分單一位置多種變異以及座標向左對齊
+![image](https://hackmd.io/_uploads/rJgNiYo2gg.png)
 
 ![Screenshot 2024-10-15 at 15.53.38](https://hackmd.io/_uploads/SJockiiyJe.png)
 
@@ -160,7 +181,7 @@ vim vep.sh
     
 * VEP annotation 正式VEP註解遺傳變異
 
-![Screenshot 2024-10-15 at 15.59.23](https://hackmd.io/_uploads/HyrZboi1Jg.png)
+![image](https://hackmd.io/_uploads/HyGb3Ki3xl.png)
 
 * Original VEP output 原始VEP格式（VCF）
 
@@ -177,11 +198,11 @@ vim vep.sh
     
     
     
-2. 輸入`:wq`儲存離開
+3. 輸入`:wq`儲存離開
 ```
 :wq
 ```
-3. 執行script
+4. 執行script
 
 (1)輸入以下指令，來以sbatch job的方式送出編輯完成的草稿
 ```
@@ -202,7 +223,7 @@ sacct
 
 
 5. 執行完成後會產生以下檔案：
-- sample.HC_normed.vcf.gz：split multiallelic 後的 vcf
+- sample.HC.normed.vcf.gz：split multiallelic 後的 vcf
 - sample.HC.VEP.vcf：VEP annotate 後以 vcf 的格式輸出sample.HC.VEP.vcf_summary.html
 - sample.HC.VEP.vcf_warnings.txt：VEP annotate 完後的一些統計及警告的資料
 - sample.HC.VEP.tsv及sample.HC.VEP_filtered.tsv：將 vcf 的格式轉換成 tsv 的格式，以及將一些的欄位刪減後的 tsv。每一行為一個 variant，若有不同 transcript 會以 "," 分隔
@@ -210,14 +231,13 @@ sacct
  
  ## tsv檔案講解說明
  
+> [!Caution]
+> #### 前情提要
+> 由於vep在執行annotation的時間較長，所以執行以下步驟時使用的都是助教已經跑出的結果，請先複製助教的結果。
+> ```
+> rsync -avz /work/evelyn92/variantcalling/variantcallingR/SRR13076392.HC.VEP_filtered.tsv ./
+> ```
 
-### :warning: <前情提要> :warning:
-由於vep在執行annotation的時間較長，所以執行以下步驟時使用的都是助教已經跑出的結果，請先複製助教的結果。
-```
-rsync -avz /work/u2499286/variantcalling/variantcallingR/SRR13076392_S14_L002_.HC.VEP_filtered.tsv ./
-```
-
-    
 1. CHROM：變異所在的染色體
 2. POS:變異所在的座標
 3. REF：參考資料之等位基因
