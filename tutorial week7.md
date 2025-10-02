@@ -165,7 +165,7 @@ vim vep.sh
 * VEP 路徑
 ![Screenshot 2024-10-15 at 15.43.26](https://hackmd.io/_uploads/SkjVpqj1ke.png)
 
-* Split multiallelic and normalized 拆分單一位置多種變異以及座標向左對齊
+* Split multiallelic and normalized 拆分單一位置多種變異以及座標向左對齊  \
 ![image](https://hackmd.io/_uploads/rJgNiYo2gg.png)
 
 ![Screenshot 2024-10-15 at 15.53.38](https://hackmd.io/_uploads/SJockiiyJe.png)
