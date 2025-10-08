@@ -118,6 +118,7 @@ The following example will use the files in the `bwa.sh` folder as a demonstrati
 ![image](https://hackmd.io/_uploads/B1aeOifclx.png)
 
 ```
+#!/usr/bin/sh
 #SBATCH -A ACD114093           #Account name/project number
 #SBATCH -J alignment           ###Job name: can be modified 
 #SBATCH -p ngscourse           ###Partition Name: equivalent to the -q Queue name in PBS.
@@ -416,6 +417,7 @@ vim bwa.sh
 ![image](https://hackmd.io/_uploads/B1aeOifclx.png)
 
 ```
+#!/usr/bin/sh
 #SBATCH -A ACD114093           #Account name/project number
 #SBATCH -J alignment           ###Job name:可修改
 #SBATCH -p ngscourse           ###Partition Name:等同PBS裡面的 -q Queue name
