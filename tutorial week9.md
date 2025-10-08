@@ -4,7 +4,7 @@
 
 ## Main Content of the Course
 
-####  <span style="color: red;">This week we will review and practice more for the contents from the past eight weeks.</span>
+####  ❗This week we will review and practice more for the contents from the past eight weeks.:heavy_exclamation_mark❗
     
 The workflow for NGS data analysis is as follows:
 ![截圖 2024-10-28 晚上11.08.04](https://hackmd.io/_uploads/S1EgYXpgyx.png)
@@ -58,7 +58,7 @@ Next, we will introduce the content of each part of the shell script in segments
 
 ### Step 1: Upload Files to Your NCHC Account
 
-#### 1. Please go to [ntu cool](https://cool.ntu.edu.tw/courses/42564) and download two fastq files and two sh files from Week 9. The fastq files contain the raw data for this practical exercise.
+#### 1. Please go to [ntu cool](https://cool.ntu.edu.tw/courses/53534) and download two fastq files and two sh files from Week 9. The fastq files contain the raw data for this practical exercise.
 
 #### 2. Upload the files to your NCHC account. 
 Before uploading the files, navigate to the folder on your local machine where you just downloaded them (meaning, you should go to the location of the downloaded files in your terminal before logging into NCHC). Additionally, decide where you want to store the files on the NCHC system. It is recommended to log into NCHC in another terminal. You can use `pwd` to check the current path, and if necessary, you can create the required folder using `mkdir`.
@@ -93,12 +93,12 @@ vim file_name.sh
 # file_name.sh is the name of your shell script file.
 ```
 #### 2. After opening the file, you will see the following screen:
-![截圖 2024-10-29 下午2.13.02](https://hackmd.io/_uploads/Hyg_aeAg1e.png)
+![螢幕擷取畫面 2025-10-08 102844](https://hackmd.io/_uploads/rJTu3Bm6ll.png)
 
     
 ```
 #!/usr/bin/sh
-#SBATCH -A ACD113120          # Project name: The project number for our class.
+#SBATCH -A ACD114093          # Project name: The project number for our class.
 #SBATCH -J fastqc             # Job name: You can change this to any name you prefer.
 #SBATCH -p ngscourse          # Partition Name
 #SBATCH -c 2                  # Number of CPU cores
@@ -121,8 +121,7 @@ vim file_name.sh
 
 #### 4. Define the Data Path and File Names
 In your shell script, you should define the paths to your data and the names of the files you will be using. You can do this by setting variables like so:   
-![截圖 2024-10-24 下午4.07.59](https://hackmd.io/_uploads/ByU_lKvx1x.png)
-
+![image](https://hackmd.io/_uploads/SyaCyIQaex.png)
 
 #### Command Introduction
 1. `A=b`: In this context, it means assignment; that is, we are assigning the value b to the variable A. After this assignment, whenever you reference A, it will automatically take on the value of b.
@@ -182,7 +181,7 @@ In your shell script, you should define the paths to your data and the names of 
 #### 8. DNA Alignment: BWA Mapping
 In this step, we use the tool BWA (Burrows-Wheeler Aligner) to perform the DNA alignment.
 
-![截圖 2024-10-24 下午4.13.11](https://hackmd.io/_uploads/r1z2WtDeye.png)
+![image](https://hackmd.io/_uploads/Hk_hl87Tll.png)
 
 
 #### Command Introduction
@@ -208,8 +207,7 @@ In this step, we use the tool BWA (Burrows-Wheeler Aligner) to perform the DNA a
 
 #### 9. Convert SAM file to BAM file using SAMTOOLS
 
-![截圖 2024-10-24 下午4.13.53](https://hackmd.io/_uploads/r16RbtDxkx.png)
-
+![image](https://hackmd.io/_uploads/S1j0lUmagg.png)
 
 #### Command Introduction
 1. ```samtools view -@ 2 -S -b ${sample}.sam > ${sample}.bam```：This is a SAMTOOLS command.
@@ -230,8 +228,7 @@ In this step, we use the tool BWA (Burrows-Wheeler Aligner) to perform the DNA a
 
 
 #### 10. Mark duplicates
-![截圖 2024-10-24 下午4.14.30](https://hackmd.io/_uploads/B1m-MKvxJg.png)
-
+![image](https://hackmd.io/_uploads/HyqlZIXpee.png)
 
 #### Command Introduction
 1. ```java -jar ${PICARD} MarkDuplicates -I ${sample}.sorted.bam -O ${sample}.sorted.markdup.bam -M ${sample}_markdup_metrics.txt --CREATE_INDEX true```This is a Picard command.
@@ -269,8 +266,7 @@ In this step, we use the tool BWA (Burrows-Wheeler Aligner) to perform the DNA a
 
 
 #### 12. Split multiallelic
-![截圖 2024-10-29 下午2.18.21](https://hackmd.io/_uploads/ry9ZJWRgye.png)
-
+![image](https://hackmd.io/_uploads/B1dn-IQpxl.png)
 
 
 
@@ -356,8 +352,7 @@ Then.
 # 生物標記物與它們的產地實作課程(七)
 ## 本次課程主要內容
     
-#### <span style="color: red;">今日課程為將過去八週課程內容統整及複習，以本週課程的 data 為例 </span>
-
+#### ❗今日課程為將過去八週課程內容統整及複習，以本週課程的 data 為例 ❗
 NGS data analysis流程如下：
 ![截圖 2024-10-28 晚上11.08.04](https://hackmd.io/_uploads/S1EgYXpgyx.png)
 
@@ -398,7 +393,7 @@ shell script 是一個迷你的小程式，我們可以把每個步驟都寫成�
   -----------------------------------
 ### 前情提要到這裡告一個段落，接下來為實際操作的內容
 ### step.1: 將檔案放到自己的國網上
-#### 1. 請到 [ntu cool](https://cool.ntu.edu.tw/courses/42564) 中 Week 9 中下載兩個 fastq 檔案及兩個 sh 檔，其中 fastq 檔案是這次的實作課中的 raw data。
+#### 1. 請到 [ntu cool](https://cool.ntu.edu.tw/courses/53534) 中 Week 9 中下載兩個 fastq 檔案及兩個 sh 檔，其中 fastq 檔案是這次的實作課中的 raw data。
 #### 2. 將檔案放到自己的國網帳號上
 在上傳檔案之前，要在本機端去到你放剛下載下來檔案的資料夾中（意思就是在剛打開 CMD 或 terminal 還沒進入國網之前要先去到存剛剛下載的檔案的位置)，另外也要先想好要將檔案存到國網的哪個位置，建議可以在另一個 CMD 或 terminal 登入國網，可以利用`pwd`得知路徑，必要的話可以利用`mkdir`建立需要資料夾。
 
@@ -434,12 +429,11 @@ vim file_name.sh
 ```
 
 #### 2. 接下來打開來會看到以下的畫面
-![截圖 2024-10-29 下午2.13.02](https://hackmd.io/_uploads/BkVNTgCl1l.png)
-
+![螢幕擷取畫面 2025-10-08 102844](https://hackmd.io/_uploads/Hk2GM8Qpel.png)
     
  ```
 #!/usr/bin/sh
-#SBATCH -A ACD113120          # Project name:是我們上課計畫的編號
+#SBATCH -A ACD114093          # Project name:是我們上課計畫的編號
 #SBATCH -J fastqc             # Job name：這部分可更改，你可以取個自己喜歡的名字
 #SBATCH -p ngscourse          # Partition Name
 #SBATCH -c 2              
@@ -463,7 +457,7 @@ vim file_name.sh
 輸出的訊息是當時的時間--年月日/時分秒
 
 #### 4.先定義資料的路徑（就是你的檔案位置）及資料名稱（就是檔案名稱）
-![截圖 2024-10-24 下午4.07.59](https://hackmd.io/_uploads/ByU_lKvx1x.png)
+![螢幕擷取畫面 2025-10-08 104325](https://hackmd.io/_uploads/HyISGUQ6eg.png)
 
 
 
@@ -628,7 +622,7 @@ vim file_name.sh
 
 
 #### 12. Split multiallelic
-![截圖 2024-10-29 下午2.18.21](https://hackmd.io/_uploads/ByNT1-Al1x.png)
+![螢幕擷取畫面 2025-10-08 105121](https://hackmd.io/_uploads/ByPcfLmTge.png)
 
 
 #### 指令介紹
