@@ -1,10 +1,10 @@
 #!/usr/bin/sh
-#SBATCH -A ACD114093          # Account name/project number
+#SBATCH -A ACD114093                # Account name/project number
 #SBATCH -J alignment                # Job name
-#SBATCH -p ngscourse           # Partition Name 等同PBS裡面的 -q Queue name
-#SBATCH -c 2                 # 使用的core數 請參考Queue資源設定
-#SBATCH --mem=13g           # 使用的記憶體量 請參考Queue資源設定
-#SBATCH -o out_al.log   # Path to the standard output file
+#SBATCH -p ngscourse                # Partition Name 等同PBS裡面的 -q Queue name
+#SBATCH -c 2                        # 使用的core數 請參考Queue資源設定
+#SBATCH --mem=13g                   # 使用的記憶體量 請參考Queue資源設定
+#SBATCH -o out_al.log               # Path to the standard output file
 #SBATCH -e err_al.log
 #SBATCH --mail-user=
 #SBATCH --mail-type=FAIL,END
