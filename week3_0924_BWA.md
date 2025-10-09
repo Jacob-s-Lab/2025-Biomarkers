@@ -60,7 +60,7 @@ mkdir alignment
 ```markdown=
 cd alignment
 pwd
-rsync -avz /work/evelyn92/bwa.sh /work/username/alignment
+rsync -avz /work/evelyn92/2025Biomarker/bwa.sh /work/username/alignment
 ```
 Shell script for running [Alignment](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/bwa.sh)
 
@@ -361,7 +361,7 @@ mkdir alignment
 ```marksown=
 cd alignmnet
 pwd
-rsync -avz /work/evelyn92/bwa.sh /work/username/alignment
+rsync -avz /work/evelyn92/2025Biomarker/bwa.sh /work/username/alignment
 ```
 Shell script for running [Alignment](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/bwa.sh)
 
