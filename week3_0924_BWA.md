@@ -48,6 +48,8 @@ Before proceeding, make sure to download ThinLinc. Detailed instructions can be 
 > #### What is Alignment?
 > Alignment in bioinformatics refers to comparing two or more sequences to identify their similarities and differences. These sequences can be DNA, RNA, or protein sequences. The main goal of alignment is to infer evolutionary relationships, functional similarities, or structural features by comparing different biological sequences.
 
+## The File Tree of This Course
+[Alignment_file tree](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/wk3_tree.txt)
 
 ## Step 1: Create a Path to NCHC
 1. Log into the NCHC (if you’ve forgotten how, please refer to this [link](https://hackmd.io/jcvG9iIiRW6DTUysi8AKug)).
@@ -345,10 +347,12 @@ https://igv.org/doc/desktop/#
 所以在這之前必須要先下載好thinlinc，詳細[連結](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/week1_0903.md)可見此
 
 ## Alignment
-
 > [!Important]
 > #### 甚麼是Alignment?
 > Alignment（比對）是bioinformatics中的一個重要概念，指的是將兩條或多條序列進行比較，以找出它們之間的相似性和差異性。這些序列可以是DNA、RNA或蛋白質的序列。Alignment 的主要目的是通過比較不同的生物序列來推測它們之間的進化關係、功能相似性或結構特徵。
+
+## 本次課程的樹狀資料結構
+[Alignment_file tree](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/wk3_tree.txt)
 
 ### Step 1在國網上建立路徑
 1. 登入國網（忘記怎麼登入的人請參見[連結](https://hackmd.io/jcvG9iIiRW6DTUysi8AKug)）
