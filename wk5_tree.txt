@@ -1,0 +1,35 @@
+/
+|____work
+| |____Username
+|   |____result
+|   | |____fastqc
+|   | | |____SRR13076392_S14_L002_R1_001.fastq.gz
+|   | | |____SRR13076392_S14_L002_R2_001.fastq.gz
+|   | | |____SRR13076393_S15_L002_R1_001.fastq.gz
+|   | | |____SRR13076393_S15_L002_R2_001.fastq.gz
+|   | | |____SRR13076396_S16_L002_R1_001.fastq.gz
+|   | | |____SRR13076396_S16_L002_R2_001.fastq.gz
+|   | | |____HW1_materials.zip
+|   | |____fastqc_S14
+|   | | |____SRR13076392_S14_L002_R2_001_fastqc.html
+|   | | |____SRR13076392_S14_L002_R2_001_fastqc.zip
+|   | |____err.log
+|   | |____out.log
+|   |____fastqc.sh
+|   |____alignment
+|     |____alignmentR
+|     | |____SRR13076392.bam
+|     | |____SRR13076392.sam
+|     | |____SRR13076392.sorted.bam
+|     | |____SRR13076392.sorted.bam.bai
+|     |____alignmentRM
+|     | |____SRR13076392.sorted.markdup.bam
+|     | |____SRR13076392_markdup_metrics.txt
+|     | |____SRR13076392.sorted.markdup.bai
+|     |____err_al.log
+|     |____err_almark.log
+|     |____out_al.log
+|     |____out_almark.log
+|     |____bwa.sh
+|     |____bwa_markdup.sh
+|____home
