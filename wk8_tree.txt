@@ -1,0 +1,87 @@
+/
+|____work
+| |____Username
+|   |____result
+|   | |____fastqc
+|   | | |____SRR13076392_S14_L002_R1_001.fastq.gz
+|   | | |____SRR13076392_S14_L002_R2_001.fastq.gz
+|   | | |____SRR13076393_S15_L002_R1_001.fastq.gz
+|   | | |____SRR13076393_S15_L002_R2_001.fastq.gz
+|   | | |____SRR13076396_S16_L002_R1_001.fastq.gz
+|   | | |____SRR13076396_S16_L002_R2_001.fastq.gz
+|   | | |____HW1_materials.zip
+|   | |____fastqc_S14
+|   | | |____SRR13076392_S14_L002_R2_001_fastqc.html
+|   | | |____SRR13076392_S14_L002_R2_001_fastqc.zip
+|   | |____tutorial_result
+|   | | |____tutorial_ALN
+|   | | | |____SRR13076392_5000_markdup_metrics.txt
+|   | | | |____SRR13076392_5000.sorted.markdup.bam
+|   | | | |____SRR13076392_5000.sorted.bam
+|   | | | |____SRR13076392_5000.sam
+|   | | | |____SRR13076392_5000.sorted.bam.bai
+|   | | | |____SRR13076392_5000.sorted.markdup.bai
+|   | | | |____SRR13076392_5000.bam
+|   | | |____tutorial_FQ
+|   | | | |____SRR13076392_R1_5000_fastqc.zip
+|   | | | |____SRR13076392_R2_5000_fastqc.html
+|   | | | |____SRR13076392_R1_5000_fastqc.html
+|   | | | |____SRR13076392_R2_5000_fastqc.zip
+|   | | |____tutorial_VC
+|   | | | |____SRR13076392_5000.sorted.markdup.M2.vcf.gz.tbi
+|   | | | |____SRR13076392_5000.sorted.markdup.hc.vcf.gz.tbi
+|   | | | |____SRR13076392_5000.sorted.markdup.M2.vcf.gz
+|   | | | |____SRR13076392_5000.sorted.markdup.hc.vcf.gz
+|   | | | |____SRR13076392_5000.sorted.markdup.M2.vcf.gz.stats
+|   | | |____tutorial_ANNO
+|   | |   |____SRR13076392_5000.sorted.markdup.hc.normed.vcf.gz.tbi
+|   | |   |____SRR13076392_5000.sorted.markdup.M2.normed.vcf.gz.tbi
+|   | |   |____SRR13076392_5000.sorted.markdup.M2.normed.vcf.vep.vcf
+|   | |   |____SRR13076392_5000.sorted.markdup.hc.normed.vcf.vep.vcf
+|   | |   |____SRR13076392_5000.sorted.markdup.M2.normed.vcf.gz
+|   | |   |____SRR13076392_5000.sorted.markdup.hc.normed.vcf.gz
+|   | |   |____SRR13076392_5000.sorted.markdup.hc.normed.vcf.vep.vcf_summary.html
+|   | |   |____SRR13076392_5000.sorted.markdup.M2.normed.vcf.vep.vcf_summary.html
+|   | |____err.log
+|   | |____out.log
+|   | |____tutorial.err.log
+|   | |____tutorial.out.log
+|   | |____mutect2.err.log
+|   | |____mutect2.out.log
+|   | |____fastqc.sh
+|   | |____tutorial.sh
+|   | |____Mutect2.sh
+|   |____alignment
+|   | |____alignmentR
+|   | | |____SRR13076392.bam
+|   | | |____SRR13076392.sam
+|   | | |____SRR13076392.sorted.bam
+|   | | |____SRR13076392.sorted.bam.bai
+|   | |____alignmentRM
+|   | | |____SRR13076392.sorted.markdup.bam
+|   | | |____SRR13076392_markdup_metrics.txt
+|   | | |____SRR13076392.sorted.markdup.bai
+|   | |____err_al.log
+|   | |____err_almark.log
+|   | |____out_al.log
+|   | |____out_almark.log
+|   | |____bwa.sh
+|   | |____bwa_markdup.sh
+|   |____variantcalling
+|     |____variantcalling.sh
+|     |____variantcallingR
+|     | |____SRR13076392.HC.vcf.gz
+|     | |____SRR13076392.HC.vcf.gz.tbi
+|     | |____SRR13076392.HC.VEP.vcf
+|     | |____SRR13076392.HC.VEP.vcf_summary.html
+|     | |____SRR13076392.HC.normed.vcf.gz
+|     | |____SRR13076392.HC.VEP.vcf_warnings.txt
+|     | |____SRR13076392.HC.normed.vcf.gz.tbi
+|     | |____SRR13076392.HC.VEP_filtered.tsv
+|     | |____SRR13076392.HC.VEP.tsv
+|     | |____err_vep.log
+|     | |____out_vep.log
+|     | |____vep.sh
+|     |____out_vc.log
+|     |____err_vc.log
+|____home
