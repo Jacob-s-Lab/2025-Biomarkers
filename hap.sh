@@ -50,7 +50,7 @@ echo "bcftools finished"
 echo "$(date '+%Y-%m-%d %H:%M:%S')"
 
 query_modified=${DIR_S14_HC_hap}/S14HC.modified.vcf.gz
-# cd ${DIR_S14_HC_hap}
+
 export HGREF=${REFERENCE_DIR}/Homo_sapiens/GATK/hg38/Homo_sapiens_assembly38.fasta
 
 echo "hap.py start"
