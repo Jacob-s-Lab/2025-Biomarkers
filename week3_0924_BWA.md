@@ -64,7 +64,6 @@ cd alignment
 pwd
 rsync -avz /work/evelyn92/2025Biomarker/bwa.sh /work/username/alignment
 ```
-Shell script for running [Alignment](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/bwa.sh)
 
 > [!Important]
 > #### Command Basics 101
@@ -72,7 +71,7 @@ Shell script for running [Alignment](https://github.com/Jacob-s-Lab/2025-Biomark
 
 
 ## Step 2: Modify the Shell Script
-Enter the `bwa.sh` file by typing:
+Enter the [bwa.sh](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/bwa.sh) file by typing:
 ```
 vim bwa.sh
 ```
@@ -367,7 +366,6 @@ cd alignmnet
 pwd
 rsync -avz /work/evelyn92/2025Biomarker/bwa.sh /work/username/alignment
 ```
-Shell script for running [Alignment](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/bwa.sh)
 
 > [!Important]
 > #### 命令小學堂
@@ -375,7 +373,7 @@ Shell script for running [Alignment](https://github.com/Jacob-s-Lab/2025-Biomark
 > pwd 指令代表 "print working directory"（打印工作目錄），用於類 Unix 系統（例如 Linux 和 macOS）中，顯示當前正在工作的目錄。當在終端中執行 `pwd`時，它會顯示當前目錄的完整路徑。
 
 ### Step 2 修改分析執行檔
-1. 進入bwa.sh輸入`vim bwa.sh`
+1. 進入 [bwa.sh](https://github.com/Jacob-s-Lab/2025-Biomarkers/blob/main/bwa.sh) 輸入`vim bwa.sh`
 ```
 vim bwa.sh
 ```
