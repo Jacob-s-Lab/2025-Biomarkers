@@ -1,7 +1,7 @@
 #!/usr/bin/sh
-#SBATCH -A ACD114093        # Account name/project number
-#SBATCH -J S14_HC_hap              # Job name
-#SBATCH -p ngscourse        # Partition name
+#SBATCH -A ACD114093                   # Account name/project number
+#SBATCH -J S14_HC_hap                  # Job name
+#SBATCH -p ngscourse                   # Partition name
 #SBATCH -c 2               
 #SBATCH --mem=13g           
 #SBATCH -o S14_HC_hap.out.log          # Path to the standard output file
