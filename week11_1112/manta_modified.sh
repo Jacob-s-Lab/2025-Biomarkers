@@ -29,7 +29,7 @@ confident_region=${wkdir}/HG002_SVs_Tier1_noVDJorXorY_v0.6.2_hs38DH.bed
 
 
 ##set working directory
-mkdir ${wkdir}
+mkdir -p ${wkdir}
 cd ${wkdir}
 
 mkdir -p ${wkdir}/filter
