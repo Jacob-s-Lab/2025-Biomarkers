@@ -1,14 +1,13 @@
 #!/usr/bin/sh
-#SBATCH -A ACD114093           # Account name/project number
-#SBATCH -J vep                 # Job name
-#SBATCH -p ngscourse           # Partition Name 等同PBS裡面的 -q Queue name
-#SBATCH -c 2                   # 使用的core數 請參考Queue資源設定
-#SBATCH --mem=13g              # 使用的記憶體量 請參考Queue資源設定
-#SBATCH -o out_vep.log         # Path to the standard output file
-#SBATCH -e err_vep.log         # Path to the standard error output file
-#SBATCH --mail-user=
-#SBATCH --mail-type=FAIL,END
-
+#SBATCH -A MST109178          # Account name/project number
+#SBATCH -J NGS                # Job name
+#SBATCH -p ngs1T_18           # Partition Name 等同PBS裡面的 -q Queue name
+#SBATCH -c 18                 # 使用的core數 請參考Queue資源設定
+#SBATCH --mem=1000g           # 使用的記憶體量 請參考Queue資源設定
+#SBATCH -o out.log            # Path to the standard output file
+#SBATCH -e err.log            # Path to the standard error ouput file
+#SBATCH --mail-user=          # email
+#SBATCH --mail-type=END       # 指定送出email時機 可為NONE, BEGIN, END, FAIL, REQUEUE, ALL
 
 set -v -x
 echo "start"
@@ -16,32 +15,43 @@ echo "$(date '+%Y-%m-%d %H:%M:%S')"
 
 
 # Please enter the R1 & R2 file name and your username
-user=evelyn92
-sampleR1=/work/${user}/result/fastqc/SRR13076392_S14_L002_R1_001.fastq.gz
-sampleR2=/work/${user}/result/fastqc/SRR13076392_S14_L002_R2_001.fastq.gz
+user=username
+IN_DIR=/work/${user}/result/fastq
 sample=SRR13076392
-path1=/work/${user}/alignment/alignmentR
-path2=/work/${user}/alignment/alignmentRM
-path3=/work/${user}/variantcalling/variantcallingR
+R1=${IN_DIR}/${sample}_1.fastq.gz
+R2=${IN_DIR}/${sample}_2.fastq.gz
 
+echo "pwd for analysis reault: "
+pwd
 
-mkdir -p ${path1}
-mkdir -p ${path2}
-mkdir -p ${path3}
+# output
+OUT_DIR=/work/${user}/result/analysis/output_${sample}
+mkdir -p ${OUT_DIR}
+cd ${OUT_DIR}
 
 # ------------------------------------ #
 # Please don't change the script below #
 # ------------------------------------ #
-## Reference: Homo_sapiens_assembly38.fasta
+# Reference: Homo_sapiens_assembly38.fasta
 ref=/opt/ohpc/Taiwania3/pkg/biology/reference/Homo_sapiens/GATK/hg38/Homo_sapiens_assembly38.fasta
-# Create the environment for alignment and variant calling
+
+echo "Analysis started"
+echo "$(date '+%Y-%m-%d %H:%M:%S')"
+
+echo "+----------alignment----------+"
+# Create a new directory for alignment
+DIR_ALN=${OUT_DIR}/ALN
+mkdir -p ${DIR_ALN}
+cd ${DIR_ALN}
+
+echo "pwd for alignment: "
+pwd
+
+# Create the environment for alignment
 module load biology
 module load BWA/0.7.17
-module load SAMTOOLS/1.18 
+module load SAMTOOLS/1.18
 set -euo pipefail
-
-
-
 
 ##############################
 # Mapping reads with BWA-MEM #
@@ -49,57 +59,93 @@ set -euo pipefail
 echo "Mapping Reads: Start"
 echo "$(date '+%Y-%m-%d %H:%M:%S')"
 
-bwa mem -M -R "@RG\tID:GP_${sample}\tSM:SM_${sample}\tPL:ILLUMINA" -t 40 -K 1000000 ${ref} ${sampleR1} ${sampleR2} > ${path1}/${sample}.sam
+bwa mem -M -R "@RG\tID:GP_${sample}\tSM:SM_${sample}\tPL:ILLUMINA" -t 40 -K 1000000 ${ref} ${R1} ${R2} > ${sample}.sam
 
 echo "Mapping Reads: Finished"
 echo "$(date '+%Y-%m-%d %H:%M:%S')"
 
-
-################################################
+######################################################
 # Preparing for bam file  (sorting & indexing) #
-################################################
+######################################################
 echo "preparing for bam file: start"
 echo "$(date '+%Y-%m-%d %H:%M:%S')"
 
-samtools view -@ 2 -S -b  ${path1}/${sample}.sam >  ${path1}/${sample}.bam
-samtools sort -@ 2  ${path1}/${sample}.bam -o  ${path1}/${sample}.sorted.bam
-samtools index -@ 20  ${path1}/${sample}.sorted.bam
-
+samtools view -@ 2 -S -b ${sample}.sam > ${sample}.bam
+samtools sort -@ 2 ${sample}.bam -o ${sample}.sorted.bam
+samtools index -@ 20 ${sample}.sorted.bam
 echo "bam file has already prepared"
 echo "$(date '+%Y-%m-%d %H:%M:%S')"
-
 
 ###################
 # Mark duplicates #
 ###################
 echo "Mark duplicates: Start"
 echo "$(date '+%Y-%m-%d %H:%M:%S')"
+
 PICARD=/work/opt/ohpc/Taiwania3/pkg/biology/Picard/picard_v2.27.4/share/picard-2.27.4-0/picard.jar
-java -jar ${PICARD} MarkDuplicates \
-	-I  ${path1}/${sample}.sorted.bam \
-	-O  ${path2}/${sample}.sorted.markdup.bam \
-	-M  ${path2}/${sample}_markdup_metrics.txt \
-	--CREATE_INDEX true
+java -jar ${PICARD} MarkDuplicates -I ${sample}.sorted.bam -O ${sample}.sorted.markdup.bam -M ${sample}_markdup_metrics.txt --CREATE_INDEX true
+
 echo "Mark duplicates: Finished"
 echo "$(date '+%Y-%m-%d %H:%M:%S')"
 
 
-############################################
-# Calling variants by GATK HaplotypeCaller #
-############################################
-echo "Variants calling: Start"
-echo "$(date '+%Y-%m-%d %H:%M:%S')"
+echo "+----------variant calling----------+"
+# Create a new directory for variant calling
+DIR_VC=${OUT_DIR}/VC
+mkdir -p ${DIR_VC}
+cd ${DIR_VC}
+
+echo "pwd for variant calling: "
+pwd
 
 # set up the environment for variant calling
+# GATK_PATH=/opt/ohpc/Taiwania3/pkg/biology/GATK/gatk_v4.2.3.0/gatk
 module load Python
 module load GATK/4.2.0.0
 
-gatk HaplotypeCaller \
-	-R ${ref} \
-	-I ${path2}/${sample}.sorted.markdup.bam \
-	-O ${path3}/${sample}.HC.vcf.gz
-echo "Variants calling: Finished"
+############################################
+# Calling variants by GATK HaplotypeCaller #
+############################################
+echo "variant calling: start"
 echo "$(date '+%Y-%m-%d %H:%M:%S')"
+
+# python3 $(which gatk) HaplotypeCaller \
+gatk HaplotypeCaller \
+  -R ${ref} \
+  -I ${DIR_ALN}/${sample}.sorted.markdup.bam \
+  -O ${sample}.sorted.markdup.HC.vcf.gz \
+  --bam-output ${sample}.sorted.markdup.HC.bam \
+  -L chr1 -L chr2 -L chr3 -L chr4 -L chr5 -L chr6 -L chr7 -L chr8 -L chr9  \
+  -L chr10 -L chr11 -L chr12 -L chr13 -L chr14 -L chr15 -L chr16 -L chr17  \
+  -L chr18 -L chr19 -L chr20 -L chr21 -L chr22
+
+echo "variant calling: Finished"
+echo "$(date '+%Y-%m-%d %H:%M:%S')"
+
+#####################################
+# Convert HC bamout BAM to HC CRAM  #
+#####################################
+echo "convert HC bamout to cram: start"
+echo "$(date '+%Y-%m-%d %H:%M:%S')"
+
+samtools view -@ 2 -C -T ${ref} \
+  -o ${sample}.sorted.markdup.HC.cram \
+  ${sample}.sorted.markdup.HC.bam
+
+samtools index -@ 2 ${sample}.sorted.markdup.HC.cram
+
+echo "convert HC bamout to cram: finished"
+echo "$(date '+%Y-%m-%d %H:%M:%S')"
+
+
+echo "+----------VEP----------+"
+# Create a new directory for variant calling
+DIR_VP=${OUT_DIR}/VP
+mkdir -p ${DIR_VP}
+cd ${DIR_VP}
+
+echo "pwd for VEP: "
+pwd
 
 ## Set up the environment and path for running VEP
 VEP_PATH=/opt/ohpc/Taiwania3/pkg/biology/Ensembl-VEP/ensembl-vep/vep
@@ -109,14 +155,14 @@ BCFTOOLS=/opt/ohpc/Taiwania3/pkg/biology/BCFtools/bcftools_v1.13/bin/bcftools
 
 module load biology
 module load Perl/5.28.1
-module load Anaconda/Anaconda3
+module load old-module pkg/Anaconda3
 export PATH=${PATH}:/opt/ohpc/Taiwania3/pkg/biology/HTSLIB/htslib_v1.13/bin:/opt/ohpc/Taiwania3/pkg/biology/SAMTOOLS/samtools_v1.15.1/bin
 set -euo pipefail
 
 # split multiallelic
 echo "split multiallelic: start"
 echo "$(date '+%Y-%m-%d %H:%M:%S')"
-${BCFTOOLS} norm -m -any ${sample}.HC.vcf.gz \
+${BCFTOOLS} norm -m -any ${sample}.sorted.markdup.HC.vcf.gz \
     -Oz \
     -o ${sample}.HC.normed.vcf.gz
 ${BCFTOOLS} index -t -f ${sample}.HC.normed.vcf.gz
